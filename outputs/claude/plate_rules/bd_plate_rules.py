@@ -30,9 +30,9 @@ SERIES_LETTERS = {
     'ছ': dict(code='CHHA', category='human_hauler', detail='human hauler (leguna), hired microbus, ambulance',
               colour='green_or_white'),
     'প': dict(code='PA',  category='taxi',         detail='taxicab', colour='green'),
-    'থ': dict(code='THA', category='cng',          detail='CNG auto-rickshaw / baby taxi (hire)', colour='green'),
-    'দ': dict(code='DA',  category='cng',          detail='private CNG auto-rickshaw', colour='white',
-              conflict='Wikipedia: not described; blog: private CNG'),
+    'থ': dict(code='THA', category='cng_commercial', detail='CNG auto-rickshaw / baby taxi (hire); green body', colour='green'),
+    'দ': dict(code='DA',  category='cng_private',    detail='private CNG auto-rickshaw; silver body (rare)', colour='white',
+              conflict='Wikipedia: not described; blog: private CNG. User (2026-10-10): CNGs are green (common) or private silver (rare)'),
     'ত': dict(code='TWA', category='mishuk',       detail='Mishuk auto-rickshaw', colour='green'),
     'ফ': dict(code='FA',  category='tempo',        detail='auto tempo', colour='green'),
     'জ': dict(code='JA',  category='bus',          detail='minibus', colour='green'),
@@ -67,7 +67,9 @@ VEHICLE_CATEGORIES = {
     'suv':          ['suv_jeep'],
     'microbus':     ['microbus', 'human_hauler'],
     'leguna':       ['human_hauler'],
-    'cng':          ['cng'],
+    'cng':          ['cng_commercial', 'cng_private'],   # colour unknown
+    'cng_green':    ['cng_commercial'],                  # green body / green plate -> hire CNG
+    'cng_silver':   ['cng_private'],                     # silver body / white plate -> private CNG (rare)
     'mishuk':       ['mishuk'],
     'tempo':        ['tempo'],
     'taxi':         ['taxi'],

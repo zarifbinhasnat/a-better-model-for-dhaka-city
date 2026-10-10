@@ -26,6 +26,8 @@ class PlateRules(unittest.TestCase):
 
     def test_cng_leguna_motorcycle_rickshaw(self):
         self.assertEqual(allowed_letters('cng', include_any=False), {'থ', 'দ'})
+        self.assertEqual(allowed_letters('cng_green', include_any=False), {'থ'})
+        self.assertEqual(allowed_letters('cng_silver', include_any=False), {'দ'})
         self.assertIn('ছ', allowed_letters('leguna'))
         self.assertEqual(allowed_letters('motorcycle', include_any=False), {'এ', 'হ', 'ল'})
         self.assertEqual(allowed_letters('rickshaw'), set())

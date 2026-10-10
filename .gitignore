@@ -26,3 +26,4 @@ work/claude/kaggle/results/
 # classifier training artefacts (dataset crops are footage-derived; runs are regenerable)
 work/claude/cng-classifier/dataset/
 work/claude/cng-classifier/runs/
+work/claude/cng-classifier/dataset_v2/

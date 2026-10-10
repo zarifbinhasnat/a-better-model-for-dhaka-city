@@ -11,7 +11,7 @@
    "detector_class": "car",
    "detector_conf": 0.907,
    "vehicle_type": "car",
-   "type_conf": 0.989,
+   "type_conf": 0.451,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -46,7 +46,7 @@
    "detector_class": "car",
    "detector_conf": 0.901,
    "vehicle_type": "car",
-   "type_conf": 0.626,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -81,7 +81,7 @@
    "detector_class": "car",
    "detector_conf": 0.89,
    "vehicle_type": "car",
-   "type_conf": 0.992,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -116,7 +116,7 @@
    "detector_class": "car",
    "detector_conf": 0.88,
    "vehicle_type": "car",
-   "type_conf": 0.995,
+   "type_conf": 0.999,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -151,7 +151,7 @@
    "detector_class": "car",
    "detector_conf": 0.865,
    "vehicle_type": "car",
-   "type_conf": 0.892,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -186,7 +186,7 @@
    "detector_class": "car",
    "detector_conf": 0.862,
    "vehicle_type": "car",
-   "type_conf": 0.832,
+   "type_conf": 0.991,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -221,7 +221,7 @@
    "detector_class": "car",
    "detector_conf": 0.844,
    "vehicle_type": "car",
-   "type_conf": 0.827,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -255,12 +255,26 @@
    ],
    "detector_class": "car",
    "detector_conf": 0.841,
-   "vehicle_type": "cng",
-   "type_conf": 0.873,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
-    "থ",
-    "দ",
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
     "য",
     "র"
    ],
@@ -277,7 +291,7 @@
    "detector_class": "car",
    "detector_conf": 0.82,
    "vehicle_type": "car",
-   "type_conf": 0.926,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -312,7 +326,7 @@
    "detector_class": "car",
    "detector_conf": 0.817,
    "vehicle_type": "car",
-   "type_conf": 0.871,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -369,7 +383,7 @@
    "detector_class": "car",
    "detector_conf": 0.806,
    "vehicle_type": "cng",
-   "type_conf": 0.96,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
@@ -377,7 +391,9 @@
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "unknown",
+   "registration_class": "unknown"
   },
   {
    "index": 12,
@@ -389,28 +405,24 @@
    ],
    "detector_class": "car",
    "detector_conf": 0.772,
-   "vehicle_type": "car",
-   "type_conf": 0.998,
+   "vehicle_type": "bus_truck",
+   "type_conf": 0.273,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
     "উ",
-    "ক",
-    "খ",
-    "গ",
-    "ঘ",
-    "চ",
-    "ছ",
+    "জ",
+    "ঝ",
     "ট",
     "ঠ",
     "ড",
     "ঢ",
     "ন",
-    "প",
-    "ভ",
+    "ব",
     "ম",
     "য",
-    "র"
+    "র",
+    "স"
    ],
    "note": null
   },
@@ -425,7 +437,7 @@
    "detector_class": "car",
    "detector_conf": 0.765,
    "vehicle_type": "car",
-   "type_conf": 0.932,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -460,7 +472,7 @@
    "detector_class": "car",
    "detector_conf": 0.754,
    "vehicle_type": "cng",
-   "type_conf": 0.979,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
@@ -468,7 +480,9 @@
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "unknown",
+   "registration_class": "unknown"
   },
   {
    "index": 15,
@@ -481,7 +495,7 @@
    "detector_class": "car",
    "detector_conf": 0.625,
    "vehicle_type": "car",
-   "type_conf": 1.0,
+   "type_conf": 0.999,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -516,7 +530,7 @@
    "detector_class": "car",
    "detector_conf": 0.605,
    "vehicle_type": "car",
-   "type_conf": 1.0,
+   "type_conf": 0.998,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -550,12 +564,26 @@
    ],
    "detector_class": "car",
    "detector_conf": 0.565,
-   "vehicle_type": "cng",
-   "type_conf": 0.829,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
-    "থ",
-    "দ",
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
     "য",
     "র"
    ],
@@ -576,11 +604,12 @@
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
-    "দ",
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "green",
+   "registration_class": "commercial (hire)"
   },
   {
    "index": 19,
@@ -593,7 +622,7 @@
    "detector_class": "truck",
    "detector_conf": 0.538,
    "vehicle_type": "car",
-   "type_conf": 0.91,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -627,24 +656,28 @@
    ],
    "detector_class": "truck",
    "detector_conf": 0.535,
-   "vehicle_type": "bus_truck",
-   "type_conf": 0.867,
+   "vehicle_type": "car",
+   "type_conf": 0.985,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
     "উ",
-    "জ",
-    "ঝ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
     "ট",
     "ঠ",
     "ড",
     "ঢ",
     "ন",
-    "ব",
+    "প",
+    "ভ",
     "ম",
     "য",
-    "র",
-    "স"
+    "র"
    ],
    "note": null
   },
@@ -658,24 +691,28 @@
    ],
    "detector_class": "truck",
    "detector_conf": 0.501,
-   "vehicle_type": "bus_truck",
-   "type_conf": 0.995,
+   "vehicle_type": "car",
+   "type_conf": 0.999,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
     "উ",
-    "জ",
-    "ঝ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
     "ট",
     "ঠ",
     "ড",
     "ঢ",
     "ন",
-    "ব",
+    "প",
+    "ভ",
     "ম",
     "য",
-    "র",
-    "স"
+    "র"
    ],
    "note": null
   },
@@ -690,7 +727,7 @@
    "detector_class": "car",
    "detector_conf": 0.479,
    "vehicle_type": "car",
-   "type_conf": 1.0,
+   "type_conf": 0.998,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -747,15 +784,16 @@
    "detector_class": "car",
    "detector_conf": 0.472,
    "vehicle_type": "cng",
-   "type_conf": 0.954,
+   "type_conf": 0.953,
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
-    "দ",
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "green",
+   "registration_class": "commercial (hire)"
   },
   {
    "index": 25,
@@ -768,7 +806,7 @@
    "detector_class": "car",
    "detector_conf": 0.47,
    "vehicle_type": "car",
-   "type_conf": 0.998,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -825,7 +863,7 @@
    "detector_class": "car",
    "detector_conf": 0.429,
    "vehicle_type": "car",
-   "type_conf": 0.893,
+   "type_conf": 1.0,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -859,24 +897,28 @@
    ],
    "detector_class": "bus",
    "detector_conf": 0.428,
-   "vehicle_type": "bus_truck",
-   "type_conf": 0.888,
+   "vehicle_type": "car",
+   "type_conf": 0.97,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
     "উ",
-    "জ",
-    "ঝ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
     "ট",
     "ঠ",
     "ড",
     "ঢ",
     "ন",
-    "ব",
+    "প",
+    "ভ",
     "ম",
     "য",
-    "র",
-    "স"
+    "র"
    ],
    "note": null
   },
@@ -891,7 +933,7 @@
    "detector_class": "car",
    "detector_conf": 0.41,
    "vehicle_type": "car",
-   "type_conf": 1.0,
+   "type_conf": 0.981,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -948,7 +990,7 @@
    "detector_class": "car",
    "detector_conf": 0.381,
    "vehicle_type": "car",
-   "type_conf": 1.0,
+   "type_conf": 0.641,
    "registration_expected": true,
    "allowed_plate_letters": [
     "অ",
@@ -983,15 +1025,16 @@
    "detector_class": "car",
    "detector_conf": 0.37,
    "vehicle_type": "cng",
-   "type_conf": 0.998,
+   "type_conf": 0.729,
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
-    "দ",
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "green",
+   "registration_class": "commercial (hire)"
   },
   {
    "index": 33,
@@ -1008,11 +1051,12 @@
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
-    "দ",
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "green",
+   "registration_class": "commercial (hire)"
   },
   {
    "index": 34,
@@ -1060,7 +1104,7 @@
    "detector_class": "bicycle",
    "detector_conf": 0.286,
    "vehicle_type": "rickshaw",
-   "type_conf": 0.958,
+   "type_conf": 0.705,
    "registration_expected": false,
    "allowed_plate_letters": [],
    "note": "rickshaw: no BRTA registration plate"
@@ -1133,15 +1177,16 @@
    "detector_class": "truck",
    "detector_conf": 0.268,
    "vehicle_type": "cng",
-   "type_conf": 0.914,
+   "type_conf": 0.999,
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
-    "দ",
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "green",
+   "registration_class": "commercial (hire)"
   },
   {
    "index": 39,
@@ -1154,7 +1199,7 @@
    "detector_class": "car",
    "detector_conf": 0.261,
    "vehicle_type": "motorcycle",
-   "type_conf": 0.47,
+   "type_conf": 0.96,
    "registration_expected": true,
    "allowed_plate_letters": [
     "এ",
@@ -1176,15 +1221,16 @@
    "detector_class": "car",
    "detector_conf": 0.25,
    "vehicle_type": "cng",
-   "type_conf": 0.878,
+   "type_conf": 0.997,
    "registration_expected": true,
    "allowed_plate_letters": [
     "থ",
-    "দ",
     "য",
     "র"
    ],
-   "note": null
+   "note": null,
+   "cng_colour": "green",
+   "registration_class": "commercial (hire)"
   },
   {
    "index": 41,
@@ -1197,7 +1243,7 @@
    "detector_class": "car",
    "detector_conf": 0.231,
    "vehicle_type": "rickshaw",
-   "type_conf": 0.997,
+   "type_conf": 1.0,
    "registration_expected": false,
    "allowed_plate_letters": [],
    "note": "rickshaw: no BRTA registration plate"
@@ -1281,7 +1327,7 @@
    ],
    "confidence": 0.903,
    "vehicle_index": 20,
-   "vehicle_type": "bus_truck"
+   "vehicle_type": "car"
   },
   {
    "box": [
@@ -1303,7 +1349,7 @@
    ],
    "confidence": 0.894,
    "vehicle_index": 7,
-   "vehicle_type": "cng"
+   "vehicle_type": "car"
   },
   {
    "box": [
@@ -1424,7 +1470,7 @@
    ],
    "confidence": 0.8,
    "vehicle_index": 20,
-   "vehicle_type": "bus_truck"
+   "vehicle_type": "car"
   },
   {
    "box": [

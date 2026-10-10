@@ -11,7 +11,20 @@ import cv2, numpy as np
 ROOT=Path(__file__).resolve().parents[3];sys.path.insert(0,str(ROOT/'outputs/claude/plate_rules'))
 from bd_plate_rules import allowed_letters
 from ultralytics import YOLO
-VEH=ROOT/'work/detection-pilot/yolo26s.pt';CLS=ROOT/'work/claude/models/vehicle_cls_run1.pt';PLATE=ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'
+VEH=ROOT/'work/detection-pilot/yolo26s.pt';CLS=ROOT/'work/claude/models/vehicle_cls_run2.pt';PLATE=ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'
+def cng_colour(crop,plate_box=None):
+    """green (commercial, থ) / silver (private, দ) / unknown, from body and plate colour.
+    green : lower body >= 3% green pixels, or a saturated (green) plate
+    silver: pale plate (median HSV saturation < 30) AND bright, green-free lower body (median V >= 90)
+    unknown otherwise (keeps both letters). Tuned on this video: 291 green / 37 silver crops (silver =
+    1-2 physical vehicles) -> 263 green, 34 silver correct, 0 cross errors, 31 unknown."""
+    hsv=cv2.cvtColor(crop,cv2.COLOR_BGR2HSV);body=hsv[hsv.shape[0]//2:]
+    if ((body[...,0]>=40)&(body[...,0]<=90)&(body[...,1]>=70)).mean()>=.03:return 'green'
+    if plate_box is None:return 'unknown'
+    x1,y1,x2,y2=[int(v) for v in plate_box];pl=hsv[max(0,y1):y2,max(0,x1):x2]
+    if not pl.size:return 'unknown'
+    if np.median(pl[...,1])>=30:return 'green'
+    return 'silver' if np.median(body[...,2])>=90 else 'unknown'
 COLORS={'car':(80,200,80),'cng':(0,160,255),'motorcycle':(255,150,60),'rickshaw':(200,100,255),'bus_truck':(220,210,0)}
 def iou(a,b):
     iw=max(0,min(a[2],b[2])-max(a[0],b[0]));ih=max(0,min(a[3],b[3])-max(a[1],b[1]));i=iw*ih
@@ -40,8 +53,13 @@ class Cascade:
                                  allowed_plate_letters=sorted(allowed_letters(vt,source='classifier') or []) if reg else [],
                                  note=None if reg else 'rickshaw: no BRTA registration plate'))
             if not reg:continue
-            for d in self.p.predict(crop,imgsz=640,conf=self.pconf,device=self.dev,verbose=False)[0].boxes.data.cpu().numpy():
+            ds=self.p.predict(crop,imgsz=640,conf=self.pconf,device=self.dev,verbose=False)[0].boxes.data.cpu().numpy()
+            for d in ds:
                 plates.append(dict(box=[round(float(v+o),1) for v,o in zip(d[:4],cb[:2]*2)],confidence=round(float(d[4]),3),vehicle_index=vehicles[-1]['index']))
+            if vt=='cng':
+                col=cng_colour(crop,ds[ds[:,4].argmax(),:4] if len(ds) else None);v=vehicles[-1]
+                v['cng_colour']=col;v['registration_class']={'green':'commercial (hire)','silver':'private'}.get(col,'unknown')
+                v['allowed_plate_letters']=sorted(allowed_letters({'green':'cng_green','silver':'cng_silver'}.get(col,'cng')) or [])
         kept=[]
         for d in sorted(plates,key=lambda d:-d['confidence']):
             if all(iou(d['box'],k['box'])<.5 for k in kept):kept.append(d)
@@ -55,7 +73,7 @@ def draw(im,res):
     out=im.copy()
     for v in res['vehicles']:
         b=[int(x) for x in v['box']];c=COLORS.get(v['vehicle_type'],(255,255,255))
-        cv2.rectangle(out,b[:2],b[2:],c,2);cv2.putText(out,v['vehicle_type']+('' if v['registration_expected'] else ' (no reg)'),(b[0],b[1]-6),0,.9,c,2)
+        cv2.rectangle(out,b[:2],b[2:],c,2);cv2.putText(out,v['vehicle_type']+(f" {v['cng_colour']}" if v.get('cng_colour') else '')+('' if v['registration_expected'] else ' (no reg)'),(b[0],b[1]-6),0,.9,c,2)
     for p in res['plates']:
         b=[int(x) for x in p['box']];cv2.rectangle(out,b[:2],b[2:],(0,0,255),3);cv2.putText(out,f"plate {p['confidence']:.2f}",(b[0],b[3]+22),0,.7,(0,0,255),2)
     return out
