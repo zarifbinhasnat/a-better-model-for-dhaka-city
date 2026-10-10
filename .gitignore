@@ -18,3 +18,8 @@ work/detection-pilot/config/
 work/video-tools/
 
 # Model weights ARE committed (user-approved 2026-10-10): work/detection-pilot/*.pt, *.onnx
+
+# Generated Kaggle dataset folders: rebuild with work/claude/labeling/export_dataset.py and work/claude/vehicle-classes/export_vehicles.py
+work/claude/kaggle/dhaka-*/
+# Downloaded Kaggle run outputs (weights are kept separately under work/claude/models/)
+work/claude/kaggle/results/
