@@ -1,0 +1,21 @@
+{
+  "timestamps_seconds": [
+    975,
+    1155,
+    1335,
+    1515,
+    1695,
+    1875
+  ],
+  "method": "class-switch hybrid: Bangla on motorcycle/bicycle crops, international on all other vehicle crops",
+  "confidence": 0.35,
+  "match_iou": 0.5,
+  "region_xyxy": [
+    0,
+    500,
+    3600,
+    2824
+  ],
+  "frozen_before_check": true,
+  "limitation": "Different frames, same camera/session. Repeated stopped vehicles may overlap development; not an independent vehicle or cross-camera test."
+}

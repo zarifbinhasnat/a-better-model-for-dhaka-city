@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Source footage and anything extracted from it stay local unless the user authorizes upload.
+*.mp4
+*.dav
+*.jpg
+*.jpeg
+*.png
+outputs/detection-pilot/frames/
+work/detection-pilot/label-views/
+work/detection-pilot/excluded-early-frames/
+
+# Local environments and tool installs
+.venv/
+work/detection-pilot/config/
+work/video-tools/
+
+# Model weights ARE committed (user-approved 2026-10-10): work/detection-pilot/*.pt, *.onnx
