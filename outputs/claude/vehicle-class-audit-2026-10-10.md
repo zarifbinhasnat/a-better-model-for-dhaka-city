@@ -32,7 +32,7 @@ End-to-end variants of the vehicle stage (`work/claude/vehicle-audit/e2e.py`; th
 | Confidence 0.10 | 603 | 90 / 19 / 12 | 82.6% | 88.2% |
 | Confidence 0.10 + CNG oracle | 603 | 92 / 20 / 10 | 82.1% | 90.2% |
 | Confidence 0.05 | 849 | 90 / 20 / 12 | 81.8% | 88.2% |
-| Drop `bicycle` (rickshaw) class | −5% crops | identical metrics | | |
+| Skip plate search on `bicycle` (rickshaw) crops | −5% crops | identical metrics | | |
 
 The vehicle-detector sweep (`vehicle_sweep.py`) puts 24 of 25 motorcycle plates inside a motorcycle box at confidence 0.05 and input 1280, versus 17 at 0.20. A larger input (2560) made coverage worse.
 
@@ -40,7 +40,7 @@ The vehicle-detector sweep (`vehicle_sweep.py`) puts 24 of 25 motorcycle plates 
 
 1. **Motorcycle:** lower the vehicle threshold for the motorcycle class only (about 0.10). That's +3 TP and +3 FP here, with no training needed. Confirm on new data before adopting it; it was chosen on development frames.
 2. **CNG:** a CNG class would help only through routing (+2 TP, −2 FP even with perfect classification). A single fine-tuned plate detector with green CNG plates and painted bumper numbers (as negatives) in its training data removes the need for routing. This is the bigger lever.
-3. **Rickshaw:** drop the `bicycle` class. It produced no true plates and only municipal-tag hits that the evaluation ignores. In deployment those hits would be false positives.
+3. **Rickshaw:** keep detecting and tracking `bicycle` proposals as **rickshaw** vehicles, marked with no registration plate expected (`plate_rules.vehicle_record`). Do not run or report the plate detector on them: they produced no true plates, only municipal-tag hits that are not registrations. (User decision, 2026-10-10.)
 4. **Leguna:** none in the development sample. Include legunas deliberately when sampling training frames, and check whether COCO calls them `bus`, `truck` or `car`.
 5. **When to fine-tune the vehicle detector:** when OCR starts. The plate-letter rule needs sedan / SUV / microbus / CNG / leguna / motorcycle / pickup / truck / bus / rickshaw. The fine-tuned plate detector and the local-class vehicle detector can share one labelling pass, with a vehicle box plus a plate box per vehicle.
 

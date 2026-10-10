@@ -8,13 +8,13 @@ Locate physical motor-vehicle number plates in crowded Dhaka roadside footage. T
 
 We are using pretrained models to establish a baseline before deciding what needs fine-tuning. No model has been trained on this footage. No Bengali characters are being read. A physically identifiable but unreadable plate may still be a valid detection target.
 
-The broader user goal includes Bengali plate recognition and traffic violations. Those are future modules; the current task is plate detection. The first 900 seconds of this video are excluded because they contain a protest.
+The broader user goal includes Bengali plate recognition and traffic violations. Those are future modules; the current task is plate detection. For this specific source video only, the first 900 seconds are excluded because they contain a protest. This is not a rule for other footage; record any exclusion per file.
 
 ## 2. Status: what exists and what is proposed
 
 | Component | Status | Evidence / entry point |
 | --- | --- | --- |
-| Post-15-minute frame sampling | Done, 66 frames | `detection-pilot/frames/`, sample manifest and check protocol |
+| Frame sampling after this video's 900-second exclusion | Done, 66 frames | `detection-pilot/frames/`, sample manifest and check protocol |
 | Vehicle proposals and native-resolution crops | Implemented and run | `detection-pilot/run_detection.py`, `Pipeline.vehicles` |
 | International and Bangla plate detectors | Both run on full frames and vehicle crops | `Pipeline.plates`, `predictions.jsonl` |
 | Baseline evaluation | Done on 12 provisionally annotated development frames | `evaluate.py`, `metrics.csv` |
@@ -28,7 +28,7 @@ The broader user goal includes Bengali plate recognition and traffic violations.
 
 ```mermaid
 flowchart TD
-    V[Local roadside video] --> F[Frames at offsets of at least 900 seconds]
+    V[Local roadside video] --> F[Frames after per-file exclusion window: 900 s for this video]
     F --> D[YOLO26s vehicle proposals]
     D --> C[5 percent padded crops from original pixels]
     C --> I[International YOLOv9 plate detector]

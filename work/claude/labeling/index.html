@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate Labeller</title>
+<style>
+  :root { --bg:#111418; --panel:#1b2027; --line:#2c333d; --text:#e6e9ee; --muted:#9aa4b2; --accent:#4c9ffe; }
+  * { box-sizing: border-box; }
+  body { margin:0; height:100vh; display:flex; flex-direction:column; background:var(--bg); color:var(--text);
+         font:13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; overflow:hidden; }
+  header { display:flex; gap:12px; align-items:center; padding:8px 12px; border-bottom:1px solid var(--line); background:var(--panel); flex-wrap:wrap; }
+  header b { font-size:14px; }
+  .stat { color:var(--muted); }
+  button { background:#262d36; color:var(--text); border:1px solid var(--line); border-radius:6px; padding:5px 10px; cursor:pointer; font:inherit; }
+  button:hover { border-color:var(--accent); }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; }
+  canvas { position:absolute; inset:0; width:100%; height:100%; cursor:crosshair; }
+  aside { width:310px; border-left:1px solid var(--line); background:var(--panel); display:flex; flex-direction:column; min-height:0; }
+  aside section { padding:10px 12px; border-bottom:1px solid var(--line); }
+  #frames { flex:1; overflow:auto; padding:6px; display:grid; grid-template-columns:repeat(4,1fr); gap:4px; align-content:start; }
+  .fr { padding:4px 2px; text-align:center; border-radius:4px; background:#232a33; cursor:pointer; font-size:11px; border:1px solid transparent; }
+  .fr.done { background:#1f4d33; } .fr.skipped { background:#4d3b1f; } .fr.test { outline:1px dashed #c58bff; }
+  .fr.cur { border-color:var(--accent); }
+  .kinds { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+  .kind { display:flex; gap:6px; align-items:center; padding:3px 6px; border-radius:4px; cursor:pointer; border:1px solid transparent; }
+  .kind.on { border-color:var(--accent); background:#232a33; }
+  .sw { width:12px; height:12px; border-radius:2px; flex:none; }
+  kbd { background:#262d36; border:1px solid var(--line); border-radius:3px; padding:0 4px; font-size:11px; }
+  .help { color:var(--muted); font-size:12px; }
+  .help div { margin:2px 0; }
+  textarea { width:100%; height:44px; background:#11151a; color:var(--text); border:1px solid var(--line); border-radius:6px; font:inherit; }
+  #toast { position:absolute; left:50%; bottom:16px; transform:translateX(-50%); background:#000c; padding:6px 12px; border-radius:6px; display:none; }
+  #warn { color:#ffb86b; }
+</style>
+</head>
+<body>
+<header>
+  <b>Plate labeller</b>
+  <span id="fname"></span>
+  <span id="split" class="stat"></span>
+  <span id="dirty" style="color:#ffb86b"></span>
+  <span style="flex:1"></span>
+  <span id="progress" class="stat"></span>
+  <button id="prev">◀ Prev</button>
+  <button id="skip">Skip</button>
+  <button id="save">Save</button>
+  <button id="savenext" class="primary">Save &amp; next ▶</button>
+</header>
+<main>
+  <div id="stage"><canvas id="cv"></canvas><div id="toast"></div></div>
+  <aside>
+    <section>
+      <div style="margin-bottom:6px">Plate belongs to (selected box / new boxes):</div>
+      <div class="kinds" id="kinds"></div>
+      <div id="sel" class="stat" style="margin-top:6px"></div>
+    </section>
+    <section class="help">
+      <div><b>Everything on screen is saved as truth.</b> Dashed boxes are model suggestions: delete wrong ones, fix the rest, draw missed plates.</div>
+      <div>Draw: drag on empty space · Move/resize: drag box / corner</div>
+      <div>Zoom: scroll · Pan: <kbd>Space</kbd>+drag or right-drag · <kbd>F</kbd> fit</div>
+      <div><kbd>Tab</kbd> / <kbd>Shift+Tab</kbd> next/prev box (zooms in) · <kbd>Del</kbd> delete</div>
+      <div><kbd>1</kbd>–<kbd>6</kbd> vehicle type · <kbd>I</kbd> ignore (unsure, unreadable-far, rickshaw tag)</div>
+      <div><kbd>Enter</kbd> save &amp; next · <kbd>S</kbd> save · <kbd>V</kbd> vehicle boxes · <kbd>Esc</kbd> deselect</div>
+      <div>Rickshaws: no registration plate. Mark their tags <kbd>I</kbd> (ignore), never as plates.</div>
+      <div id="warn"></div>
+    </section>
+    <section><textarea id="notes" placeholder="Notes for this frame (optional)"></textarea></section>
+    <div id="frames"></div>
+  </aside>
+</main>
+<script>
+const KINDS = [
+  ['car','Car / SUV / microbus','#2ecc71'], ['motorcycle','Motorcycle','#4c9ffe'],
+  ['cng','CNG','#ff9f1a'], ['leguna','Leguna / human hauler','#e056fd'],
+  ['bus_truck','Bus / truck / pickup','#00d2d3'], ['other','Other / unsure type','#ffffff'],
+];
+const COLOR = Object.fromEntries(KINDS.map(k => [k[0], k[2]])); COLOR.ignore = '#ff4757';
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d'), stage = document.getElementById('stage');
+let frames = [], cur = -1, img = null, boxes = [], vehicles = [], sel = -1, kind = 'car', dirty = false;
+let scale = 1, ox = 0, oy = 0, showVeh = true, space = false, drag = null, tabIdx = -1;
+
+const $ = id => document.getElementById(id);
+function toast(t){ const e=$('toast'); e.textContent=t; e.style.display='block'; clearTimeout(e._t); e._t=setTimeout(()=>e.style.display='none',1400); }
+function setDirty(v){ dirty=v; $('dirty').textContent = v ? '● unsaved' : ''; }
+
+// ---------- kinds panel ----------
+$('kinds').innerHTML = KINDS.map((k,i)=>`<div class="kind" data-k="${k[0]}"><span class="sw" style="background:${k[2]}"></span>${i+1} ${k[1]}</div>`).join('')
+  + `<div class="kind" data-k="ignore"><span class="sw" style="background:${COLOR.ignore}"></span>I Ignore</div>`;
+$('kinds').onclick = e => { const k = e.target.closest('.kind'); if (k) setKind(k.dataset.k); };
+function setKind(k){
+  if (sel >= 0) { boxes[sel].kind = k; boxes[sel].suggested = false; setDirty(true); }
+  if (k !== 'ignore') kind = k;
+  renderPanel(); draw();
+}
+function renderPanel(){
+  const active = sel >= 0 ? boxes[sel].kind : kind;
+  document.querySelectorAll('.kind').forEach(e => e.classList.toggle('on', e.dataset.k === active));
+  const nP = boxes.filter(b=>b.kind!=='ignore').length, nS = boxes.filter(b=>b.suggested).length;
+  $('sel').textContent = `${nP} plates, ${boxes.length-nP} ignore` + (nS ? ` · ${nS} unreviewed suggestions` : '') + (sel>=0 ? ` · selected #${sel+1}` : '');
+}
+
+// ---------- frames ----------
+async function loadList(){
+  frames = await (await fetch('/api/frames')).json();
+  const done = frames.filter(f=>f.status==='done'), tr = done.filter(f=>f.split==='train');
+  $('progress').textContent = `train ${tr.length}/${frames.filter(f=>f.split==='train').length} · test ${done.length-tr.length}/${frames.filter(f=>f.split==='locked_test').length} · plates ${done.reduce((a,f)=>a+f.plates,0)} · CNG ${done.reduce((a,f)=>a+f.cng,0)}`;
+  $('frames').innerHTML = frames.map((f,i)=>`<div class="fr ${f.status} ${f.split==='locked_test'?'test':''} ${i===cur?'cur':''}" data-i="${i}" title="${f.split}${f.suggestions_ready?'':' · suggestions pending'}">${f.stem.slice(6)}s${f.suggestions_ready?'':'…'}</div>`).join('');
+}
+$('frames').onclick = e => { const f = e.target.closest('.fr'); if (f) go(+f.dataset.i); };
+async function go(i){
+  if (i < 0 || i >= frames.length) return;
+  if (dirty && !confirm('Unsaved changes on this frame. Discard them?')) return;
+  cur = i; const f = frames[i];
+  const d = await (await fetch('/api/frame/' + f.stem)).json();
+  vehicles = d.suggestions ? d.suggestions.vehicles : [];
+  if (d.labels) {
+    boxes = d.labels.plates.map(p=>({box:p.box.slice(), kind:p.vehicle, suggested:false, from_suggestion:p.from_suggestion}))
+      .concat(d.labels.ignore.map(p=>({box:p.box.slice(), kind:'ignore', suggested:false})));
+    $('notes').value = d.labels.notes || '';
+  } else {
+    boxes = (d.suggestions ? d.suggestions.plate_suggestions : []).map(p=>({box:p.box.slice(), kind:guessKind(p.box), suggested:true, from_suggestion:true, conf:p.confidence}));
+    $('notes').value = '';
+  }
+  $('warn').textContent = d.suggestions ? '' : 'Model suggestions not ready for this frame yet; you can label from scratch.';
+  $('fname').textContent = f.stem + '.jpg'; $('split').textContent = f.split === 'locked_test' ? 'LOCKED TEST (never used for training)' : 'train';
+  sel = -1; tabIdx = -1; setDirty(false);
+  img = new Image(); img.onload = () => { fit(); draw(); }; img.src = '/img/' + f.stem + '.jpg';
+  renderPanel(); loadList();
+}
+function guessKind(b){
+  const cx=(b[0]+b[2])/2, cy=(b[1]+b[3])/2;
+  const vs = vehicles.filter(v=>v.registration_expected && v.box[0]<=cx&&cx<=v.box[2]&&v.box[1]<=cy&&cy<=v.box[3])
+    .sort((a,c)=>(a.box[2]-a.box[0])*(a.box[3]-a.box[1])-(c.box[2]-c.box[0])*(c.box[3]-c.box[1]));
+  const c = vs.length ? vs[0].coco_class : 'car';
+  return c === 'motorcycle' ? 'motorcycle' : (c === 'bus' || c === 'truck') ? 'bus_truck' : 'car';
+}
+async function save(status='done'){
+  const f = frames[cur]; if (!f) return false;
+  const body = { status, notes: $('notes').value,
+    plates: boxes.filter(b=>b.kind!=='ignore').map(b=>({box:b.box, vehicle:b.kind, from_suggestion:!!b.from_suggestion})),
+    ignore: boxes.filter(b=>b.kind==='ignore').map(b=>({box:b.box})) };
+  const r = await fetch('/api/frame/' + f.stem, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)});
+  if (!r.ok) { toast('Save failed'); return false; }
+  boxes.forEach(b=>b.suggested=false); setDirty(false); renderPanel(); toast(status==='skipped' ? 'Skipped' : 'Saved'); await loadList(); draw(); return true;
+}
+$('save').onclick = () => save();
+$('savenext').onclick = async () => { if (await save()) go(cur+1); };
+$('skip').onclick = async () => { if (await save('skipped')) go(cur+1); };
+$('prev').onclick = () => go(cur-1);
+$('notes').oninput = () => setDirty(true);
+
+// ---------- view ----------
+function resize(){ const r = stage.getBoundingClientRect(), d = devicePixelRatio||1; cv.width=r.width*d; cv.height=r.height*d; ctx.setTransform(d,0,0,d,0,0); draw(); }
+function fit(){ if(!img || !img.naturalWidth) return; const r = stage.getBoundingClientRect(); if (!r.width || !r.height) return; scale = Math.min(r.width/img.width, r.height/img.height); ox=(r.width-img.width*scale)/2; oy=(r.height-img.height*scale)/2; }
+const toImg = (x,y) => [(x-ox)/scale, (y-oy)/scale];
+function draw(){
+  const r = stage.getBoundingClientRect(); ctx.clearRect(0,0,r.width,r.height);
+  if (!img || !img.complete || !img.naturalWidth) return;
+  if (!(scale > 0) || !isFinite(scale)) { fit(); if (!(scale > 0)) return; }
+  ctx.imageSmoothingEnabled = scale < 2;
+  ctx.drawImage(img, ox, oy, img.width*scale, img.height*scale);
+  if (showVeh) for (const v of vehicles) {
+    const [x1,y1,x2,y2] = v.box.map((c,i)=> i%2 ? c*scale+oy : c*scale+ox);
+    ctx.setLineDash([]); ctx.lineWidth = 1; ctx.strokeStyle = v.registration_expected ? '#ffffff40' : '#ff6bd580';
+    ctx.strokeRect(x1,y1,x2-x1,y2-y1);
+    if (!v.registration_expected && scale > .25) { ctx.fillStyle='#ff6bd5'; ctx.font='11px sans-serif'; ctx.fillText('rickshaw · no registration', x1+2, y1+12); }
+  }
+  boxes.forEach((b,i) => {
+    const [x1,y1,x2,y2] = [b.box[0]*scale+ox, b.box[1]*scale+oy, b.box[2]*scale+ox, b.box[3]*scale+oy];
+    ctx.lineWidth = i===sel ? 3 : 2; ctx.strokeStyle = COLOR[b.kind];
+    ctx.setLineDash(b.suggested ? [5,4] : b.kind==='ignore' ? [2,3] : []);
+    ctx.strokeRect(x1,y1,x2-x1,y2-y1); ctx.setLineDash([]);
+    if (i===sel) { ctx.fillStyle = COLOR[b.kind]; for (const [hx,hy] of [[x1,y1],[x2,y1],[x1,y2],[x2,y2]]) ctx.fillRect(hx-4,hy-4,8,8); }
+    if (scale > .3 || i===sel) { ctx.fillStyle = COLOR[b.kind]; ctx.font = '11px sans-serif'; ctx.fillText(`${i+1}${b.kind==='ignore'?' ign':''}`, x1, y1-3); }
+  });
+  if (drag && drag.type==='new') { const [a,b2,c,d] = drag.rect; ctx.strokeStyle='#fff'; ctx.setLineDash([3,3]); ctx.strokeRect(a*scale+ox,b2*scale+oy,(c-a)*scale,(d-b2)*scale); ctx.setLineDash([]); }
+}
+function hit(x,y){
+  if (sel>=0) { const b = boxes[sel].box; const cs=[[0,1],[2,1],[0,3],[2,3]];
+    for (const [cx,cy] of cs) if (Math.abs(b[cx]*scale+ox-x)<7 && Math.abs(b[cy]*scale+oy-y)<7) return {i:sel, handle:[cx,cy]}; }
+  const [ix,iy] = toImg(x,y);
+  const inside = boxes.map((b,i)=>[b,i]).filter(([b])=>b.box[0]<=ix&&ix<=b.box[2]&&b.box[1]<=iy&&iy<=b.box[3])
+    .sort((a,c)=>(a[0].box[2]-a[0].box[0])*(a[0].box[3]-a[0].box[1])-(c[0].box[2]-c[0].box[0])*(c[0].box[3]-c[0].box[1]));
+  return inside.length ? {i:inside[0][1]} : null;
+}
+cv.addEventListener('contextmenu', e=>e.preventDefault());
+cv.addEventListener('mousedown', e => {
+  const r = cv.getBoundingClientRect(), x = e.clientX-r.left, y = e.clientY-r.top;
+  if (e.button===2 || e.button===1 || space) { drag = {type:'pan', x, y, ox, oy}; return; }
+  const h = hit(x,y), [ix,iy] = toImg(x,y);
+  if (h && h.handle) { drag = {type:'resize', i:h.i, handle:h.handle}; return; }
+  if (h) { sel = h.i; drag = {type:'move', i:h.i, ix, iy, orig:boxes[h.i].box.slice()}; renderPanel(); draw(); return; }
+  sel = -1; drag = {type:'new', ix, iy, rect:[ix,iy,ix,iy]}; renderPanel(); draw();
+});
+window.addEventListener('mousemove', e => {
+  if (!drag) return; const r = cv.getBoundingClientRect(), x = e.clientX-r.left, y = e.clientY-r.top, [ix,iy] = toImg(x,y);
+  if (drag.type==='pan') { ox = drag.ox + x - drag.x; oy = drag.oy + y - drag.y; }
+  else if (drag.type==='new') drag.rect = [Math.min(drag.ix,ix), Math.min(drag.iy,iy), Math.max(drag.ix,ix), Math.max(drag.iy,iy)];
+  else if (drag.type==='move') { const dx=ix-drag.ix, dy=iy-drag.iy, o=drag.orig; boxes[drag.i].box=[o[0]+dx,o[1]+dy,o[2]+dx,o[3]+dy]; boxes[drag.i].suggested=false; setDirty(true); }
+  else if (drag.type==='resize') { const b = boxes[drag.i].box; b[drag.handle[0]] = ix; b[drag.handle[1]] = iy; boxes[drag.i].suggested=false; setDirty(true); }
+  draw();
+});
+window.addEventListener('mouseup', () => {
+  if (!drag) return;
+  if (drag.type==='new') { const [a,b,c,d] = drag.rect;
+    if (c-a >= 4 && d-b >= 4) { boxes.push({box:drag.rect.map(Math.round), kind, suggested:false, from_suggestion:false}); sel = boxes.length-1; setDirty(true); } }
+  if (drag.type==='resize' || drag.type==='move') { const b = boxes[drag.i].box; boxes[drag.i].box = [Math.min(b[0],b[2]),Math.min(b[1],b[3]),Math.max(b[0],b[2]),Math.max(b[1],b[3])].map(Math.round); }
+  drag = null; renderPanel(); draw();
+});
+cv.addEventListener('wheel', e => {
+  e.preventDefault(); const r = cv.getBoundingClientRect(), x = e.clientX-r.left, y = e.clientY-r.top;
+  const k = Math.exp(-e.deltaY * 0.0015), ns = Math.min(12, Math.max(0.05, scale*k));
+  ox = x - (x-ox)*ns/scale; oy = y - (y-oy)*ns/scale; scale = ns; draw();
+}, {passive:false});
+function focusBox(i){
+  const r = stage.getBoundingClientRect(), b = boxes[i].box; sel = i;
+  scale = Math.min(6, Math.max(2.5, scale)); ox = r.width/2 - (b[0]+b[2])/2*scale; oy = r.height/2 - (b[1]+b[3])/2*scale;
+  renderPanel(); draw();
+}
+window.addEventListener('keydown', e => {
+  if (e.target.tagName === 'TEXTAREA') return;
+  if (e.code === 'Space') { space = true; cv.style.cursor = 'grab'; e.preventDefault(); return; }
+  const k = e.key.toLowerCase();
+  if (k >= '1' && k <= '6') setKind(KINDS[+k-1][0]);
+  else if (k === 'i') setKind('ignore');
+  else if ((k === 'delete' || k === 'backspace') && sel >= 0) { boxes.splice(sel,1); sel=-1; setDirty(true); renderPanel(); draw(); e.preventDefault(); }
+  else if (k === 'tab' && boxes.length) { e.preventDefault(); tabIdx = ((sel>=0?sel:tabIdx) + (e.shiftKey?-1:1) + boxes.length) % boxes.length; focusBox(tabIdx); }
+  else if (k === 'enter') $('savenext').click();
+  else if (k === 's' && !e.metaKey && !e.ctrlKey) save();
+  else if (k === 'f') { fit(); draw(); }
+  else if (k === 'v') { showVeh = !showVeh; draw(); }
+  else if (k === 'escape') { sel=-1; renderPanel(); draw(); }
+  else if (k === 'arrowright' && e.altKey) go(cur+1);
+  else if (k === 'arrowleft' && e.altKey) go(cur-1);
+});
+window.addEventListener('keyup', e => { if (e.code === 'Space') { space = false; cv.style.cursor = 'crosshair'; } });
+window.addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+window.addEventListener('resize', () => { resize(); });
+new ResizeObserver(() => { const fresh = !(scale > 0); resize(); if (fresh) { fit(); draw(); } }).observe(stage);
+resize();
+loadList().then(() => { const i = frames.findIndex(f => f.status === 'todo'); go(i < 0 ? 0 : i); });
+setInterval(() => { if (!dirty) loadList(); }, 15000);
+</script>
+</body>
+</html>

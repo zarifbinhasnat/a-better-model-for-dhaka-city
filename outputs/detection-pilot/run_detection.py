@@ -82,10 +82,10 @@ def synced_time(device):
     return time.perf_counter()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--device',default='cpu');ap.add_argument('--limit',type=int,default=0);ap.add_argument('--annotations-only',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--device',default='cpu');ap.add_argument('--skip-seconds',type=int,default=900,help='per-file exclusion; 900 applies only to the 2025-12-31 source video (protest), not to other footage');ap.add_argument('--limit',type=int,default=0);ap.add_argument('--annotations-only',action='store_true');args=ap.parse_args()
     p=Pipeline(args.device)
     files=sorted((HERE/'frames').glob('*.jpg'))
-    files=[f for f in files if int(f.stem.split('_')[1])>=900]
+    files=[f for f in files if int(f.stem.split('_')[1])>=args.skip_seconds]
     if args.annotations_only:
         wanted={x['file'] for x in json.loads((HERE/'annotations.json').read_text())['frames']};files=[f for f in files if f.name in wanted]
     if args.limit:files=files[:args.limit]

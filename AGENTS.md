@@ -11,7 +11,9 @@ Read `progress.md` before starting work. It is the shared handoff record.
 - Only one contributor should edit the shared progress file at a time; keep updates short. If a collision occurs, merge both updates rather than discarding either.
 
 ## Current scientific constraints
-- Current task: number-plate detection only. Skip the first 900 seconds of the source video.
+- Current task: number-plate detection only.
+- Per-file exclusion, not a general rule: for the current source video `2025-12-31-111331_2025-12-31-131239_1000004$1$0$0.mp4` only, skip the first 900 seconds (a protest is recorded there). Other footage has no default skip; record any exclusion per file.
+- Rickshaws (COCO `bicycle` proposals) are kept and tracked as vehicles, labelled `rickshaw`, with no BRTA registration plate expected. Do not report a registration plate for a rickshaw; municipal rickshaw tags are not registration plates.
 - Report precision and recall, matching IoU and confidence threshold, evaluation region and sample size. Do not describe detection recall as OCR accuracy.
 - Existing annotations are provisional agent-drawn labels, not independently adjudicated human ground truth.
 - The six fresh timestamps use the same camera/session and may repeat vehicles. They are not an independent vehicle or camera holdout.

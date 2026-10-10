@@ -1,6 +1,6 @@
 """Run: python3 outputs/claude/plate_rules/test_bd_plate_rules.py"""
 import unittest
-from bd_plate_rules import allowed_letters, parse_plate, check_plate, constrain_letter
+from bd_plate_rules import allowed_letters, parse_plate, check_plate, constrain_letter, registration_expected, vehicle_record
 
 class PlateRules(unittest.TestCase):
     def test_parse_two_line_bangla(self):
@@ -45,6 +45,14 @@ class PlateRules(unittest.TestCase):
         # no allowed letter was read -> abstain, never output a made-up letter
         self.assertEqual(constrain_letter('sedan', {'ঘ': .95, 'গ': .02}), (None, 'abstain'))
         self.assertEqual(constrain_letter('cng', {'থ': .8, 'ঘ': .1}), ('থ', 'agrees'))
+
+    def test_rickshaw_tracked_without_registration(self):
+        r = vehicle_record('bicycle')
+        self.assertEqual((r['vehicle_type'], r['registration_expected'], r['registration']), ('rickshaw', False, None))
+        self.assertFalse(registration_expected('bicycle'))
+        self.assertFalse(registration_expected('rickshaw'))
+        self.assertTrue(registration_expected('motorcycle'))
+        self.assertTrue(vehicle_record('car')['registration_expected'])
 
 if __name__ == '__main__':
     unittest.main()

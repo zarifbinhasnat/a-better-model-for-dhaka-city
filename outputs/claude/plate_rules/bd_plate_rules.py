@@ -86,9 +86,20 @@ COCO_TO_TYPES = {
     'motorcycle': ['motorcycle'],
     'bus':        ['bus', 'microbus', 'leguna'],
     'truck':      ['truck', 'pickup', 'cng', 'special'],
-    'bicycle':    ['rickshaw', 'bicycle'],
+    'bicycle':    ['rickshaw'],   # in this footage COCO 'bicycle' is almost always a cycle-rickshaw
 }
 ANY_VEHICLE_LETTERS = {l for l, m in SERIES_LETTERS.items() if m['category'] == 'any'}
+
+def registration_expected(vehicle_type):
+    """False for rickshaws/bicycles (no BRTA plate; municipal tags are not registrations), True otherwise."""
+    return allowed_letters(vehicle_type) != set()
+
+def vehicle_record(coco_class):
+    """How a detected vehicle should be reported. Rickshaws are kept and tracked, but carry no registration."""
+    if coco_class == 'bicycle':
+        return dict(vehicle_type='rickshaw', registration_expected=False,
+                    registration=None, note='rickshaw: no BRTA registration plate')
+    return dict(vehicle_type=coco_class, registration_expected=True, registration=None)
 
 def allowed_letters(vehicle_type, include_any=True):
     """Letters a plate on this vehicle type may carry. Accepts our types or COCO class names.

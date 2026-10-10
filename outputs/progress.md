@@ -4,7 +4,7 @@ Last updated: 2026-10-10, Claude. Read this file before starting; update it befo
 
 ## Current scope
 
-Number-plate **detection only**, aiming toward >85% recall and eventually 95%, while measuring precision too. Exclude the first 15 minutes (900 seconds) of the footage. OCR, red-light/helmet violations, tracking and full training are outside the current pilot. The target is not yet validated as a production result.
+Number-plate **detection only**, aiming toward >85% recall and eventually 95%, while measuring precision too. For the current source video only (`2025-12-31-111331_2025-12-31-131239_1000004$1$0$0.mp4`), exclude its first 900 seconds (protest); this is a per-file exclusion, not a rule for other footage. Rickshaws are tracked as vehicles with no registration plate expected. OCR, red-light/helmet violations, tracking and full training are outside the current pilot. The target is not yet validated as a production result.
 
 Workspace: `/Volumes/Projects/A better model for Dhaka City`
 
@@ -15,7 +15,7 @@ This file is canonical at `outputs/progress.md`; root `progress.md` is a symlink
 | Contributor | Status | Task / owned paths | Next handoff |
 | --- | --- | --- | --- |
 | Codex | Architecture handoff complete; pilot evaluation pending | `outputs/ARCHITECTURE.md` and existing pilot; documentation updated | Coordinate next owner for six-frame labels, frozen-hybrid evaluation and report/demo |
-| Claude (Claude Code) | Vehicle-class audit + BD plate-letter rules done | `outputs/claude/`, `work/claude/` | Next: six-frame check labels (frozen protocol), then plate-detector training set |
+| Claude (Claude Code) | **Active:** plate-detector fine-tune data pipeline (labelling UI, export, Kaggle job) | `work/claude/labeling/`, `work/claude/kaggle/`, `outputs/claude/` | User labels frames in UI → `work/claude/kaggle/run_training.sh` |
 | Teammate / other agent | Available — write your name and task here | `collaboration/teammate/`, `work/teammate/`, `outputs/teammate/` | Record changes, evidence, blockers and files to integrate |
 
 Before taking over the pilot, change the ownership row and record your task. Do not run simultaneous writers on annotations, predictions, metrics or the shared progress file. The entire workspace now lives on the Projects volume. Relative paths are preserved; the old workspace location is a compatibility symlink so existing environment launchers and this task still resolve.
@@ -25,7 +25,7 @@ Before taking over the pilot, change the ownership row and record your task. Do 
 - Literature review: `outputs/plate-recovery-literature-review-2026-10-10.md`.
 - Source video: `/Users/md.zarifbinhasnat/Downloads/2025-12-31-111331_2025-12-31-131239_1000004$1$0$0.mp4`; 1,074,759,468 bytes, 4096×2824, approximately 33:23.55.
 - Downloaded and ran YOLO26s vehicle proposals, international YOLOv9 plate detector (ONNX), and Bangla YOLOv8 plate detector (PyTorch). CPU runs, four threads; backend differences preclude a pure architecture speed comparison.
-- Extracted 60 post-15-minute development/exploration frames plus six fresh-check frames; prediction records exist for all 66.
+- Extracted 60 development/exploration frames from after this video's 900-second exclusion plus six fresh-check frames; prediction records exist for all 66.
 - Compared each plate detector on full frames and original-resolution vehicle crops. Vehicles use 5% crop padding.
 - Visually annotated/reviewed 102 plate appearances in 12 development frames. These are agent-drawn provisional labels; stopped vehicles repeat.
 - Baseline results saved in `outputs/detection-pilot/metrics.csv` and `metrics.json`.
@@ -35,6 +35,8 @@ Before taking over the pilot, change the ownership row and record your task. Do 
 - Kaggle GPU command-line procedure (account, phone verification, CLI auth, private dataset upload, GPU kernel push/status/output): `outputs/claude/kaggle-gpu-cli-guide.md`. Not yet executed.
 - Vehicle-class audit (dev diagnostic): `outputs/claude/vehicle-class-audit-2026-10-10.md`. COCO vehicle proposals cover 96% of labelled plates; vehicle-stage changes recover ≤5 of 15 misses. Plate detector is the bottleneck (CNG 4/10, motorcycle 17/25 recall). Vehicle fine-tune deferred until OCR needs local classes. Suggested (unfrozen): motorcycle vehicle conf ≈0.10, drop `bicycle`.
 - Bangladesh plate class-letter rules (vehicle type → allowed letters, parser, validator, OCR constraint that abstains rather than invents): `outputs/claude/plate_rules/`; 9 unit tests pass. Table is from Wikipedia + Bangla explainers; no official BRTA table online — replace with gazette when found. Sedan ≠ ঘ (ঘ = jeep/SUV).
+- **User decisions 2026-10-10:** (a) the 900 s skip applies only to the current source video, not to other footage (AGENTS.md, ARCHITECTURE.md, `run_detection.py --skip-seconds` updated); (b) rickshaws stay detected/tracked, reported as `rickshaw` with no registration expected (`plate_rules.vehicle_record`); (c) **uploading footage-derived vehicle crops to a private Kaggle dataset is authorized**; (d) user will label training frames in a local UI.
+- Fine-tune data pipeline: 128 new frames from this video (`work/claude/labeling/extract_frames.py`, manifest): 119 train frames every 5 s in 905–1945 s avoiding ±10 s around the 18 dev/check timestamps, plus a locked test block of 9 frames ≥1950 s. Model suggestions (`prelabel.py`, unverified) → local labelling UI (`server.py`, `index.html`, guide `LABELING.md`; human labels in `labels/`). `export_dataset.py` makes vehicle-crop YOLO + COCO datasets (val = 1700–1800 s block; test = locked block). Kaggle job `work/claude/kaggle/train-yolo26s/` (YOLO26s, 640, no flips) launched via `run_training.sh`. Kaggle CLI 2.2.4 installed (pipx), auth OK as `zarifb`. Export dry-run verified on a temporary label (deleted). No training run yet; no human labels yet.
 - Workspace is a private Git repository on GitHub (see README). Model weights are committed (user-approved); footage, extracted frames, JPG views and the venv are git-ignored.
 
 ## Current results — development sample only
@@ -86,3 +88,5 @@ Add your session entry here (date, task, owned files, completed work, checks, ne
 - 2026-10-10 — Claude: web research on plate-detector choice and fine-tuning; wrote `outputs/claude/plate-detector-model-selection-2026-10-10.md`. User confirmed Kaggle GPU access (no local CUDA) and approved committing model weights. Initialized Git, rewrote `.gitignore` (weights in; footage-derived images, venv, tool installs out), pushed to a private GitHub repo. No inference, labels or metrics changed. Next: six-frame check labels → frozen-hybrid check score → disjoint time-block training set → YOLO26s vs RF-DETR fine-tune. Blocker: uploading footage-derived crops to Kaggle needs explicit user authorization.
 
 - 2026-10-10 — Claude: vehicle-class audit on 12 dev frames (coverage, per-type recall, FP causes, vehicle conf/class/CNG-oracle end-to-end variants; baseline reproduced 87/16/15). Wrote `outputs/claude/vehicle-class-audit-2026-10-10.md`, scripts and caches in `work/claude/vehicle-audit/` (contact-sheet JPGs local only). Added `outputs/claude/plate_rules/` (BD class letters) with tests. No shared annotations, predictions, metrics or frozen protocol changed. Next: six-frame check labels → frozen score → plate-detector training set (prioritise CNG, motorcycles, legunas, painted bumper numbers as negatives).
+
+- 2026-10-10 — Claude: scoped 900 s exclusion to this video; rickshaw = tracked, no registration; built frame extraction, model-suggestion pre-labelling, local labelling UI (verified in browser: render, Tab-zoom, type change, draw, save JSON in original pixels), dataset export (dry-run verified), Kaggle training job and launcher. Next: user labels frames → run `work/claude/kaggle/run_training.sh` → evaluate fine-tuned cascade on dev frames + locked test vs frozen hybrid. Six-frame check labels still pending.
