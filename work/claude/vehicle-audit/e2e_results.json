@@ -1,0 +1,134 @@
+[
+ {
+  "vehicle_conf": 0.2,
+  "drop_bicycle": false,
+  "cng_oracle": false,
+  "tp": 87,
+  "fp": 16,
+  "fn": 15,
+  "P": 0.845,
+  "R": 0.853,
+  "proposals": 414
+ },
+ {
+  "vehicle_conf": 0.2,
+  "drop_bicycle": false,
+  "cng_oracle": true,
+  "tp": 89,
+  "fp": 14,
+  "fn": 13,
+  "P": 0.864,
+  "R": 0.873,
+  "proposals": 414
+ },
+ {
+  "vehicle_conf": 0.2,
+  "drop_bicycle": true,
+  "cng_oracle": false,
+  "tp": 87,
+  "fp": 16,
+  "fn": 15,
+  "P": 0.845,
+  "R": 0.853,
+  "proposals": 395
+ },
+ {
+  "vehicle_conf": 0.2,
+  "drop_bicycle": true,
+  "cng_oracle": true,
+  "tp": 89,
+  "fp": 14,
+  "fn": 13,
+  "P": 0.864,
+  "R": 0.873,
+  "proposals": 395
+ },
+ {
+  "vehicle_conf": 0.1,
+  "drop_bicycle": false,
+  "cng_oracle": false,
+  "tp": 90,
+  "fp": 19,
+  "fn": 12,
+  "P": 0.826,
+  "R": 0.882,
+  "proposals": 603
+ },
+ {
+  "vehicle_conf": 0.1,
+  "drop_bicycle": false,
+  "cng_oracle": true,
+  "tp": 92,
+  "fp": 20,
+  "fn": 10,
+  "P": 0.821,
+  "R": 0.902,
+  "proposals": 603
+ },
+ {
+  "vehicle_conf": 0.1,
+  "drop_bicycle": true,
+  "cng_oracle": false,
+  "tp": 90,
+  "fp": 19,
+  "fn": 12,
+  "P": 0.826,
+  "R": 0.882,
+  "proposals": 571
+ },
+ {
+  "vehicle_conf": 0.1,
+  "drop_bicycle": true,
+  "cng_oracle": true,
+  "tp": 92,
+  "fp": 20,
+  "fn": 10,
+  "P": 0.821,
+  "R": 0.902,
+  "proposals": 571
+ },
+ {
+  "vehicle_conf": 0.05,
+  "drop_bicycle": false,
+  "cng_oracle": false,
+  "tp": 90,
+  "fp": 20,
+  "fn": 12,
+  "P": 0.818,
+  "R": 0.882,
+  "proposals": 849
+ },
+ {
+  "vehicle_conf": 0.05,
+  "drop_bicycle": false,
+  "cng_oracle": true,
+  "tp": 91,
+  "fp": 22,
+  "fn": 11,
+  "P": 0.805,
+  "R": 0.892,
+  "proposals": 849
+ },
+ {
+  "vehicle_conf": 0.05,
+  "drop_bicycle": true,
+  "cng_oracle": false,
+  "tp": 90,
+  "fp": 19,
+  "fn": 12,
+  "P": 0.826,
+  "R": 0.882,
+  "proposals": 798
+ },
+ {
+  "vehicle_conf": 0.05,
+  "drop_bicycle": true,
+  "cng_oracle": true,
+  "tp": 91,
+  "fp": 21,
+  "fn": 11,
+  "P": 0.812,
+  "R": 0.892,
+  "proposals": 798
+ }
+]
