@@ -1,0 +1,76 @@
+{
+ "vehicles": [
+  {
+   "index": 0,
+   "box": [
+    198.2,
+    81.1,
+    466.4,
+    277.3
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.611,
+   "vehicle_type": "cng",
+   "type_conf": 0.997,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null,
+   "lower_half_occluded": false,
+   "cng_colour": "silver",
+   "registration_class": "private"
+  },
+  {
+   "index": 1,
+   "box": [
+    1.8,
+    80.1,
+    262.7,
+    272.6
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.514,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null,
+   "lower_half_occluded": false,
+   "cng_colour": "silver",
+   "registration_class": "private"
+  },
+  {
+   "index": 2,
+   "box": [
+    197.8,
+    1.8,
+    462.7,
+    218.0
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.338,
+   "vehicle_type": "cng",
+   "type_conf": 0.509,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null,
+   "lower_half_occluded": true,
+   "cng_colour": "unknown",
+   "registration_class": "unknown"
+  }
+ ],
+ "plates": [],
+ "file": "images-8.jpeg"
+}

@@ -1,0 +1,400 @@
+{
+ "depositphotos_894238822.jpg": [
+  {
+   "box": [
+    0,
+    218,
+    58,
+    335
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    82,
+    203,
+    232,
+    328
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    228,
+    198,
+    338,
+    300
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    335,
+    192,
+    428,
+    280
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    425,
+    188,
+    500,
+    272
+   ],
+   "label": "cng",
+   "colour": "unknown"
+  },
+  {
+   "box": [
+    490,
+    182,
+    555,
+    262
+   ],
+   "label": "cng",
+   "colour": "unknown"
+  },
+  {
+   "box": [
+    540,
+    175,
+    590,
+    243
+   ],
+   "label": "cng",
+   "colour": "unknown"
+  },
+  {
+   "box": [
+    0,
+    192,
+    115,
+    300
+   ],
+   "label": "car"
+  }
+ ],
+ "images-10.jpeg": [
+  {
+   "box": [
+    58,
+    10,
+    555,
+    340
+   ],
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "images-11.jpeg": [
+  {
+   "box": [
+    14,
+    78,
+    58,
+    136
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    100,
+    88,
+    158,
+    152
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    153,
+    96,
+    232,
+    155
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    243,
+    96,
+    299,
+    148
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    50,
+    75,
+    100,
+    125
+   ],
+   "label": "car"
+  }
+ ],
+ "images-4.jpeg": [
+  {
+   "box": [
+    25,
+    5,
+    140,
+    128
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    139,
+    12,
+    168,
+    77
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    165,
+    18,
+    190,
+    57
+   ],
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "images-5.jpeg": [
+  {
+   "box": [
+    120,
+    0,
+    270,
+    182
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    243,
+    35,
+    480,
+    222
+   ],
+   "label": "cng",
+   "colour": "silver"
+  }
+ ],
+ "images-6.jpeg": [
+  {
+   "box": [
+    107,
+    0,
+    405,
+    388
+   ],
+   "label": "cng",
+   "colour": "silver"
+  }
+ ],
+ "images-7.jpeg": [
+  {
+   "box": [
+    0,
+    45,
+    505,
+    387
+   ],
+   "label": "cng",
+   "colour": "silver"
+  }
+ ],
+ "images-8.jpeg": [
+  {
+   "box": [
+    0,
+    82,
+    272,
+    305
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    262,
+    85,
+    468,
+    275
+   ],
+   "label": "cng",
+   "colour": "silver"
+  }
+ ],
+ "images-9.jpeg": [
+  {
+   "box": [
+    560.0,
+    39.4,
+    669.6,
+    173.8
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    497.4,
+    209.7,
+    653.3,
+    398.3
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    91.3,
+    189.0,
+    235.0,
+    372.5
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    302.0,
+    0.0,
+    389.5,
+    100.0
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    179.2,
+    2.6,
+    274.9,
+    69.1
+   ],
+   "label": "cng",
+   "colour": "unknown",
+   "note": "green CNG roof visible; lower body occluded by a white car"
+  },
+  {
+   "box": [
+    502.8,
+    11.7,
+    608.3,
+    144.5
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    18.0,
+    45.3,
+    127.6,
+    133.1
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    415.3,
+    71.9,
+    538.5,
+    275.1
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    164.2,
+    67.2,
+    277.9,
+    194.0
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    235.4,
+    140.2,
+    364.0,
+    269.7
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    317.9,
+    192.2,
+    458.6,
+    384.2
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    273.7,
+    86.1,
+    379.6,
+    192.2
+   ],
+   "label": "cng",
+   "colour": "unknown",
+   "note": "green CNG roof visible; lower body occluded by a white car"
+  },
+  {
+   "box": [
+    224.1,
+    255.9,
+    385.0,
+    400.0
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    20.7,
+    149.7,
+    145.3,
+    311.4
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    202.1,
+    37.1,
+    332.2,
+    136.8
+   ],
+   "label": "cng",
+   "colour": "green"
+  }
+ ]
+}

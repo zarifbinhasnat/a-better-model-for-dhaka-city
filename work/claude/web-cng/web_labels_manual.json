@@ -1,0 +1,30 @@
+{"_note": "Claude's marking of the user's downloaded CNG photos (2026-10-10). Boxes in original pixels [x1,y1,x2,y2]. colour: green (commercial) / silver (private; 'PRIVATE'/'প্রাইভেট' text where visible) / unknown. images-9 CNGs are taken from detector proposals classified CNG (all visibly green).",
+ "depositphotos_894238822.jpg": [
+  {"box":[0,218,58,335],"label":"cng","colour":"silver"},
+  {"box":[82,203,232,328],"label":"cng","colour":"green"},
+  {"box":[228,198,338,300],"label":"cng","colour":"green"},
+  {"box":[335,192,428,280],"label":"cng","colour":"silver"},
+  {"box":[425,188,500,272],"label":"cng","colour":"unknown"},
+  {"box":[490,182,555,262],"label":"cng","colour":"unknown"},
+  {"box":[540,175,590,243],"label":"cng","colour":"unknown"},
+  {"box":[0,192,115,300],"label":"car"}],
+ "images-10.jpeg": [{"box":[58,10,555,340],"label":"cng","colour":"green"}],
+ "images-11.jpeg": [
+  {"box":[14,78,58,136],"label":"cng","colour":"green"},
+  {"box":[100,88,158,152],"label":"cng","colour":"green"},
+  {"box":[153,96,232,155],"label":"cng","colour":"green"},
+  {"box":[243,96,299,148],"label":"cng","colour":"silver"},
+  {"box":[50,75,100,125],"label":"car"}],
+ "images-4.jpeg": [
+  {"box":[25,5,140,128],"label":"cng","colour":"silver"},
+  {"box":[139,12,168,77],"label":"cng","colour":"silver"},
+  {"box":[165,18,190,57],"label":"cng","colour":"green"}],
+ "images-5.jpeg": [
+  {"box":[120,0,270,182],"label":"cng","colour":"green"},
+  {"box":[243,35,480,222],"label":"cng","colour":"silver"}],
+ "images-6.jpeg": [{"box":[107,0,405,388],"label":"cng","colour":"silver"}],
+ "images-7.jpeg": [{"box":[0,45,505,387],"label":"cng","colour":"silver"}],
+ "images-8.jpeg": [
+  {"box":[0,82,272,305],"label":"cng","colour":"silver"},
+  {"box":[262,85,468,275],"label":"cng","colour":"silver"}]
+}

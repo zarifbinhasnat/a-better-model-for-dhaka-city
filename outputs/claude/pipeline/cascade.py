@@ -11,31 +11,46 @@ import cv2, numpy as np
 ROOT=Path(__file__).resolve().parents[3];sys.path.insert(0,str(ROOT/'outputs/claude/plate_rules'))
 from bd_plate_rules import allowed_letters
 from ultralytics import YOLO
-VEH=ROOT/'work/detection-pilot/yolo26s.pt';CLS=ROOT/'work/claude/models/vehicle_cls_run2.pt';PLATE=ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'
-def cng_colour(crop,plate_box=None):
-    """green (commercial, থ) / silver (private, দ) / unknown, from body and plate colour.
-    green : lower body >= 3% green pixels, or a saturated (green) plate
-    silver: pale plate (median HSV saturation < 30) AND bright, green-free lower body (median V >= 90)
-    unknown otherwise (keeps both letters). Tuned on this video: 291 green / 37 silver crops (silver =
-    1-2 physical vehicles) -> 263 green, 34 silver correct, 0 cross errors, 31 unknown."""
+VEH=ROOT/'work/detection-pilot/yolo26s.pt';CLS=ROOT/'work/claude/models/vehicle_cls_run3.pt';PLATE=ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'
+def cng_colour(crop,plate_box=None,occluded=False):
+    """green (commercial, থ) / silver (private, দ) / unknown, from the colour of the lower half of the CNG.
+    green : lower body >= 6% green pixels (or a saturated plate with >= 3% green)
+    silver: lower body < 3% green AND either a pale plate (median saturation < 30, body V >= 80)
+            or, with no plate, a bright low-saturation body (median V >= 80, S <= 40)
+    unknown otherwise, and always when another vehicle covers the lower half (occluded).
+    Tuned on this video (291 green / 37 silver crops) + 9 downloaded photos (23 green / 10 silver):
+    0 green<->silver confusions on that data; no untouched test set. Silver is rare: unknown keeps both letters."""
+    if occluded:return 'unknown'
     hsv=cv2.cvtColor(crop,cv2.COLOR_BGR2HSV);body=hsv[hsv.shape[0]//2:]
-    if ((body[...,0]>=40)&(body[...,0]<=90)&(body[...,1]>=70)).mean()>=.03:return 'green'
-    if plate_box is None:return 'unknown'
-    x1,y1,x2,y2=[int(v) for v in plate_box];pl=hsv[max(0,y1):y2,max(0,x1):x2]
-    if not pl.size:return 'unknown'
-    if np.median(pl[...,1])>=30:return 'green'
-    return 'silver' if np.median(body[...,2])>=90 else 'unknown'
+    g=((body[...,0]>=40)&(body[...,0]<=90)&(body[...,1]>=70)).mean();V=np.median(body[...,2]);S=np.median(body[...,1])
+    if g>=.06:return 'green'
+    ps=None
+    if plate_box is not None:
+        x1,y1,x2,y2=[int(v) for v in plate_box];pl=hsv[max(0,y1):y2,max(0,x1):x2]
+        if pl.size:ps=np.median(pl[...,1])
+    if ps is not None:
+        if ps>=30:return 'green' if g>=.03 else 'unknown'
+        return 'silver' if (g<.03 and V>=80) else 'unknown'
+    return 'silver' if (g<.03 and V>=80 and S<=40) else 'unknown'
+def lower_half_occluded(box,others,thr=.3):
+    """True if a vehicle in front (larger bottom y) covers >= thr of this box's lower half."""
+    x1,y1,x2,y2=box;ly=(y1+y2)/2;A=max(1e-9,(x2-x1)*(y2-ly))
+    for o in others:
+        if o is box or o[3]<=y2:continue
+        iw=max(0,min(x2,o[2])-max(x1,o[0]));ih=max(0,min(y2,o[3])-max(ly,o[1]))
+        if iw*ih/A>=thr:return True
+    return False
 COLORS={'car':(80,200,80),'cng':(0,160,255),'motorcycle':(255,150,60),'rickshaw':(200,100,255),'bus_truck':(220,210,0)}
 def iou(a,b):
     iw=max(0,min(a[2],b[2])-max(a[0],b[0]));ih=max(0,min(a[3],b[3])-max(a[1],b[1]));i=iw*ih
     return i/max(1e-9,(a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-i)
 class Cascade:
-    def __init__(self,device='mps',moto_conf=.2,vehicle_conf=.2,plate_conf=.35):
+    def __init__(self,device='mps',moto_conf=.2,vehicle_conf=.2,plate_conf=.35,agnostic=True):
         self.v,self.c,self.p=YOLO(str(VEH)),YOLO(str(CLS)),YOLO(str(PLATE))
-        self.dev,self.moto_conf,self.vconf,self.pconf=device,moto_conf,vehicle_conf,plate_conf
+        self.dev,self.moto_conf,self.vconf,self.pconf,self.agnostic=device,moto_conf,vehicle_conf,plate_conf,agnostic
     def __call__(self,im):
         H,W=im.shape[:2]
-        r=self.v.predict(im,imgsz=1280,rect=False,conf=min(self.vconf,self.moto_conf),iou=.5,classes=[1,2,3,5,7],device=self.dev,verbose=False)[0]
+        r=self.v.predict(im,imgsz=1280,rect=False,conf=min(self.vconf,self.moto_conf),iou=.5,classes=[1,2,3,5,7],agnostic_nms=self.agnostic,device=self.dev,verbose=False)[0]   # agnostic: one box per vehicle even if COCO wavers truck/bus/car
         vehicles=[];plates=[]
         for b,s,k in zip(r.boxes.xyxy.cpu().numpy(),r.boxes.conf.cpu().numpy(),r.boxes.cls.cpu().numpy()):
             coco=self.v.names[int(k)]
@@ -57,7 +72,8 @@ class Cascade:
             for d in ds:
                 plates.append(dict(box=[round(float(v+o),1) for v,o in zip(d[:4],cb[:2]*2)],confidence=round(float(d[4]),3),vehicle_index=vehicles[-1]['index']))
             if vt=='cng':
-                col=cng_colour(crop,ds[ds[:,4].argmax(),:4] if len(ds) else None);v=vehicles[-1]
+                occ=lower_half_occluded(list(b),[list(x) for x in r.boxes.xyxy.cpu().numpy()])
+                col=cng_colour(crop,ds[ds[:,4].argmax(),:4] if len(ds) else None,occ);v=vehicles[-1];v['lower_half_occluded']=occ
                 v['cng_colour']=col;v['registration_class']={'green':'commercial (hire)','silver':'private'}.get(col,'unknown')
                 v['allowed_plate_letters']=sorted(allowed_letters({'green':'cng_green','silver':'cng_silver'}.get(col,'cng')) or [])
         kept=[]

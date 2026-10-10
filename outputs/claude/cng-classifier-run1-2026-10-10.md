@@ -1,4 +1,4 @@
-# Vehicle-type crop classifier (CNG), runs 1–2, and CNG colour
+# Vehicle-type crop classifier (CNG), runs 1–3, and CNG colour
 
 Prepared 10 October 2026 (Claude). This replaces the failed full-frame local-class detector. The COCO detector already boxes CNGs and rickshaws but names them `car` / `bicycle`. A small classifier on each box assigns the local type. Legunas are omitted: they don't run on this route (user, 2026-10-10).
 
@@ -68,3 +68,27 @@ The rule is deliberately conservative because silver is rare and a wrong single 
 Rule result: 263 green and 34 silver correct, **0 green↔silver confusions**, 31 unknown (no plate found and no visible green, or a pale plate on a dark body). In the demo, the silver CNG in frame 1185 is called silver, and a dark-canopy green CNG in frame 1970 whose painted "P.C.R…" text was picked up as a plate is **unknown**, not silver.
 
 **Caveat:** silver = 1–2 physical vehicles. The thresholds are not validated on other silver CNGs, other cameras or other lighting. The letter mapping থ = hire CNG, দ = private CNG comes from the blog source plus the user's colour rule, not from a BRTA gazette.
+
+## Run 3 (current) and the user's downloaded CNG photos
+
+The user downloaded 9 CNG photos: stock and news images, several showing private silver CNGs marked "PRIVATE" / "প্রাইভেট". Claude marked them (`work/claude/web-cng/web_labels.json`): 36 CNG boxes (23 green, 10 silver, 3 colour unknown, 2 more set to unknown because a white car occludes the lower body) and 2 cars. The images stay local (git-ignored): they are third-party stock and news photos, used only for local training and evaluation.
+
+**Before training on them** (an out-of-domain test of classifier v2): CNG recall 31/36. The misses were silver CNGs called `car` (3) and `rickshaw` (2); a close-up side view was not detected at all. Colour rule v1: 22/23 green right, but 2 silver called green and 8 silver unknown.
+
+**Pipeline fixes from this check**
+- **Duplicate vehicle boxes** (user spotted 3 boxes on one CNG): COCO wavered between truck, bus and car, and class-aware NMS kept one box per class. The cascade now uses class-agnostic NMS. On dev12 that is 414 → 389 vehicle boxes, with plate results unchanged (95/15/7; locked test 16/2/3). Partial boxes with IoU just under 0.5 can still survive (one case in images-8).
+- **Colour rule v2** (`cng_colour` in `cascade.py`), using the lower half of the CNG box:
+  - green if ≥6% green pixels;
+  - silver if <3% green and a pale plate, or, with no plate, a bright (V ≥80), low-saturation (S ≤40) body;
+  - otherwise unknown.
+  - **Occlusion guard:** if another vehicle in front covers ≥30% of the lower half, the result is unknown.
+  - On all available data, with no untouched set: video 261/291 green and 36/37 silver right; photos 21/21 green and 8/10 silver right; **0 green↔silver confusions**. The silver CNG in video frame 1185 now reads unknown, correctly, because a car covers its lower body.
+  - Private-CNG plates in the photos look **dark with light text**, not white. Both are low-saturation, which is what the rule uses.
+- **Classifier v3** (`work/claude/models/vehicle_cls_run3.pt`): v2 data plus 34 crops from the photos, with images-5 and images-8 held out.
+
+| | Validation (49) | Locked test (69) | Pilot hard cases (37) | Held-out photos (4 CNGs: 3 silver, 1 green) |
+| --- | --- | --- | --- | --- |
+| v2 | 91.8%, CNG 100/100 | 92.8%, CNG 100/100 | 100% | **2/4** (2 silver → car) |
+| **v3** | 91.8%, CNG 100/100 | **97.1%**, CNG 100/100 | 100% | **4/4** |
+
+The held-out photo test is only 4 vehicles: a sanity check, not a measurement. Remaining limits: tiny web thumbnails such as images-4 get no vehicle box at all, and the detector can box only part of a close-up side view (images-7), which leaves the colour unknown.

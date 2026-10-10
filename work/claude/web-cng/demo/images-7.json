@@ -1,0 +1,30 @@
+{
+ "vehicles": [
+  {
+   "index": 0,
+   "box": [
+    17.0,
+    43.9,
+    318.8,
+    273.8
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.385,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null,
+   "lower_half_occluded": false,
+   "cng_colour": "unknown",
+   "registration_class": "unknown"
+  }
+ ],
+ "plates": [],
+ "file": "images-7.jpeg"
+}
