@@ -7,7 +7,7 @@ HERE=Path(__file__).resolve().parents[1];ROOT=HERE.parents[2]
 sys.path.insert(0,str(ROOT/'outputs/claude/pipeline'))
 from cascade import cng_colour
 from ultralytics import YOLO
-V=YOLO(str(ROOT/'work/detection-pilot/yolo26s.pt'));C=YOLO(str(ROOT/'work/claude/models'/(sys.argv[3] if len(sys.argv)>3 else 'vehicle_cls_run2.pt')));P=YOLO(str(ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'))
+V=YOLO(str(ROOT/'work/detection-pilot/yolo26s.pt'));C=YOLO(str(ROOT/'work/claude/models'/(sys.argv[3] if len(sys.argv)>3 else 'vehicle_cls_run4b.pt')));P=YOLO(str(ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'))
 out=[];tiles=[]
 PAT=sys.argv[1] if len(sys.argv)>1 else '*.j*';OUTN=sys.argv[2] if len(sys.argv)>2 else 'proposals'
 for f in sorted((HERE/'raw').glob(PAT)):

@@ -5,7 +5,7 @@ from pathlib import Path
 from ultralytics import YOLO
 from green import green_frac
 ROOT=Path(__file__).resolve().parents[3];LAB=ROOT/'work/claude/labeling'
-m=YOLO(str(ROOT/'work/claude/models/vehicle_cls_run1.pt'));ci=[k for k,v in m.names.items() if v=='cng'][0]
+m=YOLO(str(ROOT/'work/claude/models/vehicle_cls_run4b.pt'));ci=[k for k,v in m.names.items() if v=='cng'][0]
 veh=YOLO(str(ROOT/'work/detection-pilot/yolo26s.pt'))
 pilot=json.loads(open(ROOT/'outputs/detection-pilot/predictions.jsonl').readline()) and [json.loads(l) for l in open(ROOT/'outputs/detection-pilot/predictions.jsonl')]
 jobs=[(LAB/'frames'/f'{p.stem}.jpg',[(v['box'],v['coco_class'],v['confidence']) for v in json.load(open(p))['vehicles']],'labelling') for p in sorted((LAB/'suggestions').glob('*.json'))]
