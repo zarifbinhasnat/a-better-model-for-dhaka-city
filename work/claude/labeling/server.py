@@ -68,8 +68,8 @@ class H(BaseHTTPRequestHandler):
         def box(b):
             x1, y1, x2, y2 = (int(round(float(v))) for v in b)
             return [min(x1, x2), min(y1, y2), max(x1, x2), max(y1, y2)]
-        kinds = {'car', 'motorcycle', 'cng', 'leguna', 'bus_truck', 'other'}
-        vkinds = {'car', 'motorcycle', 'cng', 'leguna', 'bus_truck', 'rickshaw'}
+        kinds = {'car', 'motorcycle', 'cng', 'bus_truck', 'other'}   # no legunas on this route
+        vkinds = {'car', 'motorcycle', 'cng', 'bus_truck', 'rickshaw'}
         rec = dict(file=f'{m[1]}.jpg', split=SPLIT[m[1]],
                    status=d.get('status', 'done') if d.get('status') in ('done', 'skipped') else 'done',
                    labeler='human (labelling UI)', saved_at=time.strftime('%Y-%m-%dT%H:%M:%S'),

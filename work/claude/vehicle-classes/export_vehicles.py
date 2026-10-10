@@ -9,10 +9,10 @@ from pathlib import Path
 import cv2
 HERE=Path(__file__).resolve().parent;LAB=HERE.parent/'labeling'
 OUT=Path(sys.argv[1]) if len(sys.argv)>1 else HERE.parent/'kaggle/dhaka-vehicles-v1'
-CLASSES=['car','motorcycle','bus','truck','cng','rickshaw','leguna']
+CLASSES=['car','motorcycle','bus','truck','cng','rickshaw']   # leguna omitted: not on this route
 COCO_MAP={'car':'car','motorcycle':'motorcycle','bus':'bus','truck':'truck','bicycle':'rickshaw'}
 USER_MAP={'car':'car','motorcycle':'motorcycle','bus_truck':'truck','cng':'cng','rickshaw':'rickshaw',
-          'rickshaw_or_nonmotorised':'rickshaw','leguna':'leguna'}
+          'rickshaw_or_nonmotorised':'rickshaw'}
 PSEUDO_CONF,REPLACE_IOU=.4,.3
 def iou(a,b):
     iw=max(0,min(a[2],b[2])-max(a[0],b[0]));ih=max(0,min(a[3],b[3])-max(a[1],b[1]));i=iw*ih

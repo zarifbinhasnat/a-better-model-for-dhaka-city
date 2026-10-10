@@ -10,7 +10,7 @@ Then open http://localhost:8765 in a browser. Frames stay on this machine.
 
 ## What to label
 - **Every physical registration plate you can identify**, including blurry or unreadable ones, on any motor vehicle. Draw a tight box around the plate only, not the bumper.
-- Set the vehicle type with keys `1`–`6`: car/SUV/microbus, motorcycle, **CNG**, **leguna**, bus/truck/pickup, other. These tags let us measure recall per vehicle type; the detector itself learns a single `plate` class.
+- Set the vehicle type with keys `1`–`5`: car/SUV/microbus, motorcycle, **CNG**, bus/truck/pickup, other (plate mode) or rickshaw (vehicle mode). Legunas don't run on this route, so there is no leguna class. These tags let us measure recall per vehicle type; the detector itself learns a single `plate` class.
 - **Ignore (`I`)** anything you are unsure about: a plate too far or small to tell, heavily occluded or cut off by the frame edge, dealer placeholders, painted duplicate numbers, and **rickshaw municipal tags**. Ignored regions count as neither right nor wrong.
 - **Not plates** (delete the suggestion): signs, shop boards, bus route text, the painted numbers on CNG bumpers, stickers.
 - Rickshaws are vehicles with **no registration plate**. They appear with a pink box marked "rickshaw · no registration".

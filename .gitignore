@@ -23,3 +23,6 @@ work/video-tools/
 work/claude/kaggle/dhaka-*/
 # Downloaded Kaggle run outputs (weights are kept separately under work/claude/models/)
 work/claude/kaggle/results/
+# classifier training artefacts (dataset crops are footage-derived; runs are regenerable)
+work/claude/cng-classifier/dataset/
+work/claude/cng-classifier/runs/

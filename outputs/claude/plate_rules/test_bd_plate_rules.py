@@ -54,5 +54,12 @@ class PlateRules(unittest.TestCase):
         self.assertTrue(registration_expected('motorcycle'))
         self.assertTrue(vehicle_record('car')['registration_expected'])
 
+    def test_classifier_narrows_letters(self):
+        self.assertEqual(allowed_letters('cng', include_any=False, source='classifier'), {'থ', 'দ'})
+        car = allowed_letters('car', include_any=False, source='classifier')
+        self.assertFalse({'থ', 'দ'} & car)            # classifier 'car' excludes CNG letters
+        self.assertTrue({'ক', 'গ', 'ঘ', 'চ'} <= car)
+        self.assertTrue({'থ', 'দ'} <= allowed_letters('car'))   # COCO 'car' cannot rule CNG out
+
 if __name__ == '__main__':
     unittest.main()

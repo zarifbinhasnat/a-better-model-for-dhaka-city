@@ -64,12 +64,12 @@
       <div id="sel" class="stat" style="margin-top:6px"></div>
     </section>
     <section class="help">
-      <div><b>Plate mode (P):</b> tight box around the number plate only. <b>Vehicle mode (V):</b> box around the whole vehicle (CNG, leguna, rickshaw…).</div>
+      <div><b>Plate mode (P):</b> tight box around the number plate only. <b>Vehicle mode (V):</b> box around the whole vehicle (CNG, rickshaw…). No legunas on this route.</div>
       <div>Dashed <b>?</b> boxes are unreviewed model suggestions. Delete wrong ones, fix the rest, then <kbd>A</kbd> accept all remaining. Unreviewed suggestions are saved as <i>ignore</i>, never as plates.</div>
       <div>Draw: drag on empty space · Move/resize: drag box / corner</div>
       <div>Zoom: scroll · Pan: <kbd>Space</kbd>+drag or right-drag · <kbd>F</kbd> fit</div>
       <div><kbd>Tab</kbd>/<kbd>Shift+Tab</kbd> next/prev box (zooms in) · <kbd>Del</kbd> delete · <kbd>Enter</kbd> accept selected</div>
-      <div><kbd>1</kbd>–<kbd>6</kbd> type · <kbd>I</kbd> ignore (unsure, far, rickshaw tag) · <kbd>O</kbd> model vehicle overlay</div>
+      <div><kbd>1</kbd>–<kbd>5</kbd> type · <kbd>I</kbd> ignore (unsure, far, rickshaw tag) · <kbd>O</kbd> model vehicle overlay</div>
       <div><kbd>Ctrl/⌘+Enter</kbd> save &amp; next · <kbd>S</kbd> save · <kbd>Esc</kbd> deselect</div>
       <div>Rickshaws have no registration plate: box the rickshaw in vehicle mode; its tag is <kbd>I</kbd> ignore.</div>
       <div id="warn"></div>
@@ -80,8 +80,8 @@
 </main>
 <script>
 const KINDS = {
-  plate:   [['car','Car / SUV / microbus'],['motorcycle','Motorcycle'],['cng','CNG'],['leguna','Leguna / human hauler'],['bus_truck','Bus / truck / pickup'],['other','Other / unsure type']],
-  vehicle: [['car','Car / SUV / microbus'],['motorcycle','Motorcycle'],['cng','CNG'],['leguna','Leguna / human hauler'],['bus_truck','Bus / truck / pickup'],['rickshaw','Rickshaw (no registration)']],
+  plate:   [['car','Car / SUV / microbus'],['motorcycle','Motorcycle'],['cng','CNG'],['bus_truck','Bus / truck / pickup'],['other','Other / unsure type']],
+  vehicle: [['car','Car / SUV / microbus'],['motorcycle','Motorcycle'],['cng','CNG'],['bus_truck','Bus / truck / pickup'],['rickshaw','Rickshaw (no registration)']],
 };
 const COLOR = {car:'#2ecc71', motorcycle:'#4c9ffe', cng:'#ff9f1a', leguna:'#e056fd', bus_truck:'#00d2d3', other:'#ffffff', rickshaw:'#ff6bd5', ignore:'#ff4757'};
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d'), stage = document.getElementById('stage');
@@ -262,7 +262,7 @@ window.addEventListener('keydown', e => {
   if (e.target.tagName === 'TEXTAREA') return;
   if (e.code === 'Space') { space = true; cv.style.cursor = 'grab'; e.preventDefault(); return; }
   const k = e.key.toLowerCase();
-  if (k >= '1' && k <= '6') { const ks = KINDS[sel>=0 && boxes[sel].layer!=='ignore' ? boxes[sel].layer : mode]; setKind(ks[+k-1][0]); }
+  if (k >= '1' && k <= '5') { const ks = KINDS[sel>=0 && boxes[sel].layer!=='ignore' ? boxes[sel].layer : mode]; setKind(ks[+k-1][0]); }
   else if (k === 'i') setKind('ignore');
   else if (k === 'p') setMode('plate');
   else if (k === 'v') setMode('vehicle');

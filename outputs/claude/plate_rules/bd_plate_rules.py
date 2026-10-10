@@ -82,11 +82,19 @@ VEHICLE_CATEGORIES = {
 }
 # Current COCO vehicle detector classes are too coarse; each maps to the union of possible types.
 COCO_TO_TYPES = {
-    'car':        ['sedan', 'suv', 'microbus', 'taxi', 'cng', 'pickup', 'leguna'],  # COCO 'car' absorbs CNGs in this footage
+    'car':        ['sedan', 'suv', 'microbus', 'taxi', 'cng', 'pickup'],  # COCO 'car' absorbs CNGs in this footage
     'motorcycle': ['motorcycle'],
-    'bus':        ['bus', 'microbus', 'leguna'],
+    'bus':        ['bus', 'microbus'],   # leguna omitted: no legunas on the current route (user, 2026-10-10)
     'truck':      ['truck', 'pickup', 'cng', 'special'],
     'bicycle':    ['rickshaw'],   # in this footage COCO 'bicycle' is almost always a cycle-rickshaw
+}
+# Crop-classifier outputs (work/claude/cng-classifier) -> types. 'car' here means "car-like, NOT a CNG".
+CLASSIFIER_TO_TYPES = {
+    'car':        ['sedan', 'suv', 'microbus', 'taxi', 'pickup'],
+    'cng':        ['cng'],
+    'motorcycle': ['motorcycle'],
+    'bus_truck':  ['bus', 'truck', 'pickup'],
+    'rickshaw':   ['rickshaw'],
 }
 ANY_VEHICLE_LETTERS = {l for l, m in SERIES_LETTERS.items() if m['category'] == 'any'}
 
@@ -101,10 +109,12 @@ def vehicle_record(coco_class):
                     registration=None, note='rickshaw: no BRTA registration plate')
     return dict(vehicle_type=coco_class, registration_expected=True, registration=None)
 
-def allowed_letters(vehicle_type, include_any=True):
-    """Letters a plate on this vehicle type may carry. Accepts our types or COCO class names.
+def allowed_letters(vehicle_type, include_any=True, source='coco'):
+    """Letters a plate on this vehicle type may carry. vehicle_type is one of our types, or a class name
+    from the COCO detector (source='coco') or the vehicle crop classifier (source='classifier').
     Returns None for an unknown type (no constraint), set() for vehicles without BRTA plates."""
-    types = COCO_TO_TYPES.get(vehicle_type, [vehicle_type])
+    table = CLASSIFIER_TO_TYPES if source == 'classifier' else COCO_TO_TYPES
+    types = table.get(vehicle_type, [vehicle_type])
     if not all(t in VEHICLE_CATEGORIES for t in types):
         return None
     cats = {c for t in types for c in VEHICLE_CATEGORIES[t]}

@@ -1,0 +1,1371 @@
+{
+ "vehicles": [
+  {
+   "index": 0,
+   "box": [
+    207.8,
+    1723.8,
+    1216.6,
+    2542.6
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.904,
+   "vehicle_type": "car",
+   "type_conf": 0.899,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 1,
+   "box": [
+    458.9,
+    1312.3,
+    1122.3,
+    1761.1
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.889,
+   "vehicle_type": "car",
+   "type_conf": 0.593,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 2,
+   "box": [
+    748.0,
+    1038.3,
+    1212.0,
+    1430.5
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.888,
+   "vehicle_type": "car",
+   "type_conf": 0.996,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 3,
+   "box": [
+    1428.2,
+    1530.0,
+    2099.6,
+    2193.6
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.881,
+   "vehicle_type": "car",
+   "type_conf": 0.982,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 4,
+   "box": [
+    1670.5,
+    917.0,
+    2144.3,
+    1530.0
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.871,
+   "vehicle_type": "cng",
+   "type_conf": 0.784,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 5,
+   "box": [
+    1539.4,
+    668.9,
+    1935.1,
+    940.1
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.833,
+   "vehicle_type": "car",
+   "type_conf": 0.934,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 6,
+   "box": [
+    675.4,
+    348.9,
+    1007.5,
+    484.1
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.804,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 7,
+   "box": [
+    1983.9,
+    582.6,
+    2243.5,
+    828.0
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.784,
+   "vehicle_type": "cng",
+   "type_conf": 0.933,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 8,
+   "box": [
+    1853.4,
+    810.2,
+    2322.3,
+    1133.2
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.779,
+   "vehicle_type": "car",
+   "type_conf": 0.992,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 9,
+   "box": [
+    2632.8,
+    869.7,
+    3012.7,
+    1243.5
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.747,
+   "vehicle_type": "car",
+   "type_conf": 0.802,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 10,
+   "box": [
+    1686.3,
+    165.1,
+    1812.2,
+    272.2
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.733,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 11,
+   "box": [
+    7.6,
+    2687.5,
+    812.8,
+    2819.5
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.731,
+   "vehicle_type": "car",
+   "type_conf": 0.997,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 12,
+   "box": [
+    2059.0,
+    399.8,
+    2408.7,
+    586.7
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.723,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 13,
+   "box": [
+    1806.3,
+    384.2,
+    2011.3,
+    555.2
+   ],
+   "detector_class": "motorcycle",
+   "detector_conf": 0.712,
+   "vehicle_type": "motorcycle",
+   "type_conf": 0.712,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "এ",
+    "য",
+    "র",
+    "ল",
+    "হ"
+   ],
+   "note": null
+  },
+  {
+   "index": 14,
+   "box": [
+    1516.3,
+    155.1,
+    1667.2,
+    284.7
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.708,
+   "vehicle_type": "car",
+   "type_conf": 0.999,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 15,
+   "box": [
+    2329.1,
+    1701.7,
+    3051.9,
+    2447.6
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.703,
+   "vehicle_type": "car",
+   "type_conf": 0.888,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 16,
+   "box": [
+    2279.1,
+    895.2,
+    2840.2,
+    1543.9
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.664,
+   "vehicle_type": "bus_truck",
+   "type_conf": 0.86,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "জ",
+    "ঝ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "ব",
+    "ম",
+    "য",
+    "র",
+    "স"
+   ],
+   "note": null
+  },
+  {
+   "index": 17,
+   "box": [
+    869.6,
+    725.9,
+    1313.8,
+    1165.9
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.635,
+   "vehicle_type": "cng",
+   "type_conf": 0.616,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 18,
+   "box": [
+    758.8,
+    678.3,
+    1058.8,
+    998.9
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.633,
+   "vehicle_type": "car",
+   "type_conf": 0.956,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 19,
+   "box": [
+    477.9,
+    764.8,
+    785.0,
+    1140.8
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.614,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 20,
+   "box": [
+    1848.8,
+    170.6,
+    2006.8,
+    274.8
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.574,
+   "vehicle_type": "car",
+   "type_conf": 0.998,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 21,
+   "box": [
+    1161.9,
+    609.4,
+    1539.9,
+    986.4
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.543,
+   "vehicle_type": "car",
+   "type_conf": 0.927,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 22,
+   "box": [
+    1521.4,
+    294.9,
+    1934.1,
+    502.0
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.535,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 23,
+   "box": [
+    1160.4,
+    609.9,
+    1539.4,
+    986.0
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.495,
+   "vehicle_type": "car",
+   "type_conf": 0.92,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 24,
+   "box": [
+    1454.5,
+    762.0,
+    1727.2,
+    1143.6
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.494,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 25,
+   "box": [
+    3217.7,
+    96.1,
+    3395.9,
+    205.1
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.406,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 26,
+   "box": [
+    0.4,
+    888.4,
+    72.5,
+    1068.6
+   ],
+   "detector_class": "motorcycle",
+   "detector_conf": 0.396,
+   "vehicle_type": "motorcycle",
+   "type_conf": 0.396,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "এ",
+    "য",
+    "র",
+    "ল",
+    "হ"
+   ],
+   "note": null
+  },
+  {
+   "index": 27,
+   "box": [
+    1954.0,
+    51.3,
+    2031.2,
+    117.3
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.377,
+   "vehicle_type": "car",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 28,
+   "box": [
+    1386.7,
+    351.7,
+    1633.3,
+    549.0
+   ],
+   "detector_class": "motorcycle",
+   "detector_conf": 0.368,
+   "vehicle_type": "motorcycle",
+   "type_conf": 0.368,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "এ",
+    "য",
+    "র",
+    "ল",
+    "হ"
+   ],
+   "note": null
+  },
+  {
+   "index": 29,
+   "box": [
+    2702.7,
+    763.9,
+    2838.6,
+    876.2
+   ],
+   "detector_class": "motorcycle",
+   "detector_conf": 0.314,
+   "vehicle_type": "motorcycle",
+   "type_conf": 0.314,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "এ",
+    "য",
+    "র",
+    "ল",
+    "হ"
+   ],
+   "note": null
+  },
+  {
+   "index": 30,
+   "box": [
+    2081.0,
+    163.0,
+    2186.5,
+    293.9
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.309,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 31,
+   "box": [
+    250.6,
+    324.1,
+    772.1,
+    544.7
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.303,
+   "vehicle_type": "car",
+   "type_conf": 0.866,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 32,
+   "box": [
+    2222.4,
+    534.7,
+    2544.8,
+    832.1
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.3,
+   "vehicle_type": "car",
+   "type_conf": 0.795,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 33,
+   "box": [
+    3991.3,
+    775.0,
+    4095.3,
+    1105.8
+   ],
+   "detector_class": "bus",
+   "detector_conf": 0.291,
+   "vehicle_type": "cng",
+   "type_conf": 0.999,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 34,
+   "box": [
+    2169.0,
+    145.4,
+    2284.4,
+    272.1
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.286,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 35,
+   "box": [
+    1032.7,
+    278.3,
+    1373.8,
+    461.6
+   ],
+   "detector_class": "truck",
+   "detector_conf": 0.242,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 36,
+   "box": [
+    1033.5,
+    277.4,
+    1372.5,
+    462.8
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.236,
+   "vehicle_type": "cng",
+   "type_conf": 1.0,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 37,
+   "box": [
+    252.8,
+    325.9,
+    770.6,
+    544.6
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.212,
+   "vehicle_type": "car",
+   "type_conf": 0.853,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "অ",
+    "উ",
+    "ক",
+    "খ",
+    "গ",
+    "ঘ",
+    "চ",
+    "ছ",
+    "ট",
+    "ঠ",
+    "ড",
+    "ঢ",
+    "ন",
+    "প",
+    "ভ",
+    "ম",
+    "য",
+    "র"
+   ],
+   "note": null
+  },
+  {
+   "index": 38,
+   "box": [
+    3991.3,
+    771.3,
+    4095.3,
+    1106.9
+   ],
+   "detector_class": "car",
+   "detector_conf": 0.203,
+   "vehicle_type": "cng",
+   "type_conf": 0.998,
+   "registration_expected": true,
+   "allowed_plate_letters": [
+    "থ",
+    "দ",
+    "য",
+    "র"
+   ],
+   "note": null
+  }
+ ],
+ "plates": [
+  {
+   "box": [
+    1370.4,
+    873.7,
+    1429.5,
+    903.8
+   ],
+   "confidence": 0.916,
+   "vehicle_index": 21,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    1775.9,
+    821.6,
+    1832.3,
+    851.2
+   ],
+   "confidence": 0.893,
+   "vehicle_index": 5,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    641.8,
+    1634.4,
+    740.5,
+    1684.0
+   ],
+   "confidence": 0.892,
+   "vehicle_index": 1,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    2819.7,
+    1087.5,
+    2894.1,
+    1125.6
+   ],
+   "confidence": 0.891,
+   "vehicle_index": 9,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    2603.5,
+    2198.5,
+    2741.7,
+    2269.3
+   ],
+   "confidence": 0.89,
+   "vehicle_index": 15,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    1660.7,
+    1981.5,
+    1780.5,
+    2042.1
+   ],
+   "confidence": 0.885,
+   "vehicle_index": 3,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    442.7,
+    2232.0,
+    573.7,
+    2299.9
+   ],
+   "confidence": 0.884,
+   "vehicle_index": 0,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    1858.9,
+    1334.4,
+    1943.6,
+    1376.9
+   ],
+   "confidence": 0.881,
+   "vehicle_index": 4,
+   "vehicle_type": "cng"
+  },
+  {
+   "box": [
+    2551.7,
+    1392.9,
+    2640.4,
+    1436.1
+   ],
+   "confidence": 0.881,
+   "vehicle_index": 16,
+   "vehicle_type": "bus_truck"
+  },
+  {
+   "box": [
+    1587.3,
+    257.3,
+    1611.4,
+    270.9
+   ],
+   "confidence": 0.871,
+   "vehicle_index": 14,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    1581.3,
+    978.6,
+    1633.8,
+    1022.7
+   ],
+   "confidence": 0.865,
+   "vehicle_index": 24,
+   "vehicle_type": "cng"
+  },
+  {
+   "box": [
+    588.6,
+    991.7,
+    640.1,
+    1032.2
+   ],
+   "confidence": 0.861,
+   "vehicle_index": 19,
+   "vehicle_type": "cng"
+  },
+  {
+   "box": [
+    1741.1,
+    251.2,
+    1765.7,
+    263.4
+   ],
+   "confidence": 0.853,
+   "vehicle_index": 10,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    2769.9,
+    820.9,
+    2816.9,
+    853.8
+   ],
+   "confidence": 0.842,
+   "vehicle_index": 29,
+   "vehicle_type": "motorcycle"
+  },
+  {
+   "box": [
+    2515.8,
+    862.0,
+    2562.3,
+    897.8
+   ],
+   "confidence": 0.71,
+   "vehicle_index": 16,
+   "vehicle_type": "bus_truck"
+  },
+  {
+   "box": [
+    2163.0,
+    178.3,
+    2169.2,
+    187.4
+   ],
+   "confidence": 0.648,
+   "vehicle_index": 30,
+   "vehicle_type": "cng"
+  },
+  {
+   "box": [
+    1938.2,
+    246.2,
+    1963.0,
+    260.0
+   ],
+   "confidence": 0.563,
+   "vehicle_index": 20,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    899.5,
+    1292.0,
+    986.2,
+    1337.9
+   ],
+   "confidence": 0.474,
+   "vehicle_index": 2,
+   "vehicle_type": "car"
+  },
+  {
+   "box": [
+    3343.1,
+    113.3,
+    3385.0,
+    132.6
+   ],
+   "confidence": 0.41,
+   "vehicle_index": 25,
+   "vehicle_type": "car"
+  }
+ ],
+ "file": "frame_1920.jpg"
+}
