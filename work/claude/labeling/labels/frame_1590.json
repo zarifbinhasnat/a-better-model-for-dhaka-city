@@ -1,0 +1,171 @@
+{
+ "file": "frame_1590.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "human (labelling UI)",
+ "saved_at": "2026-10-10T19:52:17",
+ "plates": [
+  {
+   "box": [
+    2051,
+    926,
+    2113,
+    959
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1118,
+    1227,
+    1197,
+    1271
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2354,
+    730,
+    2404,
+    756
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1551,
+    825,
+    1607,
+    852
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2246,
+    852,
+    2290,
+    884
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    358,
+    1020,
+    413,
+    1057
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    200,
+    1351,
+    505,
+    1524
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1897,
+    115,
+    1901,
+    117
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2879,
+    289,
+    2884,
+    292
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    150,
+    1204,
+    591,
+    1949
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1399,
+    320,
+    1662,
+    525
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1544,
+    229,
+    1906,
+    444
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1964,
+    187,
+    2120,
+    374
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1846,
+    69,
+    1945,
+    175
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2660,
+    211,
+    2902,
+    353
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    3873,
+    326,
+    4091,
+    510
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  }
+ ],
+ "ignore": [],
+ "notes": ""
+}

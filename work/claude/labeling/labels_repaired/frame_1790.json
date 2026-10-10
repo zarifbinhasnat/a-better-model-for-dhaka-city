@@ -1,0 +1,159 @@
+{
+ "file": "frame_1790.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    1109,
+    1224,
+    1187,
+    1266
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1772,
+    821,
+    1827,
+    851
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1630,
+    244,
+    1650,
+    259
+   ],
+   "vehicle": "bus_truck",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1933,
+    225,
+    1958,
+    238
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1367,
+    873,
+    1425,
+    904
+   ],
+   "vehicle": "bus_truck",
+   "source": "model suggestion kept by user; agent-reviewed"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    1616,
+    209,
+    1631,
+    223
+   ],
+   "reason": "agent unsure, suggestion 236"
+  },
+  {
+   "box": [
+    1888,
+    362,
+    2199,
+    552
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2039,
+    296,
+    2295,
+    498
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2694,
+    308,
+    2977,
+    549
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    1991,
+    205,
+    2154,
+    326
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    1888,
+    362,
+    2199,
+    552
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2039,
+    296,
+    2295,
+    498
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2694,
+    308,
+    2977,
+    549
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1991,
+    205,
+    2154,
+    326
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 235 rejected (not a plate)",
+  "suggestion 237 rejected (not a plate)",
+  "suggestion 241 rejected (not a plate)",
+  "suggestion 242 rejected (not a plate)",
+  "suggestion 243 rejected (not a plate)"
+ ],
+ "notes": ""
+}

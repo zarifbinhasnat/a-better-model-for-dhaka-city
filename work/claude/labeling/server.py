@@ -21,7 +21,7 @@ def frame_list():
         lab = LABELS / f'{s}.json'
         d = json.loads(lab.read_text()) if lab.exists() else None
         out.append(dict(stem=s, split=SPLIT[s], status=d['status'] if d else 'todo',
-                        plates=len(d['plates']) if d else None,
+                        plates=sum(p.get('reviewed', True) for p in d['plates']) if d else None,
                         cng=sum(p['vehicle'] == 'cng' for p in d['plates']) if d else None,
                         suggestions_ready=(SUGG / f'{s}.json').exists()))
     return out
@@ -49,9 +49,11 @@ class H(BaseHTTPRequestHandler):
         m = re.match(r'^/api/frame/(frame_\d{4})$', p)
         if m and m[1] in SPLIT:
             s = m[1]
-            lab, sug = LABELS / f'{s}.json', SUGG / f'{s}.json'
-            return self.send(200, dict(stem=s, split=SPLIT[s],
-                                       labels=json.loads(lab.read_text()) if lab.exists() else None,
+            lab, sug, rep = LABELS / f'{s}.json', SUGG / f'{s}.json', HERE / 'labels_repaired' / f'{s}.json'
+            labels = json.loads(lab.read_text()) if lab.exists() else None
+            if labels and labels.get('schema') != 2 and rep.exists():
+                labels = json.loads(rep.read_text()); labels['schema'] = 'repaired'
+            return self.send(200, dict(stem=s, split=SPLIT[s], labels=labels,
                                        suggestions=json.loads(sug.read_text()) if sug.exists() else None))
         m = re.match(r'^/img/(frame_\d{4})\.jpg$', p)
         if m and m[1] in SPLIT:
@@ -67,12 +69,17 @@ class H(BaseHTTPRequestHandler):
             x1, y1, x2, y2 = (int(round(float(v))) for v in b)
             return [min(x1, x2), min(y1, y2), max(x1, x2), max(y1, y2)]
         kinds = {'car', 'motorcycle', 'cng', 'leguna', 'bus_truck', 'other'}
+        vkinds = {'car', 'motorcycle', 'cng', 'leguna', 'bus_truck', 'rickshaw'}
         rec = dict(file=f'{m[1]}.jpg', split=SPLIT[m[1]],
                    status=d.get('status', 'done') if d.get('status') in ('done', 'skipped') else 'done',
                    labeler='human (labelling UI)', saved_at=time.strftime('%Y-%m-%dT%H:%M:%S'),
+                   schema=2,
                    plates=[dict(box=box(p['box']), vehicle=p['vehicle'] if p['vehicle'] in kinds else 'other',
-                                from_suggestion=bool(p.get('from_suggestion'))) for p in d.get('plates', [])],
+                                from_suggestion=bool(p.get('from_suggestion')), reviewed=bool(p.get('reviewed', True)))
+                           for p in d.get('plates', [])],
                    ignore=[dict(box=box(p['box'])) for p in d.get('ignore', [])],
+                   vehicles=[dict(box=box(v['box']), vehicle=v['vehicle'] if v['vehicle'] in vkinds else 'car',
+                                  registration_expected=v.get('vehicle') != 'rickshaw') for v in d.get('vehicles', [])],
                    notes=str(d.get('notes', ''))[:2000])
         (LABELS / f'{m[1]}.json').write_text(json.dumps(rec, indent=1, ensure_ascii=False))
         self.send(200, {'ok': True, 'plates': len(rec['plates'])})

@@ -1,0 +1,164 @@
+{
+ "file": "frame_0945.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    2911,
+    1592,
+    3009,
+    1643
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1950,
+    855,
+    2007,
+    884
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1564,
+    825,
+    1620,
+    855
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1193,
+    876,
+    1250,
+    906
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2628,
+    1058,
+    2700,
+    1096
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1600,
+    263,
+    1621,
+    272
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    875,
+    804,
+    914,
+    836
+   ],
+   "vehicle": "motorcycle",
+   "source": "model suggestion kept by user; agent-reviewed"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    2713,
+    332,
+    2723,
+    341
+   ],
+   "reason": "agent unsure, suggestion 33"
+  },
+  {
+   "box": [
+    2199,
+    368,
+    2504,
+    612
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    2392,
+    1101,
+    2582,
+    1493
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    512,
+    1029,
+    829,
+    1521
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    841,
+    643,
+    998,
+    920
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    911,
+    431,
+    1152,
+    676
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2199,
+    368,
+    2504,
+    612
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 26 rejected (not a plate)",
+  "suggestion 28 rejected (not a plate)",
+  "suggestion 29 rejected (not a plate)",
+  "suggestion 30 rejected (not a plate)",
+  "suggestion 31 rejected (not a plate)",
+  "suggestion 32 rejected (not a plate)"
+ ],
+ "notes": ""
+}

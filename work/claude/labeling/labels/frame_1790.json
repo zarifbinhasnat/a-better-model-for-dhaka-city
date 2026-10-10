@@ -1,0 +1,161 @@
+{
+ "file": "frame_1790.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "human (labelling UI)",
+ "saved_at": "2026-10-10T19:52:40",
+ "plates": [
+  {
+   "box": [
+    1109,
+    1224,
+    1187,
+    1266
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1772,
+    821,
+    1827,
+    851
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    296,
+    524,
+    396,
+    563
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1616,
+    209,
+    1631,
+    223
+   ],
+   "vehicle": "bus_truck",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2020,
+    75,
+    2030,
+    87
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1630,
+    244,
+    1650,
+    259
+   ],
+   "vehicle": "bus_truck",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1933,
+    225,
+    1958,
+    238
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1367,
+    873,
+    1425,
+    904
+   ],
+   "vehicle": "bus_truck",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    3439,
+    301,
+    3532,
+    413
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2052,
+    280,
+    2060,
+    282
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    3937,
+    207,
+    3941,
+    212
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1888,
+    362,
+    2199,
+    552
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2039,
+    296,
+    2295,
+    498
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2694,
+    308,
+    2977,
+    549
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1991,
+    205,
+    2154,
+    326
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  }
+ ],
+ "ignore": [],
+ "notes": ""
+}

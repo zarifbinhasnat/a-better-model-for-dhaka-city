@@ -1,0 +1,301 @@
+{
+ "file": "frame_1175.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "human (labelling UI)",
+ "saved_at": "2026-10-10T19:17:55",
+ "plates": [
+  {
+   "box": [
+    696,
+    1730,
+    798,
+    1782
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2059,
+    916,
+    2119,
+    947
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1598,
+    1009,
+    1665,
+    1042
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2628,
+    808,
+    2683,
+    836
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1075,
+    1103,
+    1146,
+    1141
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1871,
+    298,
+    1898,
+    312
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1295,
+    325,
+    1324,
+    342
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1670,
+    319,
+    1695,
+    332
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1823,
+    767,
+    1865,
+    800
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    594,
+    1324,
+    659,
+    1374
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2186,
+    775,
+    2234,
+    809
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2745,
+    402,
+    2762,
+    410
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    4052,
+    213,
+    4060,
+    217
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2054,
+    180,
+    2068,
+    188
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1976,
+    248,
+    1988,
+    253
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2134,
+    239,
+    2146,
+    248
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1802,
+    463,
+    1821,
+    486
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    3930,
+    574,
+    3940,
+    582
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    328,
+    981,
+    802,
+    1481
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1523,
+    603,
+    1792,
+    890
+   ],
+   "vehicle": "cng",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2229,
+    724,
+    2504,
+    1083
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    21,
+    1092,
+    277,
+    1819
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    748,
+    691,
+    926,
+    1062
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    938,
+    631,
+    1143,
+    1008
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2054,
+    453,
+    2458,
+    667
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1798,
+    588,
+    1915,
+    848
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1930,
+    600,
+    2060,
+    745
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    3894,
+    462,
+    3973,
+    748
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2609,
+    259,
+    2835,
+    434
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": false
+  }
+ ],
+ "ignore": [],
+ "notes": ""
+}

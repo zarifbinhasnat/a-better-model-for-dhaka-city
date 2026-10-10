@@ -1,0 +1,141 @@
+{
+ "file": "frame_1125.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "human (labelling UI)",
+ "saved_at": "2026-10-10T19:14:52",
+ "plates": [
+  {
+   "box": [
+    2238,
+    150,
+    2248,
+    158
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1875,
+    297,
+    1901,
+    312
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2172,
+    180,
+    2183,
+    188
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2270,
+    175,
+    2278,
+    181
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2010,
+    275,
+    2025,
+    288
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    1687,
+    317,
+    1700,
+    330
+   ],
+   "vehicle": "car",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2709,
+    338,
+    2932,
+    508
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    2328,
+    1055,
+    2390,
+    1096
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": true
+  },
+  {
+   "box": [
+    102,
+    905,
+    524,
+    1258
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    684,
+    818,
+    1122,
+    1285
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    886,
+    353,
+    1092,
+    603
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    1140,
+    347,
+    1342,
+    546
+   ],
+   "vehicle": "other",
+   "from_suggestion": false
+  },
+  {
+   "box": [
+    2265,
+    824,
+    2437,
+    1207
+   ],
+   "vehicle": "motorcycle",
+   "from_suggestion": false
+  }
+ ],
+ "ignore": [],
+ "notes": ""
+}

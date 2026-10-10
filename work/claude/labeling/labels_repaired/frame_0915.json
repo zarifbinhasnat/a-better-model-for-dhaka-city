@@ -1,0 +1,148 @@
+{
+ "file": "frame_0915.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    2009,
+    237,
+    2036,
+    253
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2194,
+    292,
+    2205,
+    300
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2138,
+    345,
+    2168,
+    362
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1737,
+    299,
+    1762,
+    315
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2125,
+    741,
+    2167,
+    768
+   ],
+   "vehicle": "motorcycle",
+   "source": "model suggestion kept by user; agent-reviewed"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    1410,
+    396,
+    1573,
+    637
+   ],
+   "reason": "user ignore"
+  },
+  {
+   "box": [
+    2510,
+    352,
+    2532,
+    363
+   ],
+   "reason": "agent unsure, suggestion 19"
+  },
+  {
+   "box": [
+    1320,
+    374,
+    1554,
+    555
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    1406,
+    303,
+    1537,
+    422
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    539,
+    516,
+    736,
+    803
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1320,
+    374,
+    1554,
+    555
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1721,
+    461,
+    1947,
+    616
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1406,
+    303,
+    1537,
+    422
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 15 rejected (not a plate)",
+  "suggestion 16 rejected (not a plate)",
+  "suggestion 17 rejected (not a plate)"
+ ],
+ "notes": ""
+}

@@ -1,0 +1,444 @@
+{
+ "file": "frame_1075.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    3194,
+    1568,
+    3292,
+    1620
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    954,
+    1238,
+    1032,
+    1280
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2791,
+    1074,
+    2862,
+    1112
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    990,
+    972,
+    1052,
+    1004
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1357,
+    594,
+    1399,
+    615
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2490,
+    834,
+    2549,
+    865
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1608,
+    1232,
+    1686,
+    1272
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1496,
+    942,
+    1560,
+    977
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1126,
+    689,
+    1174,
+    717
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    395,
+    1207,
+    454,
+    1251
+   ],
+   "vehicle": "cng",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    847,
+    2453,
+    1015,
+    2543
+   ],
+   "vehicle": "bus_truck",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2207,
+    745,
+    2258,
+    773
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    889,
+    2595,
+    1069,
+    2709
+   ],
+   "vehicle": "bus_truck",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1888,
+    300,
+    1904,
+    313
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2064,
+    296,
+    2093,
+    312
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1169,
+    495,
+    1197,
+    517
+   ],
+   "vehicle": "motorcycle",
+   "source": "plate proposal 23 in user vehicle box; agent-accepted"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    4044,
+    465,
+    4062,
+    475
+   ],
+   "reason": "agent unsure, suggestion 55"
+  },
+  {
+   "box": [
+    2033,
+    392,
+    2181,
+    540
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2129,
+    347,
+    2283,
+    543
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2214,
+    305,
+    2386,
+    516
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    1837,
+    341,
+    1994,
+    507
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    1737,
+    317,
+    1942,
+    456
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    1915,
+    272,
+    2072,
+    450
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    3870,
+    507,
+    4082,
+    763
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2603,
+    338,
+    2775,
+    570
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    769,
+    504,
+    877,
+    706
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    811,
+    444,
+    983,
+    658
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2,
+    815,
+    247,
+    1159
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    286,
+    972,
+    684,
+    1346
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1782,
+    703,
+    2045,
+    1011
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2033,
+    392,
+    2181,
+    540
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2129,
+    347,
+    2283,
+    543
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2214,
+    305,
+    2386,
+    516
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1837,
+    341,
+    1994,
+    507
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1737,
+    317,
+    1942,
+    456
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1915,
+    272,
+    2072,
+    450
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    3870,
+    507,
+    4082,
+    763
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2603,
+    338,
+    2775,
+    570
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1043,
+    308,
+    1258,
+    513
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    769,
+    504,
+    877,
+    706
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    811,
+    444,
+    983,
+    658
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2,
+    815,
+    247,
+    1159
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 46 rejected (not a plate)",
+  "suggestion 48 rejected (not a plate)",
+  "suggestion 50 rejected (not a plate)",
+  "suggestion 52 rejected (not a plate)",
+  "suggestion 53 rejected (not a plate)",
+  "suggestion 54 rejected (not a plate)",
+  "suggestion 56 rejected (not a plate)"
+ ],
+ "notes": ""
+}

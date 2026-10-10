@@ -1,0 +1,35 @@
+{
+ "train": {
+  "car": 186,
+  "motorcycle": 56,
+  "bus": 1,
+  "truck": 10,
+  "cng": 26,
+  "rickshaw": 40,
+  "leguna": 0,
+  "frames": 14,
+  "user_boxes": 96
+ },
+ "val": {
+  "car": 12,
+  "motorcycle": 4,
+  "bus": 0,
+  "truck": 4,
+  "cng": 6,
+  "rickshaw": 0,
+  "leguna": 0,
+  "frames": 2,
+  "user_boxes": 7
+ },
+ "test": {
+  "car": 19,
+  "motorcycle": 4,
+  "bus": 1,
+  "truck": 3,
+  "cng": 7,
+  "rickshaw": 3,
+  "leguna": 0,
+  "frames": 1,
+  "user_boxes": 13
+ }
+}

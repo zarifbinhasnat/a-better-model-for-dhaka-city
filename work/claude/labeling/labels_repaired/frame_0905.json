@@ -1,0 +1,277 @@
+{
+ "file": "frame_0905.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    4016,
+    938,
+    4074,
+    971
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1122,
+    441,
+    1155,
+    459
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1471,
+    366,
+    1497,
+    382
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1808,
+    352,
+    1835,
+    370
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2415,
+    219,
+    2429,
+    229
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1896,
+    230,
+    1920,
+    243
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2129,
+    743,
+    2166,
+    765
+   ],
+   "vehicle": "motorcycle",
+   "source": "plate proposal 4 in user vehicle box; agent-accepted"
+  },
+  {
+   "box": [
+    1906,
+    352,
+    1927,
+    368
+   ],
+   "vehicle": "motorcycle",
+   "source": "plate proposal 5 in user vehicle box; agent-accepted"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    313,
+    932,
+    636,
+    1128
+   ],
+   "reason": "user ignore"
+  },
+  {
+   "box": [
+    2697,
+    244,
+    2787,
+    431
+   ],
+   "reason": "user ignore"
+  },
+  {
+   "box": [
+    1031,
+    564,
+    1321,
+    830
+   ],
+   "reason": "user ignore"
+  },
+  {
+   "box": [
+    1608,
+    236,
+    1635,
+    249
+   ],
+   "reason": "agent unsure, suggestion 8"
+  },
+  {
+   "box": [
+    2244,
+    305,
+    2277,
+    401
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2054,
+    383,
+    2256,
+    546
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    1378,
+    431,
+    1535,
+    688
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    2404,
+    250,
+    2492,
+    422
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    3840,
+    308,
+    3958,
+    540
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    3891,
+    124,
+    4060,
+    302
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    2244,
+    305,
+    2277,
+    401
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2054,
+    383,
+    2256,
+    546
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1378,
+    431,
+    1535,
+    688
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2075,
+    582,
+    2280,
+    911
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1849,
+    290,
+    1951,
+    447
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2404,
+    250,
+    2492,
+    422
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    3840,
+    308,
+    3958,
+    540
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    3891,
+    124,
+    4060,
+    302
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 3 rejected (not a plate)",
+  "suggestion 7 rejected (not a plate)",
+  "suggestion 9 rejected (not a plate)",
+  "suggestion 10 rejected (not a plate)"
+ ],
+ "notes": ""
+}

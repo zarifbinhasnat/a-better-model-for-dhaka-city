@@ -1,0 +1,224 @@
+{
+ "file": "frame_1135.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    1759,
+    1694,
+    1841,
+    1761
+   ],
+   "vehicle": "motorcycle",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    914,
+    317,
+    943,
+    333
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2006,
+    778,
+    2058,
+    808
+   ],
+   "vehicle": "motorcycle",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2041,
+    241,
+    2067,
+    252
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2061,
+    297,
+    2085,
+    310
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    918,
+    318,
+    942,
+    332
+   ],
+   "vehicle": "car",
+   "source": "plate proposal 32 in user vehicle box; agent-accepted"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    232,
+    833,
+    591,
+    1240
+   ],
+   "reason": "user ignore"
+  },
+  {
+   "box": [
+    2135,
+    241,
+    2145,
+    248
+   ],
+   "reason": "agent unsure, suggestion 93"
+  },
+  {
+   "box": [
+    2055,
+    180,
+    2068,
+    188
+   ],
+   "reason": "agent unsure, suggestion 98"
+  },
+  {
+   "box": [
+    2170,
+    180,
+    2181,
+    188
+   ],
+   "reason": "agent unsure, suggestion 99"
+  },
+  {
+   "box": [
+    1245,
+    416,
+    1481,
+    697
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  },
+  {
+   "box": [
+    932,
+    266,
+    1218,
+    395
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    1502,
+    1349,
+    1970,
+    1967
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1245,
+    416,
+    1481,
+    697
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    880,
+    612,
+    1037,
+    932
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1909,
+    615,
+    2108,
+    905
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    727,
+    570,
+    883,
+    881
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2235,
+    444,
+    2476,
+    682
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    932,
+    266,
+    1218,
+    395
+   ],
+   "vehicle": "car",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    693,
+    223,
+    829,
+    356
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 94 rejected (not a plate)",
+  "suggestion 96 rejected (not a plate)",
+  "suggestion 100 rejected (not a plate)",
+  "suggestion 101 rejected (not a plate)",
+  "suggestion 102 rejected (not a plate)",
+  "suggestion 103 rejected (not a plate)",
+  "suggestion 105 rejected (not a plate)"
+ ],
+ "notes": ""
+}

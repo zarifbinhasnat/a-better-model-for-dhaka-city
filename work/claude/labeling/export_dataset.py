@@ -26,8 +26,19 @@ def main():
     ysplit = {'train': 'train', 'valid': 'val', 'test': 'test'}
     stats = {s: dict(frames=0, crops=0, plates=0, cng=0, negatives=0) for s in coco}
     meta = []
-    for lab in sorted((HERE / 'labels').glob('frame_*.json')):
-        L = json.loads(lab.read_text())
+    # per frame: new-UI labels (schema 2) > Claude-repaired labels > original labels
+    srcs = {}
+    for d in ('labels', 'labels_repaired'):
+        for f in sorted((HERE / d).glob('frame_*.json')):
+            j = json.loads(f.read_text())
+            if f.name not in srcs or j.get('schema') == 2 or (d == 'labels_repaired' and srcs[f.name][1].get('schema') != 2):
+                srcs[f.name] = (f, j)
+    print('label sources:', {d: sum(1 for f, _ in srcs.values() if f.parent.name == d) for d in ('labels', 'labels_repaired')})
+    for name, (lab, L) in sorted(srcs.items()):
+        L = dict(L)
+        unrev = [p for p in L['plates'] if p.get('reviewed') is False]       # unreviewed suggestions -> ignore, never positives
+        L['plates'] = [p for p in L['plates'] if p.get('reviewed') is not False]
+        L['ignore'] = list(L['ignore']) + [dict(box=p['box']) for p in unrev]
         if L['status'] != 'done':
             continue
         t = int(lab.stem.split('_')[1])
@@ -76,6 +87,8 @@ def main():
     for s in coco:
         if coco[s]['images']:
             (OUT / 'coco' / s / '_annotations.coco.json').write_text(json.dumps(coco[s]))
+    (OUT / 'weights').mkdir(exist_ok=True)
+    shutil.copy(HERE.parents[1] / 'detection-pilot/bangla-yolov8.pt', OUT / 'weights/bangla-yolov8.pt')  # init for fine-tune variant A
     (OUT / 'yolo' / 'data.yaml').write_text('path: .\ntrain: images/train\nval: images/val\ntest: images/test\nnames:\n  0: plate\n')
     (OUT / 'crops.json').write_text(json.dumps(meta))
     (OUT / 'export_stats.json').write_text(json.dumps(dict(stats=stats, val_block_seconds=VAL_BLOCK, vehicle_conf=VEHICLE_CONF,

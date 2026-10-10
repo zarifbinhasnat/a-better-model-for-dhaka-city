@@ -1,0 +1,136 @@
+{
+ "file": "frame_1125.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    1875,
+    297,
+    1901,
+    312
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2328,
+    1055,
+    2390,
+    1096
+   ],
+   "vehicle": "motorcycle",
+   "source": "model suggestion kept by user; agent-reviewed"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    2238,
+    150,
+    2248,
+    158
+   ],
+   "reason": "agent unsure, suggestion 83"
+  },
+  {
+   "box": [
+    2172,
+    180,
+    2183,
+    188
+   ],
+   "reason": "agent unsure, suggestion 85"
+  },
+  {
+   "box": [
+    2270,
+    175,
+    2278,
+    181
+   ],
+   "reason": "agent unsure, suggestion 86"
+  },
+  {
+   "box": [
+    2010,
+    275,
+    2025,
+    288
+   ],
+   "reason": "agent unsure, suggestion 87"
+  },
+  {
+   "box": [
+    1687,
+    317,
+    1700,
+    330
+   ],
+   "reason": "agent unsure, suggestion 88"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    102,
+    905,
+    524,
+    1258
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    684,
+    818,
+    1122,
+    1285
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    886,
+    353,
+    1092,
+    603
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1140,
+    347,
+    1342,
+    546
+   ],
+   "vehicle": "rickshaw_or_nonmotorised",
+   "registration_expected": false,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2265,
+    824,
+    2437,
+    1207
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 89 rejected (not a plate)"
+ ],
+ "notes": ""
+}

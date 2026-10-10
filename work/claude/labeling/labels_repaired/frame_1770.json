@@ -1,0 +1,131 @@
+{
+ "file": "frame_1770.jpg",
+ "split": "train",
+ "status": "done",
+ "labeler": "user vehicle boxes + agent-reviewed plate suggestions",
+ "plates": [
+  {
+   "box": [
+    902,
+    338,
+    929,
+    351
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1583,
+    265,
+    1609,
+    279
+   ],
+   "vehicle": "bus_truck",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    1709,
+    306,
+    1739,
+    323
+   ],
+   "vehicle": "car",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2097,
+    246,
+    2116,
+    260
+   ],
+   "vehicle": "cng",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2054,
+    303,
+    2073,
+    322
+   ],
+   "vehicle": "cng",
+   "source": "model suggestion kept by user; agent-reviewed"
+  },
+  {
+   "box": [
+    2218,
+    259,
+    2239,
+    270
+   ],
+   "vehicle": "cng",
+   "source": "plate proposal 58 in user vehicle box; agent-accepted"
+  }
+ ],
+ "ignore": [
+  {
+   "box": [
+    2215,
+    190,
+    2225,
+    195
+   ],
+   "reason": "agent unsure, suggestion 229"
+  },
+  {
+   "box": [
+    1134,
+    296,
+    1339,
+    440
+   ],
+   "reason": "user vehicle box without a confirmed plate"
+  }
+ ],
+ "vehicles": [
+  {
+   "box": [
+    1991,
+    229,
+    2139,
+    353
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    2139,
+    205,
+    2262,
+    362
+   ],
+   "vehicle": "cng",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  },
+  {
+   "box": [
+    1134,
+    296,
+    1339,
+    440
+   ],
+   "vehicle": "motorcycle",
+   "registration_expected": true,
+   "source": "user-drawn vehicle box"
+  }
+ ],
+ "repair_log": [
+  "suggestion 223 rejected (not a plate)",
+  "suggestion 226 rejected (not a plate)",
+  "suggestion 227 rejected (not a plate)",
+  "suggestion 230 rejected (not a plate)",
+  "suggestion 232 rejected (not a plate)"
+ ],
+ "notes": ""
+}

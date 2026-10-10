@@ -15,10 +15,14 @@
   button { background:#262d36; color:var(--text); border:1px solid var(--line); border-radius:6px; padding:5px 10px; cursor:pointer; font:inherit; }
   button:hover { border-color:var(--accent); }
   button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .mode { display:flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .mode button { border:0; border-radius:0; }
+  .mode button.on.plate { background:#2ecc71; color:#06210f; font-weight:600; }
+  .mode button.on.vehicle { background:#ff9f1a; color:#2a1700; font-weight:600; }
   main { flex:1; display:flex; min-height:0; }
   #stage { flex:1; position:relative; min-width:0; }
   canvas { position:absolute; inset:0; width:100%; height:100%; cursor:crosshair; }
-  aside { width:310px; border-left:1px solid var(--line); background:var(--panel); display:flex; flex-direction:column; min-height:0; }
+  aside { width:320px; border-left:1px solid var(--line); background:var(--panel); display:flex; flex-direction:column; min-height:0; }
   aside section { padding:10px 12px; border-bottom:1px solid var(--line); }
   #frames { flex:1; overflow:auto; padding:6px; display:grid; grid-template-columns:repeat(4,1fr); gap:4px; align-content:start; }
   .fr { padding:4px 2px; text-align:center; border-radius:4px; background:#232a33; cursor:pointer; font-size:11px; border:1px solid transparent; }
@@ -34,11 +38,13 @@
   textarea { width:100%; height:44px; background:#11151a; color:var(--text); border:1px solid var(--line); border-radius:6px; font:inherit; }
   #toast { position:absolute; left:50%; bottom:16px; transform:translateX(-50%); background:#000c; padding:6px 12px; border-radius:6px; display:none; }
   #warn { color:#ffb86b; }
+  #modehint { font-weight:600; margin-bottom:6px; }
 </style>
 </head>
 <body>
 <header>
   <b>Plate labeller</b>
+  <div class="mode"><button id="mPlate" class="plate">P · Plate boxes</button><button id="mVeh" class="vehicle">V · Vehicle boxes</button></div>
   <span id="fname"></span>
   <span id="split" class="stat"></span>
   <span id="dirty" style="color:#ffb86b"></span>
@@ -53,18 +59,19 @@
   <div id="stage"><canvas id="cv"></canvas><div id="toast"></div></div>
   <aside>
     <section>
-      <div style="margin-bottom:6px">Plate belongs to (selected box / new boxes):</div>
+      <div id="modehint"></div>
       <div class="kinds" id="kinds"></div>
       <div id="sel" class="stat" style="margin-top:6px"></div>
     </section>
     <section class="help">
-      <div><b>Everything on screen is saved as truth.</b> Dashed boxes are model suggestions: delete wrong ones, fix the rest, draw missed plates.</div>
+      <div><b>Plate mode (P):</b> tight box around the number plate only. <b>Vehicle mode (V):</b> box around the whole vehicle (CNG, leguna, rickshaw…).</div>
+      <div>Dashed <b>?</b> boxes are unreviewed model suggestions. Delete wrong ones, fix the rest, then <kbd>A</kbd> accept all remaining. Unreviewed suggestions are saved as <i>ignore</i>, never as plates.</div>
       <div>Draw: drag on empty space · Move/resize: drag box / corner</div>
       <div>Zoom: scroll · Pan: <kbd>Space</kbd>+drag or right-drag · <kbd>F</kbd> fit</div>
-      <div><kbd>Tab</kbd> / <kbd>Shift+Tab</kbd> next/prev box (zooms in) · <kbd>Del</kbd> delete</div>
-      <div><kbd>1</kbd>–<kbd>6</kbd> vehicle type · <kbd>I</kbd> ignore (unsure, unreadable-far, rickshaw tag)</div>
-      <div><kbd>Enter</kbd> save &amp; next · <kbd>S</kbd> save · <kbd>V</kbd> vehicle boxes · <kbd>Esc</kbd> deselect</div>
-      <div>Rickshaws: no registration plate. Mark their tags <kbd>I</kbd> (ignore), never as plates.</div>
+      <div><kbd>Tab</kbd>/<kbd>Shift+Tab</kbd> next/prev box (zooms in) · <kbd>Del</kbd> delete · <kbd>Enter</kbd> accept selected</div>
+      <div><kbd>1</kbd>–<kbd>6</kbd> type · <kbd>I</kbd> ignore (unsure, far, rickshaw tag) · <kbd>O</kbd> model vehicle overlay</div>
+      <div><kbd>Ctrl/⌘+Enter</kbd> save &amp; next · <kbd>S</kbd> save · <kbd>Esc</kbd> deselect</div>
+      <div>Rickshaws have no registration plate: box the rickshaw in vehicle mode; its tag is <kbd>I</kbd> ignore.</div>
       <div id="warn"></div>
     </section>
     <section><textarea id="notes" placeholder="Notes for this frame (optional)"></textarea></section>
@@ -72,42 +79,59 @@
   </aside>
 </main>
 <script>
-const KINDS = [
-  ['car','Car / SUV / microbus','#2ecc71'], ['motorcycle','Motorcycle','#4c9ffe'],
-  ['cng','CNG','#ff9f1a'], ['leguna','Leguna / human hauler','#e056fd'],
-  ['bus_truck','Bus / truck / pickup','#00d2d3'], ['other','Other / unsure type','#ffffff'],
-];
-const COLOR = Object.fromEntries(KINDS.map(k => [k[0], k[2]])); COLOR.ignore = '#ff4757';
+const KINDS = {
+  plate:   [['car','Car / SUV / microbus'],['motorcycle','Motorcycle'],['cng','CNG'],['leguna','Leguna / human hauler'],['bus_truck','Bus / truck / pickup'],['other','Other / unsure type']],
+  vehicle: [['car','Car / SUV / microbus'],['motorcycle','Motorcycle'],['cng','CNG'],['leguna','Leguna / human hauler'],['bus_truck','Bus / truck / pickup'],['rickshaw','Rickshaw (no registration)']],
+};
+const COLOR = {car:'#2ecc71', motorcycle:'#4c9ffe', cng:'#ff9f1a', leguna:'#e056fd', bus_truck:'#00d2d3', other:'#ffffff', rickshaw:'#ff6bd5', ignore:'#ff4757'};
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d'), stage = document.getElementById('stage');
-let frames = [], cur = -1, img = null, boxes = [], vehicles = [], sel = -1, kind = 'car', dirty = false;
-let scale = 1, ox = 0, oy = 0, showVeh = true, space = false, drag = null, tabIdx = -1;
+// box: {box:[x1,y1,x2,y2], layer:'plate'|'vehicle'|'ignore', kind, suggested, from_suggestion}
+let frames = [], cur = -1, img = null, boxes = [], vehicles = [], sel = -1, dirty = false;
+let mode = 'plate', kind = {plate:'car', vehicle:'cng'};
+let scale = 0, ox = 0, oy = 0, showVeh = false, space = false, drag = null, tabIdx = -1;
 
 const $ = id => document.getElementById(id);
-function toast(t){ const e=$('toast'); e.textContent=t; e.style.display='block'; clearTimeout(e._t); e._t=setTimeout(()=>e.style.display='none',1400); }
+function toast(t){ const e=$('toast'); e.textContent=t; e.style.display='block'; clearTimeout(e._t); e._t=setTimeout(()=>e.style.display='none',1600); }
 function setDirty(v){ dirty=v; $('dirty').textContent = v ? '● unsaved' : ''; }
 
-// ---------- kinds panel ----------
-$('kinds').innerHTML = KINDS.map((k,i)=>`<div class="kind" data-k="${k[0]}"><span class="sw" style="background:${k[2]}"></span>${i+1} ${k[1]}</div>`).join('')
-  + `<div class="kind" data-k="ignore"><span class="sw" style="background:${COLOR.ignore}"></span>I Ignore</div>`;
+// ---------- mode & kinds ----------
+function setMode(m){ mode = m; $('mPlate').classList.toggle('on', m==='plate'); $('mVeh').classList.toggle('on', m==='vehicle'); renderKinds(); renderPanel(); }
+$('mPlate').onclick = () => setMode('plate'); $('mVeh').onclick = () => setMode('vehicle');
+function renderKinds(){
+  $('modehint').textContent = mode==='plate' ? 'New boxes are PLATES. Plate belongs to:' : 'New boxes are WHOLE VEHICLES. Vehicle type:';
+  $('modehint').style.color = mode==='plate' ? '#2ecc71' : '#ff9f1a';
+  $('kinds').innerHTML = KINDS[mode].map((k,i)=>`<div class="kind" data-k="${k[0]}"><span class="sw" style="background:${COLOR[k[0]]}"></span>${i+1} ${k[1]}</div>`).join('')
+    + `<div class="kind" data-k="ignore"><span class="sw" style="background:${COLOR.ignore}"></span>I Ignore</div>`;
+}
 $('kinds').onclick = e => { const k = e.target.closest('.kind'); if (k) setKind(k.dataset.k); };
 function setKind(k){
-  if (sel >= 0) { boxes[sel].kind = k; boxes[sel].suggested = false; setDirty(true); }
-  if (k !== 'ignore') kind = k;
+  if (sel >= 0) {
+    const b = boxes[sel];
+    if (k === 'ignore') b.layer = 'ignore';
+    else {
+      if (b.layer === 'ignore') b.layer = mode;
+      if (b.layer === 'plate' && k === 'rickshaw') { toast('Rickshaws have no registration plate. Use I (ignore) for a rickshaw tag.'); return; }
+      if (b.layer === 'vehicle' && k === 'other') k = 'car';
+      b.kind = k;
+    }
+    b.suggested = false; setDirty(true);
+  } else if (k !== 'ignore') kind[mode] = k;
   renderPanel(); draw();
 }
 function renderPanel(){
-  const active = sel >= 0 ? boxes[sel].kind : kind;
+  const active = sel >= 0 ? (boxes[sel].layer==='ignore' ? 'ignore' : boxes[sel].kind) : kind[mode];
   document.querySelectorAll('.kind').forEach(e => e.classList.toggle('on', e.dataset.k === active));
-  const nP = boxes.filter(b=>b.kind!=='ignore').length, nS = boxes.filter(b=>b.suggested).length;
-  $('sel').textContent = `${nP} plates, ${boxes.length-nP} ignore` + (nS ? ` · ${nS} unreviewed suggestions` : '') + (sel>=0 ? ` · selected #${sel+1}` : '');
+  const nP = boxes.filter(b=>b.layer==='plate' && !b.suggested).length, nS = boxes.filter(b=>b.suggested).length;
+  const nV = boxes.filter(b=>b.layer==='vehicle').length, nI = boxes.filter(b=>b.layer==='ignore').length;
+  $('sel').textContent = `${nP} plates · ${nV} vehicles · ${nI} ignore` + (nS ? ` · ${nS} UNREVIEWED suggestions` : '') + (sel>=0 ? ` · selected #${sel+1} (${boxes[sel].layer})` : '');
 }
 
 // ---------- frames ----------
 async function loadList(){
   frames = await (await fetch('/api/frames')).json();
   const done = frames.filter(f=>f.status==='done'), tr = done.filter(f=>f.split==='train');
-  $('progress').textContent = `train ${tr.length}/${frames.filter(f=>f.split==='train').length} · test ${done.length-tr.length}/${frames.filter(f=>f.split==='locked_test').length} · plates ${done.reduce((a,f)=>a+f.plates,0)} · CNG ${done.reduce((a,f)=>a+f.cng,0)}`;
-  $('frames').innerHTML = frames.map((f,i)=>`<div class="fr ${f.status} ${f.split==='locked_test'?'test':''} ${i===cur?'cur':''}" data-i="${i}" title="${f.split}${f.suggestions_ready?'':' · suggestions pending'}">${f.stem.slice(6)}s${f.suggestions_ready?'':'…'}</div>`).join('');
+  $('progress').textContent = `train ${tr.length}/${frames.filter(f=>f.split==='train').length} · test ${done.length-tr.length}/${frames.filter(f=>f.split==='locked_test').length}`;
+  $('frames').innerHTML = frames.map((f,i)=>`<div class="fr ${f.status} ${f.split==='locked_test'?'test':''} ${i===cur?'cur':''}" data-i="${i}" title="${f.split}">${f.stem.slice(6)}s</div>`).join('');
 }
 $('frames').onclick = e => { const f = e.target.closest('.fr'); if (f) go(+f.dataset.i); };
 async function go(i){
@@ -116,16 +140,18 @@ async function go(i){
   cur = i; const f = frames[i];
   const d = await (await fetch('/api/frame/' + f.stem)).json();
   vehicles = d.suggestions ? d.suggestions.vehicles : [];
-  if (d.labels) {
-    boxes = d.labels.plates.map(p=>({box:p.box.slice(), kind:p.vehicle, suggested:false, from_suggestion:p.from_suggestion}))
-      .concat(d.labels.ignore.map(p=>({box:p.box.slice(), kind:'ignore', suggested:false})));
-    $('notes').value = d.labels.notes || '';
+  const L = d.labels; boxes = [];
+  if (L) {
+    for (const p of L.plates) boxes.push({box:p.box.slice(), layer:'plate', kind:p.vehicle, suggested: p.reviewed === false, from_suggestion: !!p.from_suggestion || /suggestion/.test(p.source||'')});
+    for (const g of L.ignore) boxes.push({box:g.box.slice(), layer:'ignore', kind:'ignore', suggested:false});
+    for (const v of (L.vehicles||[])) boxes.push({box:v.box.slice(), layer:'vehicle', kind: v.vehicle==='rickshaw_or_nonmotorised' ? 'rickshaw' : v.vehicle, suggested:false});
+    $('notes').value = L.notes || '';
+    $('warn').textContent = L.schema === 'repaired' ? 'Showing Claude-repaired labels for this frame (your vehicle boxes + reviewed plates). Check and save to confirm.' : '';
   } else {
-    boxes = (d.suggestions ? d.suggestions.plate_suggestions : []).map(p=>({box:p.box.slice(), kind:guessKind(p.box), suggested:true, from_suggestion:true, conf:p.confidence}));
-    $('notes').value = '';
+    for (const p of (d.suggestions ? d.suggestions.plate_suggestions : [])) boxes.push({box:p.box.slice(), layer:'plate', kind:guessKind(p.box), suggested:true, from_suggestion:true});
+    $('notes').value = ''; $('warn').textContent = d.suggestions ? '' : 'Model suggestions not ready for this frame.';
   }
-  $('warn').textContent = d.suggestions ? '' : 'Model suggestions not ready for this frame yet; you can label from scratch.';
-  $('fname').textContent = f.stem + '.jpg'; $('split').textContent = f.split === 'locked_test' ? 'LOCKED TEST (never used for training)' : 'train';
+  $('fname').textContent = f.stem + '.jpg'; $('split').textContent = f.split === 'locked_test' ? 'LOCKED TEST (never trained on)' : 'train';
   sel = -1; tabIdx = -1; setDirty(false);
   img = new Image(); img.onload = () => { fit(); draw(); }; img.src = '/img/' + f.stem + '.jpg';
   renderPanel(); loadList();
@@ -139,12 +165,15 @@ function guessKind(b){
 }
 async function save(status='done'){
   const f = frames[cur]; if (!f) return false;
+  const unrev = boxes.filter(b=>b.suggested).length;
+  if (status==='done' && unrev && !confirm(`${unrev} model suggestion(s) are still unreviewed (dashed "?").\nThey will be saved as IGNORE, not as plates.\n\nTip: review them, then press A to accept the rest.\n\nSave anyway?`)) return false;
   const body = { status, notes: $('notes').value,
-    plates: boxes.filter(b=>b.kind!=='ignore').map(b=>({box:b.box, vehicle:b.kind, from_suggestion:!!b.from_suggestion})),
-    ignore: boxes.filter(b=>b.kind==='ignore').map(b=>({box:b.box})) };
+    plates: boxes.filter(b=>b.layer==='plate').map(b=>({box:b.box, vehicle:b.kind, from_suggestion:!!b.from_suggestion, reviewed:!b.suggested})),
+    ignore: boxes.filter(b=>b.layer==='ignore').map(b=>({box:b.box})),
+    vehicles: boxes.filter(b=>b.layer==='vehicle').map(b=>({box:b.box, vehicle:b.kind})) };
   const r = await fetch('/api/frame/' + f.stem, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)});
   if (!r.ok) { toast('Save failed'); return false; }
-  boxes.forEach(b=>b.suggested=false); setDirty(false); renderPanel(); toast(status==='skipped' ? 'Skipped' : 'Saved'); await loadList(); draw(); return true;
+  setDirty(false); toast(status==='skipped' ? 'Skipped' : 'Saved'); await loadList(); renderPanel(); draw(); return true;
 }
 $('save').onclick = () => save();
 $('savenext').onclick = async () => { if (await save()) go(cur+1); };
@@ -164,23 +193,28 @@ function draw(){
   ctx.drawImage(img, ox, oy, img.width*scale, img.height*scale);
   if (showVeh) for (const v of vehicles) {
     const [x1,y1,x2,y2] = v.box.map((c,i)=> i%2 ? c*scale+oy : c*scale+ox);
-    ctx.setLineDash([]); ctx.lineWidth = 1; ctx.strokeStyle = v.registration_expected ? '#ffffff40' : '#ff6bd580';
-    ctx.strokeRect(x1,y1,x2-x1,y2-y1);
-    if (!v.registration_expected && scale > .25) { ctx.fillStyle='#ff6bd5'; ctx.font='11px sans-serif'; ctx.fillText('rickshaw · no registration', x1+2, y1+12); }
+    ctx.setLineDash([]); ctx.lineWidth = 1; ctx.strokeStyle = v.registration_expected ? '#ffffff40' : '#ff6bd580'; ctx.strokeRect(x1,y1,x2-x1,y2-y1);
   }
+  ctx.font = '11px sans-serif';
   boxes.forEach((b,i) => {
     const [x1,y1,x2,y2] = [b.box[0]*scale+ox, b.box[1]*scale+oy, b.box[2]*scale+ox, b.box[3]*scale+oy];
-    ctx.lineWidth = i===sel ? 3 : 2; ctx.strokeStyle = COLOR[b.kind];
-    ctx.setLineDash(b.suggested ? [5,4] : b.kind==='ignore' ? [2,3] : []);
+    const col = b.layer==='ignore' ? COLOR.ignore : COLOR[b.kind] || '#fff';
+    ctx.strokeStyle = col; ctx.lineWidth = i===sel ? 3 : b.layer==='vehicle' ? 2.5 : 2;
+    ctx.setLineDash(b.suggested ? [5,4] : b.layer==='ignore' ? [2,3] : b.layer==='vehicle' ? [12,4] : []);
     ctx.strokeRect(x1,y1,x2-x1,y2-y1); ctx.setLineDash([]);
-    if (i===sel) { ctx.fillStyle = COLOR[b.kind]; for (const [hx,hy] of [[x1,y1],[x2,y1],[x1,y2],[x2,y2]]) ctx.fillRect(hx-4,hy-4,8,8); }
-    if (scale > .3 || i===sel) { ctx.fillStyle = COLOR[b.kind]; ctx.font = '11px sans-serif'; ctx.fillText(`${i+1}${b.kind==='ignore'?' ign':''}`, x1, y1-3); }
+    if (b.layer==='vehicle') { ctx.fillStyle = col + '18'; ctx.fillRect(x1,y1,x2-x1,y2-y1); }
+    if (i===sel) { ctx.fillStyle = col; for (const [hx,hy] of [[x1,y1],[x2,y1],[x1,y2],[x2,y2]]) ctx.fillRect(hx-4,hy-4,8,8); }
+    if (scale > .3 || i===sel || b.layer==='vehicle') {
+      ctx.fillStyle = col;
+      const tag = b.layer==='vehicle' ? `VEH ${b.kind}` : b.layer==='ignore' ? 'ign' : (b.suggested ? '?' : '');
+      ctx.fillText(`${i+1} ${tag}`, x1, y1-3);
+    }
   });
-  if (drag && drag.type==='new') { const [a,b2,c,d] = drag.rect; ctx.strokeStyle='#fff'; ctx.setLineDash([3,3]); ctx.strokeRect(a*scale+ox,b2*scale+oy,(c-a)*scale,(d-b2)*scale); ctx.setLineDash([]); }
+  if (drag && drag.type==='new') { const [a,b2,c,d] = drag.rect; ctx.strokeStyle = mode==='plate' ? '#fff' : '#ff9f1a'; ctx.setLineDash([3,3]); ctx.strokeRect(a*scale+ox,b2*scale+oy,(c-a)*scale,(d-b2)*scale); ctx.setLineDash([]); }
 }
 function hit(x,y){
-  if (sel>=0) { const b = boxes[sel].box; const cs=[[0,1],[2,1],[0,3],[2,3]];
-    for (const [cx,cy] of cs) if (Math.abs(b[cx]*scale+ox-x)<7 && Math.abs(b[cy]*scale+oy-y)<7) return {i:sel, handle:[cx,cy]}; }
+  if (sel>=0) { const b = boxes[sel].box;
+    for (const [cx,cy] of [[0,1],[2,1],[0,3],[2,3]]) if (Math.abs(b[cx]*scale+ox-x)<7 && Math.abs(b[cy]*scale+oy-y)<7) return {i:sel, handle:[cx,cy]}; }
   const [ix,iy] = toImg(x,y);
   const inside = boxes.map((b,i)=>[b,i]).filter(([b])=>b.box[0]<=ix&&ix<=b.box[2]&&b.box[1]<=iy&&iy<=b.box[3])
     .sort((a,c)=>(a[0].box[2]-a[0].box[0])*(a[0].box[3]-a[0].box[1])-(c[0].box[2]-c[0].box[0])*(c[0].box[3]-c[0].box[1]));
@@ -192,21 +226,24 @@ cv.addEventListener('mousedown', e => {
   if (e.button===2 || e.button===1 || space) { drag = {type:'pan', x, y, ox, oy}; return; }
   const h = hit(x,y), [ix,iy] = toImg(x,y);
   if (h && h.handle) { drag = {type:'resize', i:h.i, handle:h.handle}; return; }
-  if (h) { sel = h.i; drag = {type:'move', i:h.i, ix, iy, orig:boxes[h.i].box.slice()}; renderPanel(); draw(); return; }
-  sel = -1; drag = {type:'new', ix, iy, rect:[ix,iy,ix,iy]}; renderPanel(); draw();
+  if (h) { sel = h.i; drag = {type:'move', i:h.i, ix, iy, orig:boxes[h.i].box.slice(), moved:false}; renderPanel(); draw(); return; }
+  sel = -1; drag = {type:'new', ix, iy, rect:[ix,iy,ix,iy], sx:x, sy:y}; renderPanel(); draw();
 });
 window.addEventListener('mousemove', e => {
   if (!drag) return; const r = cv.getBoundingClientRect(), x = e.clientX-r.left, y = e.clientY-r.top, [ix,iy] = toImg(x,y);
   if (drag.type==='pan') { ox = drag.ox + x - drag.x; oy = drag.oy + y - drag.y; }
   else if (drag.type==='new') drag.rect = [Math.min(drag.ix,ix), Math.min(drag.iy,iy), Math.max(drag.ix,ix), Math.max(drag.iy,iy)];
-  else if (drag.type==='move') { const dx=ix-drag.ix, dy=iy-drag.iy, o=drag.orig; boxes[drag.i].box=[o[0]+dx,o[1]+dy,o[2]+dx,o[3]+dy]; boxes[drag.i].suggested=false; setDirty(true); }
+  else if (drag.type==='move') { const dx=ix-drag.ix, dy=iy-drag.iy, o=drag.orig; if (Math.abs(dx*scale)+Math.abs(dy*scale) < 3 && !drag.moved) return; drag.moved=true; boxes[drag.i].box=[o[0]+dx,o[1]+dy,o[2]+dx,o[3]+dy]; boxes[drag.i].suggested=false; setDirty(true); }
   else if (drag.type==='resize') { const b = boxes[drag.i].box; b[drag.handle[0]] = ix; b[drag.handle[1]] = iy; boxes[drag.i].suggested=false; setDirty(true); }
   draw();
 });
-window.addEventListener('mouseup', () => {
+window.addEventListener('mouseup', e => {
   if (!drag) return;
-  if (drag.type==='new') { const [a,b,c,d] = drag.rect;
-    if (c-a >= 4 && d-b >= 4) { boxes.push({box:drag.rect.map(Math.round), kind, suggested:false, from_suggestion:false}); sel = boxes.length-1; setDirty(true); } }
+  if (drag.type==='new') { const [a,b,c,d] = drag.rect, r = cv.getBoundingClientRect();
+    const screenW = Math.abs(e.clientX - r.left - drag.sx), screenH = Math.abs(e.clientY - r.top - drag.sy);
+    if (screenW >= 6 && screenH >= 6 && c-a >= 4 && d-b >= 4) {   // ignore accidental clicks/slivers
+      boxes.push({box:drag.rect.map(Math.round), layer:mode, kind:kind[mode], suggested:false, from_suggestion:false}); sel = boxes.length-1; setDirty(true);
+    } }
   if (drag.type==='resize' || drag.type==='move') { const b = boxes[drag.i].box; boxes[drag.i].box = [Math.min(b[0],b[2]),Math.min(b[1],b[3]),Math.max(b[0],b[2]),Math.max(b[1],b[3])].map(Math.round); }
   drag = null; renderPanel(); draw();
 });
@@ -217,21 +254,26 @@ cv.addEventListener('wheel', e => {
 }, {passive:false});
 function focusBox(i){
   const r = stage.getBoundingClientRect(), b = boxes[i].box; sel = i;
-  scale = Math.min(6, Math.max(2.5, scale)); ox = r.width/2 - (b[0]+b[2])/2*scale; oy = r.height/2 - (b[1]+b[3])/2*scale;
+  const want = boxes[i].layer==='vehicle' ? 1.2 : 4;
+  scale = Math.min(6, Math.max(want, scale)); ox = r.width/2 - (b[0]+b[2])/2*scale; oy = r.height/2 - (b[1]+b[3])/2*scale;
   renderPanel(); draw();
 }
 window.addEventListener('keydown', e => {
   if (e.target.tagName === 'TEXTAREA') return;
   if (e.code === 'Space') { space = true; cv.style.cursor = 'grab'; e.preventDefault(); return; }
   const k = e.key.toLowerCase();
-  if (k >= '1' && k <= '6') setKind(KINDS[+k-1][0]);
+  if (k >= '1' && k <= '6') { const ks = KINDS[sel>=0 && boxes[sel].layer!=='ignore' ? boxes[sel].layer : mode]; setKind(ks[+k-1][0]); }
   else if (k === 'i') setKind('ignore');
+  else if (k === 'p') setMode('plate');
+  else if (k === 'v') setMode('vehicle');
+  else if (k === 'a') { const n = boxes.filter(b=>b.suggested).length; boxes.forEach(b=>b.suggested=false); if (n) { setDirty(true); toast(`Accepted ${n} remaining suggestions`); } renderPanel(); draw(); }
   else if ((k === 'delete' || k === 'backspace') && sel >= 0) { boxes.splice(sel,1); sel=-1; setDirty(true); renderPanel(); draw(); e.preventDefault(); }
   else if (k === 'tab' && boxes.length) { e.preventDefault(); tabIdx = ((sel>=0?sel:tabIdx) + (e.shiftKey?-1:1) + boxes.length) % boxes.length; focusBox(tabIdx); }
-  else if (k === 'enter') $('savenext').click();
+  else if (k === 'enter' && (e.metaKey || e.ctrlKey)) $('savenext').click();
+  else if (k === 'enter' && sel >= 0) { boxes[sel].suggested = false; setDirty(true); tabIdx = sel; if (boxes.length) focusBox((sel+1) % boxes.length); }
   else if (k === 's' && !e.metaKey && !e.ctrlKey) save();
   else if (k === 'f') { fit(); draw(); }
-  else if (k === 'v') { showVeh = !showVeh; draw(); }
+  else if (k === 'o') { showVeh = !showVeh; draw(); }
   else if (k === 'escape') { sel=-1; renderPanel(); draw(); }
   else if (k === 'arrowright' && e.altKey) go(cur+1);
   else if (k === 'arrowleft' && e.altKey) go(cur-1);
@@ -240,7 +282,7 @@ window.addEventListener('keyup', e => { if (e.code === 'Space') { space = false;
 window.addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
 window.addEventListener('resize', () => { resize(); });
 new ResizeObserver(() => { const fresh = !(scale > 0); resize(); if (fresh) { fit(); draw(); } }).observe(stage);
-resize();
+setMode('plate'); resize();
 loadList().then(() => { const i = frames.findIndex(f => f.status === 'todo'); go(i < 0 ? 0 : i); });
 setInterval(() => { if (!dirty) loadList(); }, 15000);
 </script>

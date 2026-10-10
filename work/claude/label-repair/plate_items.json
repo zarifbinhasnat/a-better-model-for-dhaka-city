@@ -1,0 +1,5672 @@
+[
+{
+"k": 0,
+"file": "frame_0905.jpg",
+"label_index": 0,
+"box": [
+4016,
+938,
+4074,
+971
+],
+"vehicle": "car",
+"conf": 0.912,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+4015.9,
+937.7,
+4074.0,
+970.9
+]
+},
+{
+"k": 1,
+"file": "frame_0905.jpg",
+"label_index": 1,
+"box": [
+1122,
+441,
+1155,
+459
+],
+"vehicle": "car",
+"conf": 0.881,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1122.2,
+441.1,
+1154.9,
+458.7
+]
+},
+{
+"k": 2,
+"file": "frame_0905.jpg",
+"label_index": 2,
+"box": [
+1471,
+366,
+1497,
+382
+],
+"vehicle": "car",
+"conf": 0.879,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1470.8,
+365.8,
+1497.0,
+381.6
+]
+},
+{
+"k": 3,
+"file": "frame_0905.jpg",
+"label_index": 3,
+"box": [
+313,
+527,
+412,
+566
+],
+"vehicle": "car",
+"conf": 0.863,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+313.0,
+527.3,
+412.5,
+566.4
+]
+},
+{
+"k": 4,
+"file": "frame_0905.jpg",
+"label_index": 4,
+"box": [
+1808,
+352,
+1835,
+370
+],
+"vehicle": "car",
+"conf": 0.806,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1807.8,
+352.1,
+1835.1,
+369.5
+]
+},
+{
+"k": 5,
+"file": "frame_0905.jpg",
+"label_index": 5,
+"box": [
+2415,
+219,
+2429,
+229
+],
+"vehicle": "car",
+"conf": 0.788,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+2415.0,
+219.2,
+2429.2,
+229.4
+]
+},
+{
+"k": 6,
+"file": "frame_0905.jpg",
+"label_index": 6,
+"box": [
+1896,
+230,
+1920,
+243
+],
+"vehicle": "car",
+"conf": 0.673,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1895.7,
+229.8,
+1920.1,
+243.2
+]
+},
+{
+"k": 7,
+"file": "frame_0905.jpg",
+"label_index": 7,
+"box": [
+1865,
+299,
+1872,
+303
+],
+"vehicle": "motorcycle",
+"conf": 0.398,
+"src": "international",
+"iou_to_sugg": 0.89,
+"sugg_box": [
+1865.1,
+298.8,
+1872.4,
+303.0
+]
+},
+{
+"k": 8,
+"file": "frame_0905.jpg",
+"label_index": 8,
+"box": [
+1608,
+236,
+1635,
+249
+],
+"vehicle": "car",
+"conf": 0.38,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1608.4,
+235.8,
+1634.9,
+248.6
+]
+},
+{
+"k": 9,
+"file": "frame_0905.jpg",
+"label_index": 9,
+"box": [
+2069,
+285,
+2073,
+290
+],
+"vehicle": "car",
+"conf": 0.335,
+"src": "international",
+"iou_to_sugg": 0.81,
+"sugg_box": [
+2069.1,
+284.6,
+2072.9,
+289.6
+]
+},
+{
+"k": 10,
+"file": "frame_0905.jpg",
+"label_index": 10,
+"box": [
+1872,
+206,
+1947,
+222
+],
+"vehicle": "car",
+"conf": 0.253,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1872.1,
+206.1,
+1946.8,
+221.7
+]
+},
+{
+"k": 11,
+"file": "frame_0915.jpg",
+"label_index": 0,
+"box": [
+2009,
+237,
+2036,
+253
+],
+"vehicle": "car",
+"conf": 0.766,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2009.0,
+236.9,
+2035.7,
+252.9
+]
+},
+{
+"k": 12,
+"file": "frame_0915.jpg",
+"label_index": 1,
+"box": [
+2194,
+292,
+2205,
+300
+],
+"vehicle": "car",
+"conf": 0.703,
+"src": "bangla",
+"iou_to_sugg": 0.85,
+"sugg_box": [
+2193.5,
+292.3,
+2205.2,
+299.5
+]
+},
+{
+"k": 13,
+"file": "frame_0915.jpg",
+"label_index": 2,
+"box": [
+2138,
+345,
+2168,
+362
+],
+"vehicle": "car",
+"conf": 0.692,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+2137.6,
+344.7,
+2168.4,
+362.3
+]
+},
+{
+"k": 14,
+"file": "frame_0915.jpg",
+"label_index": 3,
+"box": [
+1737,
+299,
+1762,
+315
+],
+"vehicle": "car",
+"conf": 0.685,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1737.2,
+299.3,
+1762.5,
+315.3
+]
+},
+{
+"k": 15,
+"file": "frame_0915.jpg",
+"label_index": 4,
+"box": [
+1831,
+235,
+1914,
+309
+],
+"vehicle": "car",
+"conf": 0.684,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1830.9,
+234.9,
+1914.3,
+308.6
+]
+},
+{
+"k": 16,
+"file": "frame_0915.jpg",
+"label_index": 5,
+"box": [
+314,
+529,
+410,
+558
+],
+"vehicle": "car",
+"conf": 0.467,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+313.6,
+529.2,
+410.5,
+558.1
+]
+},
+{
+"k": 17,
+"file": "frame_0915.jpg",
+"label_index": 6,
+"box": [
+2387,
+614,
+2413,
+645
+],
+"vehicle": "car",
+"conf": 0.398,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2387.3,
+614.0,
+2413.0,
+644.6
+]
+},
+{
+"k": 18,
+"file": "frame_0915.jpg",
+"label_index": 7,
+"box": [
+2125,
+741,
+2167,
+768
+],
+"vehicle": "motorcycle",
+"conf": 0.351,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2125.4,
+741.4,
+2167.1,
+767.9
+]
+},
+{
+"k": 19,
+"file": "frame_0915.jpg",
+"label_index": 8,
+"box": [
+2510,
+352,
+2532,
+363
+],
+"vehicle": "car",
+"conf": 0.282,
+"src": "international",
+"iou_to_sugg": 0.91,
+"sugg_box": [
+2510.0,
+352.4,
+2531.5,
+362.6
+]
+},
+{
+"k": 20,
+"file": "frame_0945.jpg",
+"label_index": 0,
+"box": [
+2911,
+1592,
+3009,
+1643
+],
+"vehicle": "car",
+"conf": 0.944,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2911.0,
+1592.5,
+3009.4,
+1642.8
+]
+},
+{
+"k": 21,
+"file": "frame_0945.jpg",
+"label_index": 1,
+"box": [
+1950,
+855,
+2007,
+884
+],
+"vehicle": "car",
+"conf": 0.938,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1950.2,
+855.2,
+2006.7,
+884.5
+]
+},
+{
+"k": 22,
+"file": "frame_0945.jpg",
+"label_index": 2,
+"box": [
+1564,
+825,
+1620,
+855
+],
+"vehicle": "car",
+"conf": 0.928,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1564.3,
+825.3,
+1620.5,
+855.4
+]
+},
+{
+"k": 23,
+"file": "frame_0945.jpg",
+"label_index": 3,
+"box": [
+1193,
+876,
+1250,
+906
+],
+"vehicle": "car",
+"conf": 0.913,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1193.1,
+875.6,
+1249.7,
+906.3
+]
+},
+{
+"k": 24,
+"file": "frame_0945.jpg",
+"label_index": 4,
+"box": [
+2628,
+1058,
+2700,
+1096
+],
+"vehicle": "car",
+"conf": 0.907,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2628.1,
+1058.0,
+2700.4,
+1095.5
+]
+},
+{
+"k": 25,
+"file": "frame_0945.jpg",
+"label_index": 5,
+"box": [
+1600,
+263,
+1621,
+272
+],
+"vehicle": "car",
+"conf": 0.868,
+"src": "international",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+1599.5,
+263.0,
+1621.1,
+272.5
+]
+},
+{
+"k": 26,
+"file": "frame_0945.jpg",
+"label_index": 6,
+"box": [
+316,
+529,
+412,
+557
+],
+"vehicle": "car",
+"conf": 0.831,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+316.0,
+528.9,
+411.8,
+556.9
+]
+},
+{
+"k": 27,
+"file": "frame_0945.jpg",
+"label_index": 7,
+"box": [
+875,
+804,
+914,
+836
+],
+"vehicle": "motorcycle",
+"conf": 0.787,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+874.7,
+803.5,
+914.3,
+835.7
+]
+},
+{
+"k": 28,
+"file": "frame_0945.jpg",
+"label_index": 8,
+"box": [
+2382,
+529,
+2390,
+536
+],
+"vehicle": "car",
+"conf": 0.546,
+"src": "international",
+"iou_to_sugg": 0.83,
+"sugg_box": [
+2381.6,
+529.3,
+2389.7,
+536.4
+]
+},
+{
+"k": 29,
+"file": "frame_0945.jpg",
+"label_index": 9,
+"box": [
+3936,
+726,
+4067,
+870
+],
+"vehicle": "motorcycle",
+"conf": 0.439,
+"src": "bangla",
+"iou_to_sugg": 1.0,
+"sugg_box": [
+3935.6,
+726.0,
+4067.0,
+869.8
+]
+},
+{
+"k": 30,
+"file": "frame_0945.jpg",
+"label_index": 10,
+"box": [
+3212,
+199,
+3218,
+207
+],
+"vehicle": "car",
+"conf": 0.419,
+"src": "international",
+"iou_to_sugg": 0.87,
+"sugg_box": [
+3211.6,
+199.2,
+3218.3,
+206.9
+]
+},
+{
+"k": 31,
+"file": "frame_0945.jpg",
+"label_index": 11,
+"box": [
+1639,
+269,
+1643,
+275
+],
+"vehicle": "car",
+"conf": 0.301,
+"src": "international",
+"iou_to_sugg": 0.84,
+"sugg_box": [
+1639.0,
+269.3,
+1642.6,
+274.9
+]
+},
+{
+"k": 32,
+"file": "frame_0945.jpg",
+"label_index": 12,
+"box": [
+2668,
+510,
+2704,
+521
+],
+"vehicle": "car",
+"conf": 0.299,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+2668.3,
+509.5,
+2704.0,
+520.9
+]
+},
+{
+"k": 33,
+"file": "frame_0945.jpg",
+"label_index": 13,
+"box": [
+2713,
+332,
+2723,
+341
+],
+"vehicle": "motorcycle",
+"conf": 0.26,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+2712.9,
+332.4,
+2722.8,
+341.0
+]
+},
+{
+"k": 34,
+"file": "frame_1075.jpg",
+"label_index": 0,
+"box": [
+3194,
+1568,
+3292,
+1620
+],
+"vehicle": "car",
+"conf": 0.941,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+3194.1,
+1568.3,
+3291.7,
+1620.5
+]
+},
+{
+"k": 35,
+"file": "frame_1075.jpg",
+"label_index": 1,
+"box": [
+954,
+1238,
+1032,
+1280
+],
+"vehicle": "car",
+"conf": 0.926,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+953.8,
+1238.5,
+1031.8,
+1279.6
+]
+},
+{
+"k": 36,
+"file": "frame_1075.jpg",
+"label_index": 2,
+"box": [
+2791,
+1074,
+2862,
+1112
+],
+"vehicle": "car",
+"conf": 0.918,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2791.0,
+1073.6,
+2861.5,
+1111.6
+]
+},
+{
+"k": 37,
+"file": "frame_1075.jpg",
+"label_index": 3,
+"box": [
+990,
+972,
+1052,
+1004
+],
+"vehicle": "car",
+"conf": 0.915,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+990.0,
+972.0,
+1051.7,
+1003.5
+]
+},
+{
+"k": 38,
+"file": "frame_1075.jpg",
+"label_index": 4,
+"box": [
+1357,
+594,
+1399,
+615
+],
+"vehicle": "car",
+"conf": 0.911,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1356.7,
+593.5,
+1398.8,
+615.4
+]
+},
+{
+"k": 39,
+"file": "frame_1075.jpg",
+"label_index": 5,
+"box": [
+2490,
+834,
+2549,
+865
+],
+"vehicle": "car",
+"conf": 0.909,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2490.0,
+833.8,
+2549.0,
+864.6
+]
+},
+{
+"k": 40,
+"file": "frame_1075.jpg",
+"label_index": 6,
+"box": [
+1608,
+1232,
+1686,
+1272
+],
+"vehicle": "car",
+"conf": 0.905,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1608.3,
+1231.8,
+1686.2,
+1272.2
+]
+},
+{
+"k": 41,
+"file": "frame_1075.jpg",
+"label_index": 7,
+"box": [
+1496,
+942,
+1560,
+977
+],
+"vehicle": "car",
+"conf": 0.875,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1495.8,
+941.8,
+1559.8,
+977.3
+]
+},
+{
+"k": 42,
+"file": "frame_1075.jpg",
+"label_index": 8,
+"box": [
+1126,
+689,
+1174,
+717
+],
+"vehicle": "car",
+"conf": 0.864,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1126.2,
+689.3,
+1174.1,
+716.6
+]
+},
+{
+"k": 43,
+"file": "frame_1075.jpg",
+"label_index": 9,
+"box": [
+395,
+1207,
+454,
+1251
+],
+"vehicle": "car",
+"conf": 0.836,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+394.9,
+1206.8,
+453.5,
+1251.4
+]
+},
+{
+"k": 44,
+"file": "frame_1075.jpg",
+"label_index": 10,
+"box": [
+847,
+2453,
+1015,
+2543
+],
+"vehicle": "bus_truck",
+"conf": 0.833,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+846.6,
+2453.3,
+1014.8,
+2542.6
+]
+},
+{
+"k": 45,
+"file": "frame_1075.jpg",
+"label_index": 11,
+"box": [
+2207,
+745,
+2258,
+773
+],
+"vehicle": "car",
+"conf": 0.816,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2207.1,
+745.1,
+2258.2,
+773.0
+]
+},
+{
+"k": 46,
+"file": "frame_1075.jpg",
+"label_index": 12,
+"box": [
+3511,
+364,
+3585,
+392
+],
+"vehicle": "car",
+"conf": 0.815,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+3510.8,
+363.9,
+3584.8,
+392.0
+]
+},
+{
+"k": 47,
+"file": "frame_1075.jpg",
+"label_index": 13,
+"box": [
+889,
+2595,
+1069,
+2709
+],
+"vehicle": "bus_truck",
+"conf": 0.799,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+888.6,
+2595.4,
+1069.0,
+2708.8
+]
+},
+{
+"k": 48,
+"file": "frame_1075.jpg",
+"label_index": 14,
+"box": [
+499,
+1249,
+570,
+1279
+],
+"vehicle": "car",
+"conf": 0.788,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+498.8,
+1249.2,
+570.0,
+1279.2
+]
+},
+{
+"k": 49,
+"file": "frame_1075.jpg",
+"label_index": 15,
+"box": [
+1888,
+300,
+1904,
+313
+],
+"vehicle": "car",
+"conf": 0.71,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+1887.6,
+300.0,
+1904.3,
+312.6
+]
+},
+{
+"k": 50,
+"file": "frame_1075.jpg",
+"label_index": 16,
+"box": [
+3457,
+303,
+3585,
+392
+],
+"vehicle": "car",
+"conf": 0.589,
+"src": "bangla",
+"iou_to_sugg": 1.0,
+"sugg_box": [
+3457.0,
+303.3,
+3585.0,
+392.0
+]
+},
+{
+"k": 51,
+"file": "frame_1075.jpg",
+"label_index": 17,
+"box": [
+2064,
+296,
+2093,
+312
+],
+"vehicle": "car",
+"conf": 0.548,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+2064.3,
+295.5,
+2093.2,
+312.1
+]
+},
+{
+"k": 52,
+"file": "frame_1075.jpg",
+"label_index": 18,
+"box": [
+3228,
+144,
+3243,
+206
+],
+"vehicle": "car",
+"conf": 0.502,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+3228.0,
+143.6,
+3242.7,
+205.8
+]
+},
+{
+"k": 53,
+"file": "frame_1075.jpg",
+"label_index": 19,
+"box": [
+303,
+1258,
+349,
+1286
+],
+"vehicle": "car",
+"conf": 0.479,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+303.1,
+1257.9,
+349.4,
+1286.4
+]
+},
+{
+"k": 54,
+"file": "frame_1075.jpg",
+"label_index": 20,
+"box": [
+598,
+916,
+631,
+936
+],
+"vehicle": "motorcycle",
+"conf": 0.463,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+598.2,
+916.2,
+631.0,
+936.3
+]
+},
+{
+"k": 55,
+"file": "frame_1075.jpg",
+"label_index": 21,
+"box": [
+4044,
+465,
+4062,
+475
+],
+"vehicle": "car",
+"conf": 0.384,
+"src": "international",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+4044.1,
+465.4,
+4061.7,
+474.6
+]
+},
+{
+"k": 56,
+"file": "frame_1075.jpg",
+"label_index": 22,
+"box": [
+327,
+531,
+423,
+563
+],
+"vehicle": "bus_truck",
+"conf": 0.293,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+327.0,
+531.4,
+423.1,
+563.2
+]
+},
+{
+"k": 57,
+"file": "frame_1095.jpg",
+"label_index": 0,
+"box": [
+1806,
+1226,
+1887,
+1272
+],
+"vehicle": "car",
+"conf": 0.931,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1806.0,
+1225.9,
+1887.3,
+1271.6
+]
+},
+{
+"k": 58,
+"file": "frame_1095.jpg",
+"label_index": 1,
+"box": [
+1428,
+2039,
+1547,
+2102
+],
+"vehicle": "car",
+"conf": 0.927,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1427.9,
+2038.7,
+1547.4,
+2102.1
+]
+},
+{
+"k": 59,
+"file": "frame_1095.jpg",
+"label_index": 2,
+"box": [
+2615,
+1097,
+2687,
+1134
+],
+"vehicle": "car",
+"conf": 0.923,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2614.9,
+1097.4,
+2686.6,
+1134.4
+]
+},
+{
+"k": 60,
+"file": "frame_1095.jpg",
+"label_index": 3,
+"box": [
+1452,
+742,
+1502,
+767
+],
+"vehicle": "car",
+"conf": 0.917,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1452.1,
+741.5,
+1502.4,
+767.4
+]
+},
+{
+"k": 61,
+"file": "frame_1095.jpg",
+"label_index": 4,
+"box": [
+1132,
+1206,
+1208,
+1246
+],
+"vehicle": "car",
+"conf": 0.916,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1131.7,
+1206.5,
+1207.7,
+1246.3
+]
+},
+{
+"k": 62,
+"file": "frame_1095.jpg",
+"label_index": 5,
+"box": [
+2729,
+863,
+2788,
+895
+],
+"vehicle": "car",
+"conf": 0.915,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2728.9,
+862.8,
+2787.5,
+895.2
+]
+},
+{
+"k": 63,
+"file": "frame_1095.jpg",
+"label_index": 6,
+"box": [
+1890,
+739,
+1984,
+768
+],
+"vehicle": "car",
+"conf": 0.879,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1890.1,
+738.8,
+1983.7,
+767.7
+]
+},
+{
+"k": 64,
+"file": "frame_1095.jpg",
+"label_index": 7,
+"box": [
+2367,
+722,
+2420,
+749
+],
+"vehicle": "car",
+"conf": 0.828,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2366.9,
+721.7,
+2419.5,
+748.9
+]
+},
+{
+"k": 65,
+"file": "frame_1095.jpg",
+"label_index": 8,
+"box": [
+1592,
+543,
+1633,
+567
+],
+"vehicle": "car",
+"conf": 0.81,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1592.3,
+543.2,
+1633.3,
+567.4
+]
+},
+{
+"k": 66,
+"file": "frame_1095.jpg",
+"label_index": 9,
+"box": [
+2066,
+297,
+2092,
+311
+],
+"vehicle": "car",
+"conf": 0.802,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2066.1,
+296.6,
+2092.2,
+311.0
+]
+},
+{
+"k": 67,
+"file": "frame_1095.jpg",
+"label_index": 10,
+"box": [
+1236,
+873,
+1277,
+906
+],
+"vehicle": "car",
+"conf": 0.766,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1236.2,
+872.6,
+1277.4,
+906.0
+]
+},
+{
+"k": 68,
+"file": "frame_1095.jpg",
+"label_index": 11,
+"box": [
+2217,
+265,
+2226,
+273
+],
+"vehicle": "car",
+"conf": 0.753,
+"src": "bangla",
+"iou_to_sugg": 0.91,
+"sugg_box": [
+2216.6,
+265.0,
+2226.1,
+272.7
+]
+},
+{
+"k": 69,
+"file": "frame_1095.jpg",
+"label_index": 12,
+"box": [
+3456,
+305,
+3561,
+412
+],
+"vehicle": "car",
+"conf": 0.745,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+3455.5,
+305.1,
+3561.0,
+412.3
+]
+},
+{
+"k": 70,
+"file": "frame_1095.jpg",
+"label_index": 13,
+"box": [
+707,
+970,
+761,
+1016
+],
+"vehicle": "motorcycle",
+"conf": 0.719,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+707.3,
+969.9,
+760.9,
+1016.1
+]
+},
+{
+"k": 71,
+"file": "frame_1095.jpg",
+"label_index": 14,
+"box": [
+3512,
+363,
+3561,
+397
+],
+"vehicle": "car",
+"conf": 0.709,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+3511.6,
+363.3,
+3560.8,
+396.7
+]
+},
+{
+"k": 72,
+"file": "frame_1095.jpg",
+"label_index": 15,
+"box": [
+873,
+822,
+940,
+863
+],
+"vehicle": "bus_truck",
+"conf": 0.696,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+873.3,
+821.5,
+940.4,
+863.3
+]
+},
+{
+"k": 73,
+"file": "frame_1095.jpg",
+"label_index": 16,
+"box": [
+924,
+440,
+941,
+455
+],
+"vehicle": "car",
+"conf": 0.661,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+924.1,
+440.1,
+941.4,
+455.2
+]
+},
+{
+"k": 74,
+"file": "frame_1095.jpg",
+"label_index": 17,
+"box": [
+1877,
+297,
+1906,
+314
+],
+"vehicle": "car",
+"conf": 0.627,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1876.6,
+296.9,
+1906.1,
+313.6
+]
+},
+{
+"k": 75,
+"file": "frame_1095.jpg",
+"label_index": 18,
+"box": [
+2214,
+505,
+2244,
+526
+],
+"vehicle": "car",
+"conf": 0.622,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+2213.6,
+505.4,
+2244.4,
+526.3
+]
+},
+{
+"k": 76,
+"file": "frame_1095.jpg",
+"label_index": 19,
+"box": [
+1163,
+358,
+1188,
+375
+],
+"vehicle": "car",
+"conf": 0.587,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1163.1,
+358.2,
+1188.4,
+375.1
+]
+},
+{
+"k": 77,
+"file": "frame_1095.jpg",
+"label_index": 20,
+"box": [
+1103,
+751,
+1135,
+782
+],
+"vehicle": "bus_truck",
+"conf": 0.567,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1103.3,
+751.3,
+1134.8,
+782.2
+]
+},
+{
+"k": 78,
+"file": "frame_1095.jpg",
+"label_index": 21,
+"box": [
+2141,
+242,
+2150,
+248
+],
+"vehicle": "car",
+"conf": 0.534,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2140.7,
+241.6,
+2150.2,
+248.2
+]
+},
+{
+"k": 79,
+"file": "frame_1095.jpg",
+"label_index": 22,
+"box": [
+1746,
+771,
+1775,
+867
+],
+"vehicle": "car",
+"conf": 0.526,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1746.0,
+770.7,
+1775.1,
+866.8
+]
+},
+{
+"k": 80,
+"file": "frame_1095.jpg",
+"label_index": 23,
+"box": [
+1982,
+248,
+1993,
+253
+],
+"vehicle": "car",
+"conf": 0.488,
+"src": "international",
+"iou_to_sugg": 0.87,
+"sugg_box": [
+1982.5,
+248.3,
+1993.1,
+252.9
+]
+},
+{
+"k": 81,
+"file": "frame_1095.jpg",
+"label_index": 24,
+"box": [
+2390,
+475,
+2424,
+509
+],
+"vehicle": "motorcycle",
+"conf": 0.308,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2390.2,
+474.8,
+2423.6,
+508.7
+]
+},
+{
+"k": 82,
+"file": "frame_1095.jpg",
+"label_index": 25,
+"box": [
+2144,
+271,
+2154,
+274
+],
+"vehicle": "car",
+"conf": 0.252,
+"src": "international",
+"iou_to_sugg": 0.79,
+"sugg_box": [
+2143.7,
+270.8,
+2154.5,
+273.7
+]
+},
+{
+"k": 83,
+"file": "frame_1125.jpg",
+"label_index": 0,
+"box": [
+2238,
+150,
+2248,
+158
+],
+"vehicle": "car",
+"conf": 0.744,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2237.7,
+150.5,
+2248.5,
+157.9
+]
+},
+{
+"k": 84,
+"file": "frame_1125.jpg",
+"label_index": 1,
+"box": [
+1875,
+297,
+1901,
+312
+],
+"vehicle": "car",
+"conf": 0.736,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1874.8,
+297.4,
+1901.3,
+312.2
+]
+},
+{
+"k": 85,
+"file": "frame_1125.jpg",
+"label_index": 2,
+"box": [
+2172,
+180,
+2183,
+188
+],
+"vehicle": "car",
+"conf": 0.718,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+2171.6,
+180.2,
+2182.7,
+188.1
+]
+},
+{
+"k": 86,
+"file": "frame_1125.jpg",
+"label_index": 3,
+"box": [
+2270,
+175,
+2278,
+181
+],
+"vehicle": "car",
+"conf": 0.709,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2270.4,
+174.9,
+2278.4,
+180.8
+]
+},
+{
+"k": 87,
+"file": "frame_1125.jpg",
+"label_index": 4,
+"box": [
+2010,
+275,
+2025,
+288
+],
+"vehicle": "motorcycle",
+"conf": 0.615,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2010.4,
+275.0,
+2024.8,
+288.0
+]
+},
+{
+"k": 88,
+"file": "frame_1125.jpg",
+"label_index": 5,
+"box": [
+1687,
+317,
+1700,
+330
+],
+"vehicle": "car",
+"conf": 0.593,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+1687.4,
+317.1,
+1699.7,
+329.5
+]
+},
+{
+"k": 89,
+"file": "frame_1125.jpg",
+"label_index": 6,
+"box": [
+2709,
+338,
+2932,
+508
+],
+"vehicle": "motorcycle",
+"conf": 0.545,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2708.7,
+338.3,
+2931.7,
+507.6
+]
+},
+{
+"k": 90,
+"file": "frame_1125.jpg",
+"label_index": 7,
+"box": [
+2328,
+1055,
+2390,
+1096
+],
+"vehicle": "motorcycle",
+"conf": 0.376,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2328.2,
+1055.3,
+2389.9,
+1096.3
+]
+},
+{
+"k": 91,
+"file": "frame_1135.jpg",
+"label_index": 0,
+"box": [
+1759,
+1694,
+1841,
+1761
+],
+"vehicle": "motorcycle",
+"conf": 0.834,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1758.9,
+1694.2,
+1840.6,
+1761.2
+]
+},
+{
+"k": 92,
+"file": "frame_1135.jpg",
+"label_index": 1,
+"box": [
+914,
+317,
+943,
+333
+],
+"vehicle": "car",
+"conf": 0.763,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+914.3,
+317.4,
+942.9,
+333.2
+]
+},
+{
+"k": 93,
+"file": "frame_1135.jpg",
+"label_index": 2,
+"box": [
+2135,
+241,
+2145,
+248
+],
+"vehicle": "car",
+"conf": 0.762,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2134.9,
+241.2,
+2144.6,
+247.5
+]
+},
+{
+"k": 94,
+"file": "frame_1135.jpg",
+"label_index": 3,
+"box": [
+3451,
+299,
+3558,
+413
+],
+"vehicle": "car",
+"conf": 0.762,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+3451.0,
+299.4,
+3558.0,
+413.2
+]
+},
+{
+"k": 95,
+"file": "frame_1135.jpg",
+"label_index": 4,
+"box": [
+2006,
+778,
+2058,
+808
+],
+"vehicle": "motorcycle",
+"conf": 0.729,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2005.9,
+777.6,
+2057.5,
+808.0
+]
+},
+{
+"k": 96,
+"file": "frame_1135.jpg",
+"label_index": 5,
+"box": [
+1964,
+283,
+2423,
+492
+],
+"vehicle": "bus_truck",
+"conf": 0.676,
+"src": "bangla",
+"iou_to_sugg": 0.42,
+"sugg_box": [
+2166.5,
+286.5,
+2453.2,
+453.7
+]
+},
+{
+"k": 97,
+"file": "frame_1135.jpg",
+"label_index": 6,
+"box": [
+2041,
+241,
+2067,
+252
+],
+"vehicle": "car",
+"conf": 0.669,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+2040.8,
+240.8,
+2066.9,
+252.5
+]
+},
+{
+"k": 98,
+"file": "frame_1135.jpg",
+"label_index": 7,
+"box": [
+2055,
+180,
+2068,
+188
+],
+"vehicle": "car",
+"conf": 0.65,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+2054.9,
+179.5,
+2068.1,
+188.3
+]
+},
+{
+"k": 99,
+"file": "frame_1135.jpg",
+"label_index": 8,
+"box": [
+2170,
+180,
+2181,
+188
+],
+"vehicle": "car",
+"conf": 0.525,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+2170.0,
+179.9,
+2180.8,
+188.3
+]
+},
+{
+"k": 100,
+"file": "frame_1135.jpg",
+"label_index": 9,
+"box": [
+1917,
+536,
+1950,
+562
+],
+"vehicle": "motorcycle",
+"conf": 0.442,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1916.8,
+535.7,
+1949.8,
+562.4
+]
+},
+{
+"k": 101,
+"file": "frame_1135.jpg",
+"label_index": 10,
+"box": [
+255,
+1048,
+472,
+1209
+],
+"vehicle": "motorcycle",
+"conf": 0.389,
+"src": "bangla",
+"iou_to_sugg": 1.0,
+"sugg_box": [
+255.1,
+1047.7,
+472.1,
+1209.0
+]
+},
+{
+"k": 102,
+"file": "frame_1135.jpg",
+"label_index": 11,
+"box": [
+2820,
+382,
+2845,
+392
+],
+"vehicle": "car",
+"conf": 0.369,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+2820.2,
+381.6,
+2845.4,
+392.0
+]
+},
+{
+"k": 103,
+"file": "frame_1135.jpg",
+"label_index": 12,
+"box": [
+1896,
+555,
+1903,
+561
+],
+"vehicle": "motorcycle",
+"conf": 0.338,
+"src": "bangla",
+"iou_to_sugg": 0.79,
+"sugg_box": [
+1895.5,
+554.6,
+1903.3,
+560.6
+]
+},
+{
+"k": 104,
+"file": "frame_1135.jpg",
+"label_index": 13,
+"box": [
+2061,
+297,
+2085,
+310
+],
+"vehicle": "car",
+"conf": 0.279,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+2060.6,
+297.2,
+2085.4,
+310.1
+]
+},
+{
+"k": 105,
+"file": "frame_1135.jpg",
+"label_index": 14,
+"box": [
+2104,
+209,
+2108,
+214
+],
+"vehicle": "car",
+"conf": 0.274,
+"src": "international",
+"iou_to_sugg": 0.85,
+"sugg_box": [
+2104.0,
+208.8,
+2108.1,
+213.5
+]
+},
+{
+"k": 106,
+"file": "frame_1175.jpg",
+"label_index": 0,
+"box": [
+696,
+1730,
+798,
+1782
+],
+"vehicle": "car",
+"conf": 0.933,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+695.8,
+1730.1,
+798.1,
+1782.5
+]
+},
+{
+"k": 107,
+"file": "frame_1175.jpg",
+"label_index": 1,
+"box": [
+2059,
+916,
+2119,
+947
+],
+"vehicle": "car",
+"conf": 0.914,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2058.8,
+916.5,
+2119.4,
+946.9
+]
+},
+{
+"k": 108,
+"file": "frame_1175.jpg",
+"label_index": 2,
+"box": [
+1598,
+1009,
+1665,
+1042
+],
+"vehicle": "car",
+"conf": 0.913,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1598.3,
+1008.7,
+1665.0,
+1041.8
+]
+},
+{
+"k": 109,
+"file": "frame_1175.jpg",
+"label_index": 3,
+"box": [
+2628,
+808,
+2683,
+836
+],
+"vehicle": "car",
+"conf": 0.913,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2628.2,
+808.0,
+2683.3,
+836.1
+]
+},
+{
+"k": 110,
+"file": "frame_1175.jpg",
+"label_index": 4,
+"box": [
+1075,
+1103,
+1146,
+1141
+],
+"vehicle": "car",
+"conf": 0.91,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1075.2,
+1102.6,
+1146.4,
+1141.2
+]
+},
+{
+"k": 111,
+"file": "frame_1175.jpg",
+"label_index": 5,
+"box": [
+1871,
+298,
+1898,
+312
+],
+"vehicle": "car",
+"conf": 0.836,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1870.8,
+298.0,
+1897.6,
+312.3
+]
+},
+{
+"k": 112,
+"file": "frame_1175.jpg",
+"label_index": 6,
+"box": [
+1295,
+325,
+1324,
+342
+],
+"vehicle": "car",
+"conf": 0.808,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1295.4,
+325.0,
+1324.5,
+341.9
+]
+},
+{
+"k": 113,
+"file": "frame_1175.jpg",
+"label_index": 7,
+"box": [
+1670,
+319,
+1695,
+332
+],
+"vehicle": "car",
+"conf": 0.796,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1670.2,
+319.0,
+1694.9,
+332.5
+]
+},
+{
+"k": 114,
+"file": "frame_1175.jpg",
+"label_index": 8,
+"box": [
+1823,
+767,
+1865,
+800
+],
+"vehicle": "motorcycle",
+"conf": 0.779,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1822.6,
+766.6,
+1865.3,
+800.4
+]
+},
+{
+"k": 115,
+"file": "frame_1175.jpg",
+"label_index": 9,
+"box": [
+594,
+1324,
+659,
+1374
+],
+"vehicle": "car",
+"conf": 0.694,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+593.6,
+1323.9,
+659.2,
+1374.1
+]
+},
+{
+"k": 116,
+"file": "frame_1175.jpg",
+"label_index": 10,
+"box": [
+2186,
+775,
+2234,
+809
+],
+"vehicle": "motorcycle",
+"conf": 0.642,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2185.7,
+775.4,
+2233.9,
+809.1
+]
+},
+{
+"k": 117,
+"file": "frame_1175.jpg",
+"label_index": 11,
+"box": [
+2745,
+402,
+2762,
+410
+],
+"vehicle": "motorcycle",
+"conf": 0.638,
+"src": "bangla",
+"iou_to_sugg": 0.88,
+"sugg_box": [
+2745.3,
+401.5,
+2762.0,
+409.6
+]
+},
+{
+"k": 118,
+"file": "frame_1175.jpg",
+"label_index": 12,
+"box": [
+4052,
+213,
+4060,
+217
+],
+"vehicle": "car",
+"conf": 0.633,
+"src": "international",
+"iou_to_sugg": 0.85,
+"sugg_box": [
+4051.9,
+212.6,
+4059.5,
+217.0
+]
+},
+{
+"k": 119,
+"file": "frame_1175.jpg",
+"label_index": 13,
+"box": [
+2054,
+180,
+2068,
+188
+],
+"vehicle": "car",
+"conf": 0.569,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2053.8,
+179.5,
+2067.6,
+188.4
+]
+},
+{
+"k": 120,
+"file": "frame_1175.jpg",
+"label_index": 14,
+"box": [
+1976,
+248,
+1988,
+253
+],
+"vehicle": "car",
+"conf": 0.547,
+"src": "international",
+"iou_to_sugg": 0.83,
+"sugg_box": [
+1975.6,
+247.7,
+1988.5,
+252.7
+]
+},
+{
+"k": 121,
+"file": "frame_1175.jpg",
+"label_index": 15,
+"box": [
+2134,
+239,
+2146,
+248
+],
+"vehicle": "car",
+"conf": 0.545,
+"src": "bangla",
+"iou_to_sugg": 0.89,
+"sugg_box": [
+2134.5,
+238.7,
+2145.6,
+248.1
+]
+},
+{
+"k": 122,
+"file": "frame_1175.jpg",
+"label_index": 16,
+"box": [
+1802,
+463,
+1821,
+486
+],
+"vehicle": "motorcycle",
+"conf": 0.498,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1802.4,
+463.4,
+1820.9,
+485.8
+]
+},
+{
+"k": 123,
+"file": "frame_1175.jpg",
+"label_index": 17,
+"box": [
+3930,
+574,
+3940,
+582
+],
+"vehicle": "motorcycle",
+"conf": 0.477,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+3930.1,
+574.4,
+3939.8,
+581.5
+]
+},
+{
+"k": 124,
+"file": "frame_1185.jpg",
+"label_index": 0,
+"box": [
+2202,
+1100,
+2274,
+1138
+],
+"vehicle": "car",
+"conf": 0.935,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2202.5,
+1099.8,
+2274.4,
+1137.7
+]
+},
+{
+"k": 125,
+"file": "frame_1185.jpg",
+"label_index": 1,
+"box": [
+1666,
+1893,
+1777,
+1950
+],
+"vehicle": "car",
+"conf": 0.926,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1666.5,
+1892.6,
+1777.0,
+1949.8
+]
+},
+{
+"k": 126,
+"file": "frame_1185.jpg",
+"label_index": 2,
+"box": [
+1075,
+1103,
+1146,
+1141
+],
+"vehicle": "car",
+"conf": 0.926,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1075.2,
+1103.2,
+1146.1,
+1140.9
+]
+},
+{
+"k": 127,
+"file": "frame_1185.jpg",
+"label_index": 3,
+"box": [
+1598,
+1008,
+1665,
+1042
+],
+"vehicle": "car",
+"conf": 0.916,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1598.4,
+1008.2,
+1664.9,
+1042.0
+]
+},
+{
+"k": 128,
+"file": "frame_1185.jpg",
+"label_index": 4,
+"box": [
+2628,
+809,
+2683,
+838
+],
+"vehicle": "car",
+"conf": 0.911,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2628.1,
+808.7,
+2683.4,
+837.6
+]
+},
+{
+"k": 129,
+"file": "frame_1185.jpg",
+"label_index": 5,
+"box": [
+1870,
+299,
+1897,
+312
+],
+"vehicle": "car",
+"conf": 0.838,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1870.5,
+298.7,
+1896.8,
+312.2
+]
+},
+{
+"k": 130,
+"file": "frame_1185.jpg",
+"label_index": 6,
+"box": [
+1670,
+319,
+1695,
+332
+],
+"vehicle": "car",
+"conf": 0.795,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1670.2,
+318.7,
+1695.3,
+331.7
+]
+},
+{
+"k": 131,
+"file": "frame_1185.jpg",
+"label_index": 7,
+"box": [
+2060,
+297,
+2085,
+311
+],
+"vehicle": "car",
+"conf": 0.75,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2059.5,
+297.0,
+2085.1,
+311.1
+]
+},
+{
+"k": 132,
+"file": "frame_1185.jpg",
+"label_index": 8,
+"box": [
+2055,
+180,
+2066,
+188
+],
+"vehicle": "car",
+"conf": 0.729,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2055.3,
+179.5,
+2066.5,
+187.8
+]
+},
+{
+"k": 133,
+"file": "frame_1185.jpg",
+"label_index": 9,
+"box": [
+723,
+875,
+771,
+916
+],
+"vehicle": "car",
+"conf": 0.686,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+722.7,
+875.1,
+770.8,
+916.0
+]
+},
+{
+"k": 134,
+"file": "frame_1185.jpg",
+"label_index": 10,
+"box": [
+1552,
+226,
+1569,
+235
+],
+"vehicle": "car",
+"conf": 0.686,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+1551.7,
+225.5,
+1568.8,
+235.2
+]
+},
+{
+"k": 135,
+"file": "frame_1185.jpg",
+"label_index": 11,
+"box": [
+430,
+1036,
+472,
+1070
+],
+"vehicle": "motorcycle",
+"conf": 0.678,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+429.6,
+1035.5,
+472.5,
+1070.5
+]
+},
+{
+"k": 136,
+"file": "frame_1185.jpg",
+"label_index": 12,
+"box": [
+2182,
+775,
+2233,
+812
+],
+"vehicle": "motorcycle",
+"conf": 0.564,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2181.7,
+774.7,
+2232.7,
+812.5
+]
+},
+{
+"k": 137,
+"file": "frame_1185.jpg",
+"label_index": 13,
+"box": [
+1695,
+240,
+1704,
+246
+],
+"vehicle": "car",
+"conf": 0.537,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+1695.0,
+240.3,
+1703.8,
+245.8
+]
+},
+{
+"k": 138,
+"file": "frame_1185.jpg",
+"label_index": 14,
+"box": [
+1058,
+834,
+1077,
+851
+],
+"vehicle": "motorcycle",
+"conf": 0.442,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+1057.6,
+834.5,
+1076.8,
+850.8
+]
+},
+{
+"k": 139,
+"file": "frame_1185.jpg",
+"label_index": 15,
+"box": [
+1823,
+768,
+1864,
+801
+],
+"vehicle": "motorcycle",
+"conf": 0.363,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1822.7,
+768.0,
+1864.0,
+800.7
+]
+},
+{
+"k": 140,
+"file": "frame_1185.jpg",
+"label_index": 16,
+"box": [
+1976,
+248,
+1986,
+252
+],
+"vehicle": "car",
+"conf": 0.313,
+"src": "international",
+"iou_to_sugg": 0.79,
+"sugg_box": [
+1976.0,
+248.5,
+1985.7,
+252.3
+]
+},
+{
+"k": 141,
+"file": "frame_1185.jpg",
+"label_index": 17,
+"box": [
+1846,
+563,
+1863,
+575
+],
+"vehicle": "motorcycle",
+"conf": 0.267,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1846.1,
+562.9,
+1862.7,
+575.3
+]
+},
+{
+"k": 142,
+"file": "frame_1215.jpg",
+"label_index": 0,
+"box": [
+2202,
+1099,
+2274,
+1137
+],
+"vehicle": "car",
+"conf": 0.926,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2201.8,
+1098.9,
+2274.0,
+1136.9
+]
+},
+{
+"k": 143,
+"file": "frame_1215.jpg",
+"label_index": 1,
+"box": [
+2965,
+2363,
+3106,
+2439
+],
+"vehicle": "car",
+"conf": 0.922,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2965.1,
+2363.2,
+3106.3,
+2439.1
+]
+},
+{
+"k": 144,
+"file": "frame_1215.jpg",
+"label_index": 2,
+"box": [
+1076,
+1102,
+1146,
+1140
+],
+"vehicle": "car",
+"conf": 0.919,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1075.6,
+1102.0,
+1146.3,
+1140.0
+]
+},
+{
+"k": 145,
+"file": "frame_1215.jpg",
+"label_index": 3,
+"box": [
+1707,
+1406,
+1795,
+1451
+],
+"vehicle": "car",
+"conf": 0.91,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1707.1,
+1405.6,
+1795.2,
+1450.9
+]
+},
+{
+"k": 146,
+"file": "frame_1215.jpg",
+"label_index": 4,
+"box": [
+390,
+1083,
+454,
+1118
+],
+"vehicle": "car",
+"conf": 0.889,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+390.3,
+1083.1,
+453.5,
+1118.5
+]
+},
+{
+"k": 147,
+"file": "frame_1215.jpg",
+"label_index": 5,
+"box": [
+2628,
+807,
+2684,
+836
+],
+"vehicle": "car",
+"conf": 0.87,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2628.4,
+806.8,
+2684.5,
+836.0
+]
+},
+{
+"k": 148,
+"file": "frame_1215.jpg",
+"label_index": 6,
+"box": [
+488,
+1554,
+547,
+1590
+],
+"vehicle": "car",
+"conf": 0.866,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+487.8,
+1554.4,
+546.6,
+1590.4
+]
+},
+{
+"k": 149,
+"file": "frame_1215.jpg",
+"label_index": 7,
+"box": [
+1636,
+1007,
+1664,
+1038
+],
+"vehicle": "car",
+"conf": 0.83,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1635.6,
+1006.9,
+1664.3,
+1037.9
+]
+},
+{
+"k": 150,
+"file": "frame_1215.jpg",
+"label_index": 8,
+"box": [
+1904,
+292,
+1926,
+310
+],
+"vehicle": "car",
+"conf": 0.78,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+1903.9,
+292.3,
+1926.5,
+310.5
+]
+},
+{
+"k": 151,
+"file": "frame_1215.jpg",
+"label_index": 9,
+"box": [
+711,
+1531,
+788,
+1580
+],
+"vehicle": "car",
+"conf": 0.755,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+710.8,
+1530.6,
+788.0,
+1580.3
+]
+},
+{
+"k": 152,
+"file": "frame_1215.jpg",
+"label_index": 10,
+"box": [
+1104,
+435,
+1137,
+456
+],
+"vehicle": "car",
+"conf": 0.737,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1104.3,
+434.6,
+1136.7,
+455.9
+]
+},
+{
+"k": 153,
+"file": "frame_1215.jpg",
+"label_index": 11,
+"box": [
+601,
+1508,
+668,
+1560
+],
+"vehicle": "car",
+"conf": 0.726,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+601.3,
+1507.9,
+667.9,
+1560.1
+]
+},
+{
+"k": 154,
+"file": "frame_1215.jpg",
+"label_index": 12,
+"box": [
+2181,
+775,
+2233,
+812
+],
+"vehicle": "motorcycle",
+"conf": 0.532,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2181.2,
+775.2,
+2232.8,
+811.6
+]
+},
+{
+"k": 155,
+"file": "frame_1215.jpg",
+"label_index": 13,
+"box": [
+1665,
+186,
+1672,
+193
+],
+"vehicle": "car",
+"conf": 0.501,
+"src": "bangla",
+"iou_to_sugg": 0.88,
+"sugg_box": [
+1664.8,
+186.2,
+1672.1,
+193.4
+]
+},
+{
+"k": 156,
+"file": "frame_1215.jpg",
+"label_index": 14,
+"box": [
+1801,
+771,
+1818,
+789
+],
+"vehicle": "motorcycle",
+"conf": 0.492,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1800.8,
+771.2,
+1817.7,
+789.2
+]
+},
+{
+"k": 157,
+"file": "frame_1215.jpg",
+"label_index": 15,
+"box": [
+1811,
+245,
+1860,
+269
+],
+"vehicle": "car",
+"conf": 0.389,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1811.0,
+244.7,
+1860.2,
+269.4
+]
+},
+{
+"k": 158,
+"file": "frame_1215.jpg",
+"label_index": 16,
+"box": [
+718,
+692,
+733,
+706
+],
+"vehicle": "motorcycle",
+"conf": 0.383,
+"src": "bangla",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+718.5,
+692.1,
+732.6,
+706.2
+]
+},
+{
+"k": 159,
+"file": "frame_1215.jpg",
+"label_index": 17,
+"box": [
+2218,
+327,
+2247,
+342
+],
+"vehicle": "car",
+"conf": 0.327,
+"src": "international",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+2217.8,
+326.6,
+2247.4,
+341.5
+]
+},
+{
+"k": 160,
+"file": "frame_1235.jpg",
+"label_index": 0,
+"box": [
+2203,
+1099,
+2274,
+1136
+],
+"vehicle": "car",
+"conf": 0.928,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2202.7,
+1099.0,
+2274.3,
+1135.9
+]
+},
+{
+"k": 161,
+"file": "frame_1235.jpg",
+"label_index": 1,
+"box": [
+606,
+1816,
+711,
+1872
+],
+"vehicle": "car",
+"conf": 0.923,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+605.7,
+1816.2,
+711.3,
+1871.9
+]
+},
+{
+"k": 162,
+"file": "frame_1235.jpg",
+"label_index": 2,
+"box": [
+2636,
+1528,
+2732,
+1576
+],
+"vehicle": "car",
+"conf": 0.922,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2636.1,
+1527.8,
+2731.5,
+1575.9
+]
+},
+{
+"k": 163,
+"file": "frame_1235.jpg",
+"label_index": 3,
+"box": [
+2628,
+807,
+2683,
+835
+],
+"vehicle": "car",
+"conf": 0.916,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2628.1,
+807.4,
+2683.3,
+835.2
+]
+},
+{
+"k": 164,
+"file": "frame_1235.jpg",
+"label_index": 4,
+"box": [
+963,
+1331,
+1045,
+1375
+],
+"vehicle": "car",
+"conf": 0.915,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+963.0,
+1331.3,
+1045.0,
+1374.9
+]
+},
+{
+"k": 165,
+"file": "frame_1235.jpg",
+"label_index": 5,
+"box": [
+1708,
+1406,
+1795,
+1451
+],
+"vehicle": "car",
+"conf": 0.912,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1708.2,
+1405.8,
+1795.2,
+1451.0
+]
+},
+{
+"k": 166,
+"file": "frame_1235.jpg",
+"label_index": 6,
+"box": [
+1598,
+1008,
+1666,
+1042
+],
+"vehicle": "car",
+"conf": 0.899,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1598.2,
+1007.7,
+1665.7,
+1041.5
+]
+},
+{
+"k": 167,
+"file": "frame_1235.jpg",
+"label_index": 7,
+"box": [
+2971,
+1021,
+3038,
+1057
+],
+"vehicle": "car",
+"conf": 0.898,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2971.4,
+1021.2,
+3037.8,
+1057.2
+]
+},
+{
+"k": 168,
+"file": "frame_1235.jpg",
+"label_index": 8,
+"box": [
+391,
+1084,
+454,
+1119
+],
+"vehicle": "car",
+"conf": 0.894,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+391.0,
+1083.6,
+454.2,
+1118.9
+]
+},
+{
+"k": 169,
+"file": "frame_1235.jpg",
+"label_index": 9,
+"box": [
+1188,
+1948,
+1269,
+2011
+],
+"vehicle": "motorcycle",
+"conf": 0.836,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1188.2,
+1948.5,
+1269.0,
+2010.8
+]
+},
+{
+"k": 170,
+"file": "frame_1235.jpg",
+"label_index": 10,
+"box": [
+2182,
+379,
+2212,
+395
+],
+"vehicle": "car",
+"conf": 0.762,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2181.8,
+378.9,
+2212.1,
+394.8
+]
+},
+{
+"k": 171,
+"file": "frame_1235.jpg",
+"label_index": 11,
+"box": [
+1628,
+788,
+1669,
+822
+],
+"vehicle": "car",
+"conf": 0.692,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1628.1,
+787.6,
+1669.2,
+822.1
+]
+},
+{
+"k": 172,
+"file": "frame_1235.jpg",
+"label_index": 12,
+"box": [
+1736,
+262,
+1748,
+271
+],
+"vehicle": "car",
+"conf": 0.677,
+"src": "bangla",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+1736.3,
+262.0,
+1747.7,
+270.7
+]
+},
+{
+"k": 173,
+"file": "frame_1235.jpg",
+"label_index": 13,
+"box": [
+2231,
+271,
+2260,
+287
+],
+"vehicle": "car",
+"conf": 0.673,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2231.4,
+271.2,
+2260.0,
+287.2
+]
+},
+{
+"k": 174,
+"file": "frame_1235.jpg",
+"label_index": 14,
+"box": [
+717,
+879,
+760,
+917
+],
+"vehicle": "car",
+"conf": 0.65,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+716.8,
+878.9,
+760.2,
+916.9
+]
+},
+{
+"k": 175,
+"file": "frame_1235.jpg",
+"label_index": 15,
+"box": [
+2184,
+775,
+2233,
+815
+],
+"vehicle": "motorcycle",
+"conf": 0.636,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2184.1,
+775.4,
+2232.7,
+815.0
+]
+},
+{
+"k": 176,
+"file": "frame_1235.jpg",
+"label_index": 16,
+"box": [
+1790,
+256,
+1801,
+272
+],
+"vehicle": "car",
+"conf": 0.635,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1790.0,
+256.5,
+1800.7,
+272.1
+]
+},
+{
+"k": 177,
+"file": "frame_1235.jpg",
+"label_index": 17,
+"box": [
+1936,
+338,
+1963,
+354
+],
+"vehicle": "car",
+"conf": 0.51,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1936.1,
+338.4,
+1962.9,
+353.6
+]
+},
+{
+"k": 178,
+"file": "frame_1235.jpg",
+"label_index": 18,
+"box": [
+1825,
+768,
+1868,
+800
+],
+"vehicle": "motorcycle",
+"conf": 0.414,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1824.7,
+767.7,
+1867.6,
+800.1
+]
+},
+{
+"k": 179,
+"file": "frame_1405.jpg",
+"label_index": 0,
+"box": [
+1174,
+422,
+1206,
+438
+],
+"vehicle": "car",
+"conf": 0.876,
+"src": "international",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+1173.5,
+421.9,
+1206.5,
+438.5
+]
+},
+{
+"k": 180,
+"file": "frame_1405.jpg",
+"label_index": 1,
+"box": [
+1174,
+1225,
+1243,
+1277
+],
+"vehicle": "motorcycle",
+"conf": 0.784,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1174.1,
+1225.2,
+1242.7,
+1277.3
+]
+},
+{
+"k": 181,
+"file": "frame_1405.jpg",
+"label_index": 2,
+"box": [
+2244,
+189,
+2257,
+199
+],
+"vehicle": "car",
+"conf": 0.736,
+"src": "bangla",
+"iou_to_sugg": 0.89,
+"sugg_box": [
+2244.4,
+189.4,
+2256.9,
+198.7
+]
+},
+{
+"k": 182,
+"file": "frame_1405.jpg",
+"label_index": 3,
+"box": [
+971,
+334,
+1100,
+440
+],
+"vehicle": "car",
+"conf": 0.716,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+971.0,
+333.5,
+1099.7,
+440.3
+]
+},
+{
+"k": 183,
+"file": "frame_1405.jpg",
+"label_index": 4,
+"box": [
+1759,
+288,
+1778,
+300
+],
+"vehicle": "motorcycle",
+"conf": 0.708,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1759.4,
+288.1,
+1777.9,
+300.0
+]
+},
+{
+"k": 184,
+"file": "frame_1405.jpg",
+"label_index": 5,
+"box": [
+2336,
+367,
+2365,
+384
+],
+"vehicle": "car",
+"conf": 0.694,
+"src": "international",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+2336.0,
+366.7,
+2364.7,
+383.5
+]
+},
+{
+"k": 185,
+"file": "frame_1405.jpg",
+"label_index": 6,
+"box": [
+1800,
+142,
+1809,
+148
+],
+"vehicle": "car",
+"conf": 0.678,
+"src": "bangla",
+"iou_to_sugg": 0.88,
+"sugg_box": [
+1800.2,
+141.6,
+1808.9,
+148.2
+]
+},
+{
+"k": 186,
+"file": "frame_1405.jpg",
+"label_index": 7,
+"box": [
+1572,
+218,
+1585,
+225
+],
+"vehicle": "car",
+"conf": 0.674,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1572.0,
+217.8,
+1585.0,
+224.8
+]
+},
+{
+"k": 187,
+"file": "frame_1405.jpg",
+"label_index": 8,
+"box": [
+1938,
+275,
+1947,
+282
+],
+"vehicle": "motorcycle",
+"conf": 0.643,
+"src": "bangla",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+1938.4,
+274.8,
+1947.0,
+281.5
+]
+},
+{
+"k": 188,
+"file": "frame_1405.jpg",
+"label_index": 9,
+"box": [
+1989,
+226,
+2006,
+241
+],
+"vehicle": "car",
+"conf": 0.634,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+1989.4,
+225.5,
+2006.5,
+241.3
+]
+},
+{
+"k": 189,
+"file": "frame_1405.jpg",
+"label_index": 10,
+"box": [
+1859,
+155,
+1876,
+162
+],
+"vehicle": "car",
+"conf": 0.628,
+"src": "bangla",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+1858.7,
+154.8,
+1875.8,
+162.2
+]
+},
+{
+"k": 190,
+"file": "frame_1405.jpg",
+"label_index": 11,
+"box": [
+2075,
+283,
+2101,
+300
+],
+"vehicle": "car",
+"conf": 0.579,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+2075.3,
+283.0,
+2101.3,
+299.6
+]
+},
+{
+"k": 191,
+"file": "frame_1405.jpg",
+"label_index": 12,
+"box": [
+3214,
+195,
+3224,
+206
+],
+"vehicle": "car",
+"conf": 0.438,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+3214.0,
+195.0,
+3224.1,
+206.5
+]
+},
+{
+"k": 192,
+"file": "frame_1405.jpg",
+"label_index": 13,
+"box": [
+1886,
+258,
+1900,
+272
+],
+"vehicle": "motorcycle",
+"conf": 0.417,
+"src": "bangla",
+"iou_to_sugg": 0.94,
+"sugg_box": [
+1886.0,
+258.4,
+1900.2,
+272.2
+]
+},
+{
+"k": 193,
+"file": "frame_1405.jpg",
+"label_index": 14,
+"box": [
+4,
+963,
+144,
+1074
+],
+"vehicle": "motorcycle",
+"conf": 0.327,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+4.2,
+963.1,
+144.1,
+1074.3
+]
+},
+{
+"k": 194,
+"file": "frame_1405.jpg",
+"label_index": 15,
+"box": [
+1919,
+272,
+1924,
+276
+],
+"vehicle": "motorcycle",
+"conf": 0.307,
+"src": "international",
+"iou_to_sugg": 0.75,
+"sugg_box": [
+1918.8,
+271.6,
+1924.3,
+275.6
+]
+},
+{
+"k": 195,
+"file": "frame_1405.jpg",
+"label_index": 16,
+"box": [
+2071,
+698,
+2082,
+706
+],
+"vehicle": "motorcycle",
+"conf": 0.283,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+2070.9,
+697.9,
+2081.8,
+706.1
+]
+},
+{
+"k": 196,
+"file": "frame_1405.jpg",
+"label_index": 17,
+"box": [
+1828,
+286,
+1838,
+296
+],
+"vehicle": "motorcycle",
+"conf": 0.279,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+1827.9,
+285.6,
+1838.4,
+295.8
+]
+},
+{
+"k": 197,
+"file": "frame_1590.jpg",
+"label_index": 0,
+"box": [
+2051,
+926,
+2113,
+959
+],
+"vehicle": "car",
+"conf": 0.923,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2051.1,
+926.4,
+2113.4,
+958.7
+]
+},
+{
+"k": 198,
+"file": "frame_1590.jpg",
+"label_index": 1,
+"box": [
+1118,
+1227,
+1197,
+1271
+],
+"vehicle": "car",
+"conf": 0.921,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1118.0,
+1227.4,
+1197.3,
+1270.9
+]
+},
+{
+"k": 199,
+"file": "frame_1590.jpg",
+"label_index": 2,
+"box": [
+2354,
+730,
+2404,
+756
+],
+"vehicle": "car",
+"conf": 0.918,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2353.8,
+729.6,
+2403.6,
+756.3
+]
+},
+{
+"k": 200,
+"file": "frame_1590.jpg",
+"label_index": 3,
+"box": [
+1551,
+825,
+1607,
+852
+],
+"vehicle": "car",
+"conf": 0.911,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1550.9,
+824.7,
+1607.3,
+852.0
+]
+},
+{
+"k": 201,
+"file": "frame_1590.jpg",
+"label_index": 4,
+"box": [
+2246,
+852,
+2290,
+884
+],
+"vehicle": "motorcycle",
+"conf": 0.811,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2245.9,
+852.4,
+2290.1,
+883.9
+]
+},
+{
+"k": 202,
+"file": "frame_1590.jpg",
+"label_index": 5,
+"box": [
+358,
+1020,
+413,
+1057
+],
+"vehicle": "motorcycle",
+"conf": 0.786,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+357.8,
+1020.2,
+413.0,
+1057.2
+]
+},
+{
+"k": 203,
+"file": "frame_1590.jpg",
+"label_index": 6,
+"box": [
+200,
+1351,
+505,
+1524
+],
+"vehicle": "motorcycle",
+"conf": 0.478,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+199.6,
+1351.3,
+504.9,
+1524.4
+]
+},
+{
+"k": 204,
+"file": "frame_1590.jpg",
+"label_index": 7,
+"box": [
+1897,
+115,
+1901,
+117
+],
+"vehicle": "car",
+"conf": 0.353,
+"src": "international",
+"iou_to_sugg": 0.79,
+"sugg_box": [
+1896.9,
+115.1,
+1901.1,
+117.3
+]
+},
+{
+"k": 205,
+"file": "frame_1590.jpg",
+"label_index": 8,
+"box": [
+2879,
+289,
+2884,
+292
+],
+"vehicle": "car",
+"conf": 0.263,
+"src": "international",
+"iou_to_sugg": 0.86,
+"sugg_box": [
+2879.3,
+288.9,
+2884.0,
+292.2
+]
+},
+{
+"k": 206,
+"file": "frame_1595.jpg",
+"label_index": 0,
+"box": [
+2051,
+926,
+2114,
+959
+],
+"vehicle": "car",
+"conf": 0.923,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2051.3,
+926.0,
+2114.3,
+958.7
+]
+},
+{
+"k": 207,
+"file": "frame_1595.jpg",
+"label_index": 1,
+"box": [
+1119,
+1215,
+1198,
+1258
+],
+"vehicle": "car",
+"conf": 0.91,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1118.7,
+1214.8,
+1198.0,
+1257.5
+]
+},
+{
+"k": 208,
+"file": "frame_1595.jpg",
+"label_index": 2,
+"box": [
+2354,
+730,
+2405,
+757
+],
+"vehicle": "car",
+"conf": 0.909,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2354.3,
+729.5,
+2404.8,
+756.7
+]
+},
+{
+"k": 209,
+"file": "frame_1595.jpg",
+"label_index": 3,
+"box": [
+999,
+1740,
+1055,
+1776
+],
+"vehicle": "bus_truck",
+"conf": 0.893,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+998.7,
+1740.4,
+1055.3,
+1775.8
+]
+},
+{
+"k": 210,
+"file": "frame_1595.jpg",
+"label_index": 4,
+"box": [
+1605,
+398,
+1620,
+416
+],
+"vehicle": "car",
+"conf": 0.85,
+"src": "international",
+"iou_to_sugg": 0.91,
+"sugg_box": [
+1604.7,
+398.3,
+1620.5,
+415.5
+]
+},
+{
+"k": 211,
+"file": "frame_1595.jpg",
+"label_index": 5,
+"box": [
+2113,
+507,
+2138,
+529
+],
+"vehicle": "car",
+"conf": 0.827,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2113.4,
+507.2,
+2138.4,
+528.9
+]
+},
+{
+"k": 212,
+"file": "frame_1595.jpg",
+"label_index": 6,
+"box": [
+853,
+1679,
+934,
+1738
+],
+"vehicle": "bus_truck",
+"conf": 0.821,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+853.1,
+1678.6,
+934.3,
+1738.3
+]
+},
+{
+"k": 213,
+"file": "frame_1595.jpg",
+"label_index": 7,
+"box": [
+2245,
+851,
+2295,
+884
+],
+"vehicle": "motorcycle",
+"conf": 0.781,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2245.1,
+851.4,
+2294.6,
+884.0
+]
+},
+{
+"k": 214,
+"file": "frame_1595.jpg",
+"label_index": 8,
+"box": [
+3830,
+1056,
+3856,
+1115
+],
+"vehicle": "bus_truck",
+"conf": 0.772,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+3830.0,
+1055.7,
+3855.5,
+1114.7
+]
+},
+{
+"k": 215,
+"file": "frame_1595.jpg",
+"label_index": 9,
+"box": [
+2268,
+868,
+2291,
+882
+],
+"vehicle": "motorcycle",
+"conf": 0.65,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+2267.8,
+867.8,
+2290.7,
+881.8
+]
+},
+{
+"k": 216,
+"file": "frame_1595.jpg",
+"label_index": 10,
+"box": [
+2123,
+247,
+2145,
+257
+],
+"vehicle": "car",
+"conf": 0.551,
+"src": "international",
+"iou_to_sugg": 0.91,
+"sugg_box": [
+2122.7,
+247.4,
+2144.9,
+257.4
+]
+},
+{
+"k": 217,
+"file": "frame_1595.jpg",
+"label_index": 11,
+"box": [
+1718,
+311,
+1742,
+324
+],
+"vehicle": "car",
+"conf": 0.532,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1717.9,
+311.2,
+1742.4,
+323.9
+]
+},
+{
+"k": 218,
+"file": "frame_1595.jpg",
+"label_index": 12,
+"box": [
+815,
+470,
+830,
+487
+],
+"vehicle": "car",
+"conf": 0.522,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+814.9,
+470.2,
+829.6,
+486.9
+]
+},
+{
+"k": 219,
+"file": "frame_1595.jpg",
+"label_index": 13,
+"box": [
+753,
+826,
+797,
+859
+],
+"vehicle": "motorcycle",
+"conf": 0.472,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+753.1,
+825.8,
+796.7,
+858.8
+]
+},
+{
+"k": 220,
+"file": "frame_1595.jpg",
+"label_index": 14,
+"box": [
+2059,
+320,
+2065,
+323
+],
+"vehicle": "car",
+"conf": 0.44,
+"src": "international",
+"iou_to_sugg": 0.69,
+"sugg_box": [
+2059.4,
+319.5,
+2064.9,
+322.6
+]
+},
+{
+"k": 221,
+"file": "frame_1595.jpg",
+"label_index": 15,
+"box": [
+2215,
+899,
+2228,
+909
+],
+"vehicle": "motorcycle",
+"conf": 0.262,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+2215.0,
+899.3,
+2227.9,
+909.0
+]
+},
+{
+"k": 222,
+"file": "frame_1770.jpg",
+"label_index": 0,
+"box": [
+902,
+338,
+929,
+351
+],
+"vehicle": "car",
+"conf": 0.871,
+"src": "international",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+901.5,
+337.8,
+928.6,
+351.3
+]
+},
+{
+"k": 223,
+"file": "frame_1770.jpg",
+"label_index": 1,
+"box": [
+298,
+524,
+397,
+563
+],
+"vehicle": "car",
+"conf": 0.839,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+298.0,
+524.4,
+397.1,
+562.9
+]
+},
+{
+"k": 224,
+"file": "frame_1770.jpg",
+"label_index": 2,
+"box": [
+1583,
+265,
+1609,
+279
+],
+"vehicle": "bus_truck",
+"conf": 0.824,
+"src": "international",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1582.8,
+265.4,
+1608.7,
+278.9
+]
+},
+{
+"k": 225,
+"file": "frame_1770.jpg",
+"label_index": 3,
+"box": [
+1709,
+306,
+1739,
+323
+],
+"vehicle": "car",
+"conf": 0.743,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1709.4,
+306.0,
+1738.9,
+323.4
+]
+},
+{
+"k": 226,
+"file": "frame_1770.jpg",
+"label_index": 4,
+"box": [
+3429,
+292,
+3534,
+422
+],
+"vehicle": "car",
+"conf": 0.637,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+3428.7,
+292.4,
+3534.0,
+422.0
+]
+},
+{
+"k": 227,
+"file": "frame_1770.jpg",
+"label_index": 5,
+"box": [
+3247,
+433,
+3260,
+446
+],
+"vehicle": "car",
+"conf": 0.633,
+"src": "international",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+3247.2,
+433.2,
+3259.5,
+445.8
+]
+},
+{
+"k": 228,
+"file": "frame_1770.jpg",
+"label_index": 6,
+"box": [
+2097,
+246,
+2116,
+260
+],
+"vehicle": "car",
+"conf": 0.628,
+"src": "bangla",
+"iou_to_sugg": 0.93,
+"sugg_box": [
+2097.0,
+245.7,
+2115.7,
+259.5
+]
+},
+{
+"k": 229,
+"file": "frame_1770.jpg",
+"label_index": 7,
+"box": [
+2215,
+190,
+2225,
+195
+],
+"vehicle": "car",
+"conf": 0.625,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+2214.9,
+190.0,
+2224.8,
+195.1
+]
+},
+{
+"k": 230,
+"file": "frame_1770.jpg",
+"label_index": 8,
+"box": [
+1279,
+427,
+1289,
+436
+],
+"vehicle": "motorcycle",
+"conf": 0.602,
+"src": "bangla",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+1279.1,
+427.0,
+1289.4,
+436.3
+]
+},
+{
+"k": 231,
+"file": "frame_1770.jpg",
+"label_index": 9,
+"box": [
+2054,
+303,
+2073,
+322
+],
+"vehicle": "car",
+"conf": 0.571,
+"src": "bangla",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+2053.5,
+303.4,
+2072.6,
+321.8
+]
+},
+{
+"k": 232,
+"file": "frame_1770.jpg",
+"label_index": 10,
+"box": [
+3213,
+184,
+3216,
+195
+],
+"vehicle": "car",
+"conf": 0.31,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+3213.0,
+184.0,
+3216.0,
+195.2
+]
+},
+{
+"k": 233,
+"file": "frame_1790.jpg",
+"label_index": 0,
+"box": [
+1109,
+1224,
+1187,
+1266
+],
+"vehicle": "car",
+"conf": 0.921,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1108.9,
+1223.6,
+1187.0,
+1265.9
+]
+},
+{
+"k": 234,
+"file": "frame_1790.jpg",
+"label_index": 1,
+"box": [
+1772,
+821,
+1827,
+851
+],
+"vehicle": "car",
+"conf": 0.919,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1772.2,
+821.0,
+1827.3,
+850.8
+]
+},
+{
+"k": 235,
+"file": "frame_1790.jpg",
+"label_index": 2,
+"box": [
+296,
+524,
+396,
+563
+],
+"vehicle": "car",
+"conf": 0.84,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+296.5,
+524.2,
+395.7,
+563.4
+]
+},
+{
+"k": 236,
+"file": "frame_1790.jpg",
+"label_index": 3,
+"box": [
+1616,
+209,
+1631,
+223
+],
+"vehicle": "bus_truck",
+"conf": 0.753,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+1615.5,
+209.2,
+1630.6,
+222.6
+]
+},
+{
+"k": 237,
+"file": "frame_1790.jpg",
+"label_index": 4,
+"box": [
+2020,
+75,
+2030,
+87
+],
+"vehicle": "car",
+"conf": 0.745,
+"src": "bangla",
+"iou_to_sugg": 0.9,
+"sugg_box": [
+2019.7,
+75.3,
+2029.5,
+87.0
+]
+},
+{
+"k": 238,
+"file": "frame_1790.jpg",
+"label_index": 5,
+"box": [
+1630,
+244,
+1650,
+259
+],
+"vehicle": "bus_truck",
+"conf": 0.709,
+"src": "bangla",
+"iou_to_sugg": 0.91,
+"sugg_box": [
+1629.5,
+243.6,
+1650.3,
+258.6
+]
+},
+{
+"k": 239,
+"file": "frame_1790.jpg",
+"label_index": 6,
+"box": [
+1933,
+225,
+1958,
+238
+],
+"vehicle": "car",
+"conf": 0.628,
+"src": "bangla",
+"iou_to_sugg": 0.95,
+"sugg_box": [
+1933.3,
+225.1,
+1957.9,
+238.4
+]
+},
+{
+"k": 240,
+"file": "frame_1790.jpg",
+"label_index": 7,
+"box": [
+1367,
+873,
+1425,
+904
+],
+"vehicle": "bus_truck",
+"conf": 0.608,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1367.0,
+873.4,
+1425.1,
+904.2
+]
+},
+{
+"k": 241,
+"file": "frame_1790.jpg",
+"label_index": 8,
+"box": [
+3439,
+301,
+3532,
+413
+],
+"vehicle": "car",
+"conf": 0.563,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+3438.6,
+300.8,
+3532.5,
+412.9
+]
+},
+{
+"k": 242,
+"file": "frame_1790.jpg",
+"label_index": 9,
+"box": [
+2052,
+280,
+2060,
+282
+],
+"vehicle": "car",
+"conf": 0.475,
+"src": "international",
+"iou_to_sugg": 0.74,
+"sugg_box": [
+2052.0,
+279.5,
+2060.0,
+282.2
+]
+},
+{
+"k": 243,
+"file": "frame_1790.jpg",
+"label_index": 10,
+"box": [
+3937,
+207,
+3941,
+212
+],
+"vehicle": "car",
+"conf": 0.421,
+"src": "international",
+"iou_to_sugg": 0.87,
+"sugg_box": [
+3937.0,
+206.8,
+3940.6,
+212.0
+]
+},
+{
+"k": 244,
+"file": "frame_1970.jpg",
+"label_index": 0,
+"box": [
+448,
+2230,
+576,
+2297
+],
+"vehicle": "car",
+"conf": 0.922,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+447.7,
+2230.0,
+575.7,
+2297.2
+]
+},
+{
+"k": 245,
+"file": "frame_1970.jpg",
+"label_index": 1,
+"box": [
+1859,
+1334,
+1944,
+1379
+],
+"vehicle": "car",
+"conf": 0.919,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1859.1,
+1333.8,
+1944.0,
+1379.4
+]
+},
+{
+"k": 246,
+"file": "frame_1970.jpg",
+"label_index": 2,
+"box": [
+2632,
+1845,
+2748,
+1907
+],
+"vehicle": "car",
+"conf": 0.917,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2632.1,
+1844.6,
+2747.9,
+1907.1
+]
+},
+{
+"k": 247,
+"file": "frame_1970.jpg",
+"label_index": 3,
+"box": [
+1690,
+1982,
+1779,
+2044
+],
+"vehicle": "car",
+"conf": 0.917,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1689.9,
+1981.6,
+1779.2,
+2043.8
+]
+},
+{
+"k": 248,
+"file": "frame_1970.jpg",
+"label_index": 4,
+"box": [
+2821,
+1087,
+2892,
+1126
+],
+"vehicle": "car",
+"conf": 0.916,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2821.3,
+1087.4,
+2892.5,
+1125.8
+]
+},
+{
+"k": 249,
+"file": "frame_1970.jpg",
+"label_index": 5,
+"box": [
+1778,
+820,
+1833,
+851
+],
+"vehicle": "car",
+"conf": 0.915,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1777.7,
+820.4,
+1832.8,
+851.0
+]
+},
+{
+"k": 250,
+"file": "frame_1970.jpg",
+"label_index": 6,
+"box": [
+644,
+1634,
+741,
+1686
+],
+"vehicle": "car",
+"conf": 0.912,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+644.5,
+1634.0,
+741.3,
+1685.8
+]
+},
+{
+"k": 251,
+"file": "frame_1970.jpg",
+"label_index": 7,
+"box": [
+1372,
+872,
+1431,
+905
+],
+"vehicle": "car",
+"conf": 0.91,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1371.6,
+871.6,
+1431.2,
+904.9
+]
+},
+{
+"k": 252,
+"file": "frame_1970.jpg",
+"label_index": 8,
+"box": [
+906,
+1293,
+984,
+1327
+],
+"vehicle": "car",
+"conf": 0.9,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+906.0,
+1293.1,
+983.9,
+1327.4
+]
+},
+{
+"k": 253,
+"file": "frame_1970.jpg",
+"label_index": 9,
+"box": [
+586,
+1197,
+634,
+1225
+],
+"vehicle": "motorcycle",
+"conf": 0.865,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+586.5,
+1197.4,
+634.3,
+1225.2
+]
+},
+{
+"k": 254,
+"file": "frame_1970.jpg",
+"label_index": 10,
+"box": [
+2545,
+2787,
+2705,
+2824
+],
+"vehicle": "car",
+"conf": 0.848,
+"src": "international",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+2545.3,
+2786.6,
+2704.7,
+2823.5
+]
+},
+{
+"k": 255,
+"file": "frame_1970.jpg",
+"label_index": 11,
+"box": [
+32,
+1868,
+122,
+1936
+],
+"vehicle": "motorcycle",
+"conf": 0.802,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+32.4,
+1868.1,
+122.1,
+1935.8
+]
+},
+{
+"k": 256,
+"file": "frame_1970.jpg",
+"label_index": 12,
+"box": [
+1582,
+980,
+1636,
+1024
+],
+"vehicle": "car",
+"conf": 0.787,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+1581.7,
+980.4,
+1636.0,
+1024.1
+]
+},
+{
+"k": 257,
+"file": "frame_1970.jpg",
+"label_index": 13,
+"box": [
+2517,
+860,
+2566,
+899
+],
+"vehicle": "car",
+"conf": 0.782,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2517.2,
+860.5,
+2565.8,
+899.0
+]
+},
+{
+"k": 258,
+"file": "frame_1970.jpg",
+"label_index": 14,
+"box": [
+2543,
+1383,
+2659,
+1443
+],
+"vehicle": "bus_truck",
+"conf": 0.779,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2542.8,
+1382.7,
+2659.0,
+1443.1
+]
+},
+{
+"k": 259,
+"file": "frame_1970.jpg",
+"label_index": 15,
+"box": [
+3109,
+1361,
+3226,
+1382
+],
+"vehicle": "car",
+"conf": 0.773,
+"src": "international",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+3108.8,
+1361.2,
+3225.8,
+1381.9
+]
+},
+{
+"k": 260,
+"file": "frame_1970.jpg",
+"label_index": 16,
+"box": [
+1588,
+256,
+1613,
+271
+],
+"vehicle": "car",
+"conf": 0.751,
+"src": "bangla",
+"iou_to_sugg": 0.97,
+"sugg_box": [
+1587.7,
+255.9,
+1613.2,
+270.9
+]
+},
+{
+"k": 261,
+"file": "frame_1970.jpg",
+"label_index": 17,
+"box": [
+2178,
+985,
+2234,
+1030
+],
+"vehicle": "car",
+"conf": 0.727,
+"src": "bangla",
+"iou_to_sugg": 0.98,
+"sugg_box": [
+2178.1,
+985.3,
+2233.6,
+1030.2
+]
+},
+{
+"k": 262,
+"file": "frame_1970.jpg",
+"label_index": 18,
+"box": [
+3013,
+1215,
+3224,
+1370
+],
+"vehicle": "car",
+"conf": 0.661,
+"src": "bangla",
+"iou_to_sugg": 1.0,
+"sugg_box": [
+3013.0,
+1215.0,
+3224.5,
+1370.0
+]
+},
+{
+"k": 263,
+"file": "frame_1970.jpg",
+"label_index": 19,
+"box": [
+1533,
+852,
+1666,
+956
+],
+"vehicle": "car",
+"conf": 0.631,
+"src": "bangla",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1533.1,
+852.3,
+1666.4,
+956.2
+]
+},
+{
+"k": 264,
+"file": "frame_1970.jpg",
+"label_index": 20,
+"box": [
+1939,
+246,
+1964,
+259
+],
+"vehicle": "car",
+"conf": 0.626,
+"src": "bangla",
+"iou_to_sugg": 0.92,
+"sugg_box": [
+1939.4,
+245.6,
+1964.5,
+259.2
+]
+},
+{
+"k": 265,
+"file": "frame_1970.jpg",
+"label_index": 21,
+"box": [
+1938,
+185,
+1949,
+192
+],
+"vehicle": "car",
+"conf": 0.61,
+"src": "bangla",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1937.7,
+185.0,
+1948.8,
+192.0
+]
+},
+{
+"k": 266,
+"file": "frame_1970.jpg",
+"label_index": 22,
+"box": [
+1498,
+1047,
+1545,
+1072
+],
+"vehicle": "car",
+"conf": 0.607,
+"src": "international",
+"iou_to_sugg": 0.96,
+"sugg_box": [
+1498.2,
+1046.7,
+1545.4,
+1071.6
+]
+},
+{
+"k": 267,
+"file": "frame_1970.jpg",
+"label_index": 23,
+"box": [
+1988,
+2438,
+2204,
+2643
+],
+"vehicle": "car",
+"conf": 0.566,
+"src": "bangla",
+"iou_to_sugg": 1.0,
+"sugg_box": [
+1987.6,
+2438.0,
+2204.0,
+2643.2
+]
+},
+{
+"k": 268,
+"file": "frame_1970.jpg",
+"label_index": 24,
+"box": [
+2550,
+1415,
+2640,
+1438
+],
+"vehicle": "bus_truck",
+"conf": 0.338,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+2550.2,
+1415.0,
+2640.5,
+1438.1
+]
+},
+{
+"k": 269,
+"file": "frame_1970.jpg",
+"label_index": 25,
+"box": [
+1134,
+2400,
+1684,
+2452
+],
+"vehicle": "bus_truck",
+"conf": 0.277,
+"src": "international",
+"iou_to_sugg": 0.99,
+"sugg_box": [
+1133.5,
+2399.7,
+1684.5,
+2451.9
+]
+}
+]
