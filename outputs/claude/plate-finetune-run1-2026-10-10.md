@@ -37,3 +37,12 @@ Per vehicle type for B on the development frames (any-match, Claude's visual typ
 2. Label more training frames in plate mode (reviewing suggestions) and add legunas, then retrain. Repeat run 1's settings so the comparison is controlled.
 3. Add the motorcycle-only vehicle threshold of 0.10 as a separate, pre-declared variant.
 4. Get human review of the development and test labels before any external claim.
+
+## Vehicle local-class detector, run 1: failed, not adopted
+
+Kaggle job `zarifb/dhaka-vehicles-train-yolo26s`: YOLO26s (COCO init) on 14 full frames at 1280. Labels were the user's vehicle boxes (26 CNG, 40 rickshaw in training) plus COCO pseudo-labels (≥0.4) for other vehicles.
+
+- **Validation:** best checkpoint at epoch 4 (early stopping at 44). mAP50 car 0.89, motorcycle 0.75, truck 0.995, **CNG 0.0** (6 CNGs in the 2 validation frames).
+- **Locked-test frame** (7 CNG, 3 rickshaw labelled): **0 CNG and 0 rickshaw predictions** at confidence 0.25 or 0.10. Spurious `leguna` predictions appeared, from a class with no training examples.
+- **Likely causes:** far too few CNG and rickshaw examples for a full-frame detector, validation on 2 frames picking a near-COCO checkpoint, CNGs the user didn't box remaining as pseudo-label `car` (conflicting labels), and an untrained `leguna` class.
+- **Proposed run 2:** a **crop classifier** on the existing vehicle proposals (car-like crop → car / CNG / leguna / microbus, bicycle crop → rickshaw). That needs far fewer examples than a full-frame detector, and it plugs into the cascade. The plate detector no longer needs CNG routing (B finds 9/10 CNG plates), so a CNG vehicle class is mainly for counting and the future plate-letter rule (থ/দ).
