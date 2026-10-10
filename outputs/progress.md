@@ -32,6 +32,7 @@ Before taking over the pilot, change the ownership row and record your task. Do 
 - Tried overlapping tiles; additional false positives did not justify selecting this approach.
 - Created shared ownership folders, root README, root AGENTS.md and this session handoff. Existing executable paths remain unchanged.
 - Plate-detector model selection research (fine-tune vs pretrained; YOLO26 vs RF-DETR vs D-FINE; Bangla datasets): `outputs/claude/plate-detector-model-selection-2026-10-10.md`. Recommendation: fine-tune on this footage's vehicle crops; YOLO26s (local/Kaggle) and RF-DETR-S/M (Kaggle GPU) on the same time-block split.
+- Kaggle GPU command-line procedure (account, phone verification, CLI auth, private dataset upload, GPU kernel push/status/output): `outputs/claude/kaggle-gpu-cli-guide.md`. Not yet executed.
 - Workspace is a private Git repository on GitHub (see README). Model weights are committed (user-approved); footage, extracted frames, JPG views and the venv are git-ignored.
 
 ## Current results — development sample only
