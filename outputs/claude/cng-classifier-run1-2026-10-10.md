@@ -1,4 +1,4 @@
-# Vehicle-type crop classifier (CNG), runs 1–3, and CNG colour
+# Vehicle-type crop classifier (CNG), runs 1–4, and CNG colour
 
 Prepared 10 October 2026 (Claude). This replaces the failed full-frame local-class detector. The COCO detector already boxes CNGs and rickshaws but names them `car` / `bicycle`. A small classifier on each box assigns the local type. Legunas are omitted: they don't run on this route (user, 2026-10-10).
 
@@ -69,7 +69,7 @@ Rule result: 263 green and 34 silver correct, **0 green↔silver confusions**, 3
 
 **Caveat:** silver = 1–2 physical vehicles. The thresholds are not validated on other silver CNGs, other cameras or other lighting. The letter mapping থ = hire CNG, দ = private CNG comes from the blog source plus the user's colour rule, not from a BRTA gazette.
 
-## Run 3 (current) and the user's downloaded CNG photos
+## Run 3 and the user's downloaded CNG photos (batch 1)
 
 The user downloaded 9 CNG photos: stock and news images, several showing private silver CNGs marked "PRIVATE" / "প্রাইভেট". Claude marked them (`work/claude/web-cng/web_labels.json`): 36 CNG boxes (23 green, 10 silver, 3 colour unknown, 2 more set to unknown because a white car occludes the lower body) and 2 cars. The images stay local (git-ignored): they are third-party stock and news photos, used only for local training and evaluation.
 
@@ -92,3 +92,21 @@ The user downloaded 9 CNG photos: stock and news images, several showing private
 | **v3** | 91.8%, CNG 100/100 | **97.1%**, CNG 100/100 | 100% | **4/4** |
 
 The held-out photo test is only 4 vehicles: a sanity check, not a measurement. Remaining limits: tiny web thumbnails such as images-4 get no vehicle box at all, and the detector can box only part of a close-up side view (images-7), which leaves the colour unknown.
+
+## Run 4b (current) and photo batch 2
+
+The user downloaded 10 more photos: Alamy, Getty and Shutterstock stock, including high-angle traffic views. They are stored as `raw/b2_*.jpg` and stay local. Claude marked them (`web_labels_b2.json`): 42 CNG (36 green, 6 silver), 88 cars, 8 buses/trucks, 3 rickshaws and 1 motorcycle. Proposals were verified one by one; the motion-blurred "প্রাইভেট" CNG (b2_04, missed by the detector) and the image-10 queue were boxed by hand.
+
+**Classifier v3 on batch 2, before training:** CNG recall 42/42 (optimistic: part of the marking started from its own proposals), **precision 42/56**. The false CNGs were 10 silver/white cars and 4 buses/trucks, mostly tiny vehicles in high-angle shots.
+
+**Colour rule:** b2_04 is a private silver CNG with a green fender accent and a green cast at night (8.2% green), which the 6% cutoff called green. The green cutoff is now **10%**. That gives 0 green↔silver confusions on all data (video 291/37, batch 1 23/10, batch 2 36/6). The cost is more "unknown": 14 more video green CNGs and 4 batch-2 green CNGs.
+
+**Classifier v4 / v4b:** v4 trained on everything except b2_10 (held out: 4 silver + 2 green), and it lost silver recall (8/10 on held-out photos) after 88 small grey aerial cars entered training. v4b also holds out the aerial jam image b2_02 as a false-CNG test.
+
+| Held-out photos | CNG recall (images-5, images-8, b2_10) | False CNG on b2_02 (35 non-CNG) | Video val / test / pilot |
+| --- | --- | --- | --- |
+| v3 | 10/10 | 6 | 91.8% / 97.1% / 100% |
+| v4 (b2_02 in training) | 8/10 | n/a | same |
+| **v4b (deployed)** | 9/10 | **2** | 91.8% / 97.1% / 100% |
+
+`outputs/claude/pipeline/cascade.py` now uses `work/claude/models/vehicle_cls_run4b.pt`. End-to-end plate results are unchanged: dev12 95/15/7, locked test 16/2/3. The held-out photo sets are small (10 CNGs and 36 vehicles), so the v3 vs v4b difference is suggestive, not established.

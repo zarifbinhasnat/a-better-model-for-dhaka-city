@@ -1,0 +1,2702 @@
+[
+ {
+  "k": 0,
+  "file": "b2_01.jpg",
+  "box": [
+   236.9,
+   201.7,
+   426.6,
+   333.4
+  ],
+  "coco": "car",
+  "det_conf": 0.921,
+  "cls": "car",
+  "cls_conf": 0.998,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 1,
+  "file": "b2_01.jpg",
+  "box": [
+   142.9,
+   99.7,
+   227.7,
+   141.7
+  ],
+  "coco": "car",
+  "det_conf": 0.892,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 2,
+  "file": "b2_01.jpg",
+  "box": [
+   87.9,
+   150.2,
+   172.2,
+   230.2
+  ],
+  "coco": "car",
+  "det_conf": 0.872,
+  "cls": "car",
+  "cls_conf": 0.994,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 3,
+  "file": "b2_01.jpg",
+  "box": [
+   196.9,
+   149.2,
+   303.6,
+   230.1
+  ],
+  "coco": "car",
+  "det_conf": 0.869,
+  "cls": "car",
+  "cls_conf": 0.926,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 4,
+  "file": "b2_01.jpg",
+  "box": [
+   376.5,
+   305.2,
+   637.6,
+   359.0
+  ],
+  "coco": "car",
+  "det_conf": 0.865,
+  "cls": "car",
+  "cls_conf": 0.928,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 5,
+  "file": "b2_01.jpg",
+  "box": [
+   115.0,
+   186.1,
+   243.9,
+   320.3
+  ],
+  "coco": "car",
+  "det_conf": 0.839,
+  "cls": "car",
+  "cls_conf": 0.978,
+  "cng_colour": null,
+  "plate": [
+   181.5,
+   269.0,
+   204.5,
+   281.8
+  ],
+  "plate_conf": 0.876
+ },
+ {
+  "k": 6,
+  "file": "b2_01.jpg",
+  "box": [
+   255.0,
+   101.5,
+   328.8,
+   144.2
+  ],
+  "coco": "car",
+  "det_conf": 0.82,
+  "cls": "car",
+  "cls_conf": 0.989,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 7,
+  "file": "b2_01.jpg",
+  "box": [
+   194.4,
+   120.1,
+   263.4,
+   172.0
+  ],
+  "coco": "car",
+  "det_conf": 0.801,
+  "cls": "car",
+  "cls_conf": 0.97,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 8,
+  "file": "b2_01.jpg",
+  "box": [
+   130.5,
+   315.8,
+   335.4,
+   359.2
+  ],
+  "coco": "car",
+  "det_conf": 0.785,
+  "cls": "car",
+  "cls_conf": 0.79,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 9,
+  "file": "b2_01.jpg",
+  "box": [
+   584.2,
+   87.0,
+   639.5,
+   124.5
+  ],
+  "coco": "car",
+  "det_conf": 0.654,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 10,
+  "file": "b2_01.jpg",
+  "box": [
+   0.1,
+   145.6,
+   79.3,
+   253.2
+  ],
+  "coco": "truck",
+  "det_conf": 0.634,
+  "cls": "cng",
+  "cls_conf": 0.646,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 11,
+  "file": "b2_01.jpg",
+  "box": [
+   511.1,
+   198.3,
+   639.8,
+   333.9
+  ],
+  "coco": "truck",
+  "det_conf": 0.568,
+  "cls": "cng",
+  "cls_conf": 0.984,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 12,
+  "file": "b2_01.jpg",
+  "box": [
+   422.1,
+   159.9,
+   524.0,
+   267.5
+  ],
+  "coco": "truck",
+  "det_conf": 0.534,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": [
+   417.0,
+   192.5,
+   421.9,
+   202.1
+  ],
+  "plate_conf": 0.376
+ },
+ {
+  "k": 13,
+  "file": "b2_01.jpg",
+  "box": [
+   88.3,
+   105.0,
+   150.4,
+   167.3
+  ],
+  "coco": "car",
+  "det_conf": 0.411,
+  "cls": "car",
+  "cls_conf": 0.97,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 14,
+  "file": "b2_01.jpg",
+  "box": [
+   319.3,
+   112.4,
+   374.5,
+   176.7
+  ],
+  "coco": "car",
+  "det_conf": 0.384,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 15,
+  "file": "b2_01.jpg",
+  "box": [
+   356.9,
+   137.8,
+   433.2,
+   221.2
+  ],
+  "coco": "truck",
+  "det_conf": 0.274,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": [
+   411.7,
+   192.9,
+   421.1,
+   201.9
+  ],
+  "plate_conf": 0.36
+ },
+ {
+  "k": 16,
+  "file": "b2_01.jpg",
+  "box": [
+   255.0,
+   89.9,
+   284.2,
+   114.1
+  ],
+  "coco": "car",
+  "det_conf": 0.212,
+  "cls": "car",
+  "cls_conf": 0.889,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 17,
+  "file": "b2_01.jpg",
+  "box": [
+   367.4,
+   70.7,
+   402.1,
+   101.7
+  ],
+  "coco": "car",
+  "det_conf": 0.211,
+  "cls": "cng",
+  "cls_conf": 0.47,
+  "cng_colour": "unknown",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 18,
+  "file": "b2_01.jpg",
+  "box": [
+   302.2,
+   88.8,
+   354.4,
+   115.1
+  ],
+  "coco": "car",
+  "det_conf": 0.197,
+  "cls": "car",
+  "cls_conf": 0.396,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 19,
+  "file": "b2_02.jpg",
+  "box": [
+   255.7,
+   506.8,
+   417.7,
+   658.2
+  ],
+  "coco": "car",
+  "det_conf": 0.858,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 20,
+  "file": "b2_02.jpg",
+  "box": [
+   46.1,
+   526.1,
+   196.8,
+   637.8
+  ],
+  "coco": "car",
+  "det_conf": 0.761,
+  "cls": "bus_truck",
+  "cls_conf": 0.687,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 21,
+  "file": "b2_02.jpg",
+  "box": [
+   80.2,
+   454.8,
+   219.0,
+   598.3
+  ],
+  "coco": "car",
+  "det_conf": 0.76,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 22,
+  "file": "b2_02.jpg",
+  "box": [
+   0.0,
+   369.1,
+   110.4,
+   497.9
+  ],
+  "coco": "car",
+  "det_conf": 0.734,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": [
+   31.3,
+   475.7,
+   53.9,
+   488.3
+  ],
+  "plate_conf": 0.591
+ },
+ {
+  "k": 23,
+  "file": "b2_02.jpg",
+  "box": [
+   359.0,
+   263.2,
+   430.5,
+   327.4
+  ],
+  "coco": "car",
+  "det_conf": 0.7,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 24,
+  "file": "b2_02.jpg",
+  "box": [
+   235.5,
+   313.5,
+   350.2,
+   460.9
+  ],
+  "coco": "car",
+  "det_conf": 0.688,
+  "cls": "car",
+  "cls_conf": 0.983,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 25,
+  "file": "b2_02.jpg",
+  "box": [
+   22.4,
+   308.9,
+   115.9,
+   397.1
+  ],
+  "coco": "car",
+  "det_conf": 0.681,
+  "cls": "car",
+  "cls_conf": 0.994,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 26,
+  "file": "b2_02.jpg",
+  "box": [
+   0.0,
+   448.4,
+   35.4,
+   596.7
+  ],
+  "coco": "car",
+  "det_conf": 0.632,
+  "cls": "car",
+  "cls_conf": 0.338,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 27,
+  "file": "b2_02.jpg",
+  "box": [
+   66.8,
+   257.5,
+   140.3,
+   322.6
+  ],
+  "coco": "car",
+  "det_conf": 0.587,
+  "cls": "car",
+  "cls_conf": 0.892,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 28,
+  "file": "b2_02.jpg",
+  "box": [
+   91.7,
+   211.5,
+   158.7,
+   289.3
+  ],
+  "coco": "car",
+  "det_conf": 0.574,
+  "cls": "car",
+  "cls_conf": 0.985,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 29,
+  "file": "b2_02.jpg",
+  "box": [
+   359.3,
+   343.8,
+   437.0,
+   433.8
+  ],
+  "coco": "car",
+  "det_conf": 0.568,
+  "cls": "car",
+  "cls_conf": 0.879,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 30,
+  "file": "b2_02.jpg",
+  "box": [
+   154.7,
+   263.5,
+   224.2,
+   318.6
+  ],
+  "coco": "car",
+  "det_conf": 0.562,
+  "cls": "car",
+  "cls_conf": 0.932,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 31,
+  "file": "b2_02.jpg",
+  "box": [
+   20.7,
+   198.4,
+   95.0,
+   272.0
+  ],
+  "coco": "car",
+  "det_conf": 0.556,
+  "cls": "car",
+  "cls_conf": 0.966,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 32,
+  "file": "b2_02.jpg",
+  "box": [
+   364.9,
+   304.2,
+   437.0,
+   361.9
+  ],
+  "coco": "car",
+  "det_conf": 0.535,
+  "cls": "car",
+  "cls_conf": 0.981,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 33,
+  "file": "b2_02.jpg",
+  "box": [
+   382.2,
+   382.7,
+   437.0,
+   544.7
+  ],
+  "coco": "car",
+  "det_conf": 0.524,
+  "cls": "car",
+  "cls_conf": 0.791,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 34,
+  "file": "b2_02.jpg",
+  "box": [
+   248.6,
+   278.6,
+   320.3,
+   328.6
+  ],
+  "coco": "car",
+  "det_conf": 0.516,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 35,
+  "file": "b2_02.jpg",
+  "box": [
+   169.1,
+   238.5,
+   228.8,
+   291.1
+  ],
+  "coco": "car",
+  "det_conf": 0.486,
+  "cls": "car",
+  "cls_conf": 0.981,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 36,
+  "file": "b2_02.jpg",
+  "box": [
+   0.0,
+   328.1,
+   18.2,
+   416.1
+  ],
+  "coco": "car",
+  "det_conf": 0.476,
+  "cls": "car",
+  "cls_conf": 0.925,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 37,
+  "file": "b2_02.jpg",
+  "box": [
+   126.2,
+   335.2,
+   224.2,
+   480.7
+  ],
+  "coco": "car",
+  "det_conf": 0.455,
+  "cls": "cng",
+  "cls_conf": 0.991,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 38,
+  "file": "b2_02.jpg",
+  "box": [
+   1.0,
+   241.2,
+   67.0,
+   308.4
+  ],
+  "coco": "car",
+  "det_conf": 0.444,
+  "cls": "car",
+  "cls_conf": 0.907,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 39,
+  "file": "b2_02.jpg",
+  "box": [
+   248.3,
+   238.4,
+   312.6,
+   297.5
+  ],
+  "coco": "car",
+  "det_conf": 0.409,
+  "cls": "car",
+  "cls_conf": 0.702,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 40,
+  "file": "b2_02.jpg",
+  "box": [
+   181.4,
+   209.9,
+   235.7,
+   264.3
+  ],
+  "coco": "car",
+  "det_conf": 0.387,
+  "cls": "car",
+  "cls_conf": 0.997,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 41,
+  "file": "b2_02.jpg",
+  "box": [
+   0.0,
+   272.4,
+   45.8,
+   349.4
+  ],
+  "coco": "car",
+  "det_conf": 0.359,
+  "cls": "car",
+  "cls_conf": 0.974,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 42,
+  "file": "b2_02.jpg",
+  "box": [
+   205.6,
+   178.2,
+   258.1,
+   241.5
+  ],
+  "coco": "car",
+  "det_conf": 0.341,
+  "cls": "car",
+  "cls_conf": 0.845,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 43,
+  "file": "b2_02.jpg",
+  "box": [
+   51.7,
+   289.0,
+   129.9,
+   351.2
+  ],
+  "coco": "car",
+  "det_conf": 0.325,
+  "cls": "cng",
+  "cls_conf": 0.482,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 44,
+  "file": "b2_02.jpg",
+  "box": [
+   128.0,
+   192.1,
+   173.3,
+   241.7
+  ],
+  "coco": "car",
+  "det_conf": 0.324,
+  "cls": "car",
+  "cls_conf": 0.865,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 45,
+  "file": "b2_02.jpg",
+  "box": [
+   150.3,
+   177.2,
+   193.6,
+   220.9
+  ],
+  "coco": "car",
+  "det_conf": 0.322,
+  "cls": "car",
+  "cls_conf": 0.637,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 46,
+  "file": "b2_02.jpg",
+  "box": [
+   14.8,
+   63.0,
+   38.8,
+   88.3
+  ],
+  "coco": "truck",
+  "det_conf": 0.303,
+  "cls": "car",
+  "cls_conf": 0.619,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 47,
+  "file": "b2_02.jpg",
+  "box": [
+   265.9,
+   398.2,
+   355.1,
+   513.2
+  ],
+  "coco": "truck",
+  "det_conf": 0.289,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 48,
+  "file": "b2_02.jpg",
+  "box": [
+   334.6,
+   199.8,
+   389.3,
+   267.3
+  ],
+  "coco": "car",
+  "det_conf": 0.282,
+  "cls": "cng",
+  "cls_conf": 0.595,
+  "cng_colour": "unknown",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 49,
+  "file": "b2_02.jpg",
+  "box": [
+   383.7,
+   238.8,
+   437.0,
+   296.2
+  ],
+  "coco": "car",
+  "det_conf": 0.254,
+  "cls": "cng",
+  "cls_conf": 0.78,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 50,
+  "file": "b2_02.jpg",
+  "box": [
+   70.5,
+   181.9,
+   119.0,
+   221.3
+  ],
+  "coco": "car",
+  "det_conf": 0.24,
+  "cls": "car",
+  "cls_conf": 0.891,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 51,
+  "file": "b2_02.jpg",
+  "box": [
+   273.4,
+   208.9,
+   330.9,
+   273.5
+  ],
+  "coco": "car",
+  "det_conf": 0.217,
+  "cls": "car",
+  "cls_conf": 0.877,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 52,
+  "file": "b2_02.jpg",
+  "box": [
+   14.5,
+   168.7,
+   63.1,
+   201.7
+  ],
+  "coco": "car",
+  "det_conf": 0.2,
+  "cls": "car",
+  "cls_conf": 0.955,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 53,
+  "file": "b2_02.jpg",
+  "box": [
+   197.1,
+   168.3,
+   237.0,
+   208.9
+  ],
+  "coco": "car",
+  "det_conf": 0.171,
+  "cls": "cng",
+  "cls_conf": 0.844,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 54,
+  "file": "b2_02.jpg",
+  "box": [
+   48.5,
+   157.8,
+   88.0,
+   195.3
+  ],
+  "coco": "car",
+  "det_conf": 0.17,
+  "cls": "car",
+  "cls_conf": 0.993,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 55,
+  "file": "b2_03.jpg",
+  "box": [
+   165.1,
+   104.0,
+   385.1,
+   247.7
+  ],
+  "coco": "truck",
+  "det_conf": 0.571,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": [
+   289.8,
+   162.4,
+   387.8,
+   226.1
+  ],
+  "plate_conf": 0.366
+ },
+ {
+  "k": 56,
+  "file": "b2_05.jpg",
+  "box": [
+   806.9,
+   310.9,
+   958.7,
+   375.8
+  ],
+  "coco": "car",
+  "det_conf": 0.749,
+  "cls": "car",
+  "cls_conf": 0.996,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 57,
+  "file": "b2_05.jpg",
+  "box": [
+   1057.8,
+   298.4,
+   1279.6,
+   419.0
+  ],
+  "coco": "car",
+  "det_conf": 0.688,
+  "cls": "car",
+  "cls_conf": 0.996,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 58,
+  "file": "b2_05.jpg",
+  "box": [
+   441.2,
+   325.4,
+   702.1,
+   632.8
+  ],
+  "coco": "truck",
+  "det_conf": 0.685,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 59,
+  "file": "b2_05.jpg",
+  "box": [
+   294.1,
+   304.4,
+   460.0,
+   529.6
+  ],
+  "coco": "truck",
+  "det_conf": 0.626,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 60,
+  "file": "b2_05.jpg",
+  "box": [
+   815.8,
+   371.6,
+   1278.2,
+   716.5
+  ],
+  "coco": "truck",
+  "det_conf": 0.598,
+  "cls": "cng",
+  "cls_conf": 0.995,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 61,
+  "file": "b2_05.jpg",
+  "box": [
+   764.3,
+   303.0,
+   868.1,
+   335.6
+  ],
+  "coco": "car",
+  "det_conf": 0.589,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 62,
+  "file": "b2_05.jpg",
+  "box": [
+   41.6,
+   334.9,
+   366.5,
+   686.0
+  ],
+  "coco": "truck",
+  "det_conf": 0.587,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 63,
+  "file": "b2_05.jpg",
+  "box": [
+   0.5,
+   326.5,
+   130.7,
+   385.9
+  ],
+  "coco": "car",
+  "det_conf": 0.587,
+  "cls": "car",
+  "cls_conf": 0.995,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 64,
+  "file": "b2_05.jpg",
+  "box": [
+   890.9,
+   303.9,
+   987.6,
+   361.4
+  ],
+  "coco": "car",
+  "det_conf": 0.563,
+  "cls": "car",
+  "cls_conf": 0.992,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 65,
+  "file": "b2_05.jpg",
+  "box": [
+   174.1,
+   294.0,
+   277.6,
+   340.2
+  ],
+  "coco": "car",
+  "det_conf": 0.525,
+  "cls": "car",
+  "cls_conf": 0.969,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 66,
+  "file": "b2_05.jpg",
+  "box": [
+   680.5,
+   298.4,
+   770.4,
+   334.0
+  ],
+  "coco": "car",
+  "det_conf": 0.518,
+  "cls": "car",
+  "cls_conf": 0.992,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 67,
+  "file": "b2_05.jpg",
+  "box": [
+   108.6,
+   307.7,
+   268.7,
+   353.1
+  ],
+  "coco": "car",
+  "det_conf": 0.512,
+  "cls": "car",
+  "cls_conf": 0.723,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 68,
+  "file": "b2_05.jpg",
+  "box": [
+   625.1,
+   320.5,
+   762.4,
+   503.8
+  ],
+  "coco": "car",
+  "det_conf": 0.509,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 69,
+  "file": "b2_05.jpg",
+  "box": [
+   0.1,
+   380.9,
+   121.0,
+   715.1
+  ],
+  "coco": "truck",
+  "det_conf": 0.468,
+  "cls": "cng",
+  "cls_conf": 0.997,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 70,
+  "file": "b2_05.jpg",
+  "box": [
+   565.8,
+   306.0,
+   663.3,
+   334.2
+  ],
+  "coco": "car",
+  "det_conf": 0.452,
+  "cls": "car",
+  "cls_conf": 0.468,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 71,
+  "file": "b2_05.jpg",
+  "box": [
+   612.6,
+   284.5,
+   692.2,
+   321.0
+  ],
+  "coco": "car",
+  "det_conf": 0.449,
+  "cls": "car",
+  "cls_conf": 0.979,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 72,
+  "file": "b2_05.jpg",
+  "box": [
+   696.0,
+   332.8,
+   943.5,
+   644.7
+  ],
+  "coco": "truck",
+  "det_conf": 0.44,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 73,
+  "file": "b2_05.jpg",
+  "box": [
+   523.6,
+   291.7,
+   614.1,
+   327.8
+  ],
+  "coco": "car",
+  "det_conf": 0.434,
+  "cls": "car",
+  "cls_conf": 0.916,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 74,
+  "file": "b2_05.jpg",
+  "box": [
+   424.4,
+   300.3,
+   515.6,
+   415.2
+  ],
+  "coco": "truck",
+  "det_conf": 0.374,
+  "cls": "cng",
+  "cls_conf": 0.998,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 75,
+  "file": "b2_05.jpg",
+  "box": [
+   957.7,
+   305.2,
+   1126.6,
+   383.2
+  ],
+  "coco": "car",
+  "det_conf": 0.251,
+  "cls": "car",
+  "cls_conf": 0.918,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 76,
+  "file": "b2_05.jpg",
+  "box": [
+   400.5,
+   288.4,
+   478.1,
+   308.1
+  ],
+  "coco": "car",
+  "det_conf": 0.166,
+  "cls": "car",
+  "cls_conf": 0.755,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 77,
+  "file": "b2_06.jpg",
+  "box": [
+   299.0,
+   195.7,
+   325.1,
+   249.3
+  ],
+  "coco": "bus",
+  "det_conf": 0.803,
+  "cls": "rickshaw",
+  "cls_conf": 0.764,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 78,
+  "file": "b2_06.jpg",
+  "box": [
+   269.7,
+   307.8,
+   298.6,
+   349.2
+  ],
+  "coco": "car",
+  "det_conf": 0.795,
+  "cls": "cng",
+  "cls_conf": 0.78,
+  "cng_colour": "silver",
+  "plate": [
+   278.5,
+   344.5,
+   283.3,
+   347.5
+  ],
+  "plate_conf": 0.697
+ },
+ {
+  "k": 79,
+  "file": "b2_06.jpg",
+  "box": [
+   426.9,
+   327.2,
+   458.0,
+   369.8
+  ],
+  "coco": "car",
+  "det_conf": 0.791,
+  "cls": "cng",
+  "cls_conf": 0.611,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 80,
+  "file": "b2_06.jpg",
+  "box": [
+   206.6,
+   175.6,
+   243.1,
+   221.5
+  ],
+  "coco": "bus",
+  "det_conf": 0.782,
+  "cls": "rickshaw",
+  "cls_conf": 0.567,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 81,
+  "file": "b2_06.jpg",
+  "box": [
+   426.6,
+   367.9,
+   499.5,
+   406.2
+  ],
+  "coco": "car",
+  "det_conf": 0.772,
+  "cls": "car",
+  "cls_conf": 0.9,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 82,
+  "file": "b2_06.jpg",
+  "box": [
+   3.1,
+   304.4,
+   125.6,
+   427.0
+  ],
+  "coco": "bus",
+  "det_conf": 0.756,
+  "cls": "motorcycle",
+  "cls_conf": 0.47,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 83,
+  "file": "b2_06.jpg",
+  "box": [
+   242.5,
+   175.9,
+   272.9,
+   215.3
+  ],
+  "coco": "bus",
+  "det_conf": 0.687,
+  "cls": "cng",
+  "cls_conf": 0.869,
+  "cng_colour": "unknown",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 84,
+  "file": "b2_06.jpg",
+  "box": [
+   0.0,
+   347.1,
+   19.9,
+   374.9
+  ],
+  "coco": "car",
+  "det_conf": 0.662,
+  "cls": "car",
+  "cls_conf": 0.99,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 85,
+  "file": "b2_06.jpg",
+  "box": [
+   81.9,
+   258.1,
+   115.7,
+   279.8
+  ],
+  "coco": "car",
+  "det_conf": 0.64,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 86,
+  "file": "b2_06.jpg",
+  "box": [
+   469.2,
+   403.7,
+   523.2,
+   427.0
+  ],
+  "coco": "car",
+  "det_conf": 0.601,
+  "cls": "car",
+  "cls_conf": 0.626,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 87,
+  "file": "b2_06.jpg",
+  "box": [
+   311.7,
+   319.6,
+   330.6,
+   354.6
+  ],
+  "coco": "car",
+  "det_conf": 0.532,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": [
+   315.9,
+   346.7,
+   322.5,
+   353.1
+  ],
+  "plate_conf": 0.331
+ },
+ {
+  "k": 88,
+  "file": "b2_06.jpg",
+  "box": [
+   60.0,
+   277.1,
+   97.0,
+   302.1
+  ],
+  "coco": "car",
+  "det_conf": 0.531,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 89,
+  "file": "b2_06.jpg",
+  "box": [
+   98.4,
+   280.2,
+   121.6,
+   305.7
+  ],
+  "coco": "car",
+  "det_conf": 0.52,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 90,
+  "file": "b2_06.jpg",
+  "box": [
+   248.6,
+   228.0,
+   269.4,
+   245.4
+  ],
+  "coco": "car",
+  "det_conf": 0.448,
+  "cls": "car",
+  "cls_conf": 0.629,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 91,
+  "file": "b2_06.jpg",
+  "box": [
+   377.4,
+   196.1,
+   391.9,
+   215.8
+  ],
+  "coco": "car",
+  "det_conf": 0.414,
+  "cls": "car",
+  "cls_conf": 0.779,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 92,
+  "file": "b2_06.jpg",
+  "box": [
+   127.2,
+   391.8,
+   158.2,
+   425.6
+  ],
+  "coco": "car",
+  "det_conf": 0.411,
+  "cls": "cng",
+  "cls_conf": 0.902,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 93,
+  "file": "b2_06.jpg",
+  "box": [
+   405.6,
+   229.0,
+   432.4,
+   251.7
+  ],
+  "coco": "car",
+  "det_conf": 0.406,
+  "cls": "car",
+  "cls_conf": 0.66,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 94,
+  "file": "b2_06.jpg",
+  "box": [
+   132.2,
+   225.3,
+   200.3,
+   295.8
+  ],
+  "coco": "bus",
+  "det_conf": 0.398,
+  "cls": "rickshaw",
+  "cls_conf": 0.909,
+  "cng_colour": null,
+  "plate": [
+   131.9,
+   270.5,
+   158.8,
+   292.9
+  ],
+  "plate_conf": 0.806
+ },
+ {
+  "k": 95,
+  "file": "b2_06.jpg",
+  "box": [
+   9.9,
+   313.3,
+   61.4,
+   349.5
+  ],
+  "coco": "car",
+  "det_conf": 0.36,
+  "cls": "cng",
+  "cls_conf": 0.505,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 96,
+  "file": "b2_06.jpg",
+  "box": [
+   402.2,
+   335.6,
+   423.9,
+   373.3
+  ],
+  "coco": "car",
+  "det_conf": 0.349,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 97,
+  "file": "b2_06.jpg",
+  "box": [
+   389.9,
+   240.2,
+   416.5,
+   267.9
+  ],
+  "coco": "bus",
+  "det_conf": 0.319,
+  "cls": "cng",
+  "cls_conf": 0.763,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 98,
+  "file": "b2_06.jpg",
+  "box": [
+   212.8,
+   271.3,
+   244.2,
+   303.4
+  ],
+  "coco": "car",
+  "det_conf": 0.314,
+  "cls": "car",
+  "cls_conf": 0.835,
+  "cng_colour": null,
+  "plate": [
+   211.8,
+   291.8,
+   229.4,
+   303.3
+  ],
+  "plate_conf": 0.705
+ },
+ {
+  "k": 99,
+  "file": "b2_06.jpg",
+  "box": [
+   399.6,
+   208.0,
+   417.3,
+   230.6
+  ],
+  "coco": "car",
+  "det_conf": 0.313,
+  "cls": "car",
+  "cls_conf": 0.499,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 100,
+  "file": "b2_06.jpg",
+  "box": [
+   142.1,
+   227.3,
+   157.6,
+   245.1
+  ],
+  "coco": "car",
+  "det_conf": 0.31,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 101,
+  "file": "b2_06.jpg",
+  "box": [
+   105.9,
+   239.3,
+   131.9,
+   261.3
+  ],
+  "coco": "car",
+  "det_conf": 0.309,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 102,
+  "file": "b2_06.jpg",
+  "box": [
+   396.8,
+   315.3,
+   415.5,
+   344.1
+  ],
+  "coco": "car",
+  "det_conf": 0.244,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 103,
+  "file": "b2_06.jpg",
+  "box": [
+   233.2,
+   116.8,
+   250.2,
+   131.5
+  ],
+  "coco": "truck",
+  "det_conf": 0.242,
+  "cls": "car",
+  "cls_conf": 0.998,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 104,
+  "file": "b2_06.jpg",
+  "box": [
+   185.3,
+   208.8,
+   203.6,
+   224.8
+  ],
+  "coco": "car",
+  "det_conf": 0.23,
+  "cls": "cng",
+  "cls_conf": 0.674,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 105,
+  "file": "b2_06.jpg",
+  "box": [
+   315.3,
+   153.7,
+   335.0,
+   183.8
+  ],
+  "coco": "bus",
+  "det_conf": 0.219,
+  "cls": "cng",
+  "cls_conf": 0.998,
+  "cng_colour": "unknown",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 106,
+  "file": "b2_06.jpg",
+  "box": [
+   393.5,
+   178.6,
+   408.6,
+   192.4
+  ],
+  "coco": "car",
+  "det_conf": 0.196,
+  "cls": "cng",
+  "cls_conf": 0.796,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 107,
+  "file": "b2_06.jpg",
+  "box": [
+   382.6,
+   221.8,
+   406.3,
+   248.4
+  ],
+  "coco": "bus",
+  "det_conf": 0.19,
+  "cls": "cng",
+  "cls_conf": 0.93,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 108,
+  "file": "b2_06.jpg",
+  "box": [
+   154.6,
+   214.3,
+   170.2,
+   232.0
+  ],
+  "coco": "car",
+  "det_conf": 0.183,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": [
+   155.1,
+   221.1,
+   161.0,
+   225.0
+  ],
+  "plate_conf": 0.547
+ },
+ {
+  "k": 109,
+  "file": "b2_07.jpg",
+  "box": [
+   272.6,
+   268.1,
+   387.7,
+   353.6
+  ],
+  "coco": "car",
+  "det_conf": 0.917,
+  "cls": "car",
+  "cls_conf": 0.848,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 110,
+  "file": "b2_07.jpg",
+  "box": [
+   124.3,
+   228.6,
+   162.2,
+   251.3
+  ],
+  "coco": "motorcycle",
+  "det_conf": 0.667,
+  "cls": "car",
+  "cls_conf": 0.597,
+  "cng_colour": null,
+  "plate": [
+   129.8,
+   227.0,
+   144.3,
+   237.3
+  ],
+  "plate_conf": 0.252
+ },
+ {
+  "k": 111,
+  "file": "b2_07.jpg",
+  "box": [
+   0.0,
+   145.9,
+   18.4,
+   163.7
+  ],
+  "coco": "car",
+  "det_conf": 0.646,
+  "cls": "cng",
+  "cls_conf": 0.7,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 112,
+  "file": "b2_07.jpg",
+  "box": [
+   441.3,
+   193.2,
+   486.9,
+   224.3
+  ],
+  "coco": "car",
+  "det_conf": 0.632,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 113,
+  "file": "b2_07.jpg",
+  "box": [
+   55.4,
+   165.1,
+   77.0,
+   190.5
+  ],
+  "coco": "car",
+  "det_conf": 0.571,
+  "cls": "cng",
+  "cls_conf": 0.96,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 114,
+  "file": "b2_07.jpg",
+  "box": [
+   110.9,
+   174.6,
+   134.7,
+   202.3
+  ],
+  "coco": "car",
+  "det_conf": 0.551,
+  "cls": "cng",
+  "cls_conf": 0.991,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 115,
+  "file": "b2_07.jpg",
+  "box": [
+   173.5,
+   177.8,
+   239.9,
+   210.2
+  ],
+  "coco": "car",
+  "det_conf": 0.542,
+  "cls": "car",
+  "cls_conf": 0.985,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 116,
+  "file": "b2_07.jpg",
+  "box": [
+   101.3,
+   143.6,
+   135.7,
+   167.5
+  ],
+  "coco": "car",
+  "det_conf": 0.533,
+  "cls": "car",
+  "cls_conf": 0.997,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 117,
+  "file": "b2_07.jpg",
+  "box": [
+   152.3,
+   191.3,
+   192.6,
+   223.8
+  ],
+  "coco": "car",
+  "det_conf": 0.53,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 118,
+  "file": "b2_07.jpg",
+  "box": [
+   128.2,
+   186.5,
+   160.5,
+   211.6
+  ],
+  "coco": "car",
+  "det_conf": 0.462,
+  "cls": "car",
+  "cls_conf": 0.717,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 119,
+  "file": "b2_07.jpg",
+  "box": [
+   309.2,
+   173.5,
+   371.5,
+   196.9
+  ],
+  "coco": "car",
+  "det_conf": 0.458,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 120,
+  "file": "b2_07.jpg",
+  "box": [
+   88.1,
+   138.7,
+   110.6,
+   154.6
+  ],
+  "coco": "car",
+  "det_conf": 0.421,
+  "cls": "car",
+  "cls_conf": 0.982,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 121,
+  "file": "b2_07.jpg",
+  "box": [
+   318.2,
+   144.3,
+   405.5,
+   179.7
+  ],
+  "coco": "truck",
+  "det_conf": 0.389,
+  "cls": "cng",
+  "cls_conf": 0.902,
+  "cng_colour": "unknown",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 122,
+  "file": "b2_07.jpg",
+  "box": [
+   397.9,
+   196.7,
+   442.0,
+   227.4
+  ],
+  "coco": "car",
+  "det_conf": 0.369,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 123,
+  "file": "b2_07.jpg",
+  "box": [
+   319.9,
+   184.5,
+   365.8,
+   209.0
+  ],
+  "coco": "car",
+  "det_conf": 0.363,
+  "cls": "car",
+  "cls_conf": 0.992,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 124,
+  "file": "b2_07.jpg",
+  "box": [
+   377.4,
+   174.0,
+   432.2,
+   194.5
+  ],
+  "coco": "car",
+  "det_conf": 0.362,
+  "cls": "car",
+  "cls_conf": 0.998,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 125,
+  "file": "b2_07.jpg",
+  "box": [
+   397.2,
+   184.7,
+   451.2,
+   210.5
+  ],
+  "coco": "car",
+  "det_conf": 0.3,
+  "cls": "car",
+  "cls_conf": 0.996,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 126,
+  "file": "b2_07.jpg",
+  "box": [
+   445.4,
+   173.7,
+   504.4,
+   194.9
+  ],
+  "coco": "car",
+  "det_conf": 0.294,
+  "cls": "car",
+  "cls_conf": 0.999,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 127,
+  "file": "b2_07.jpg",
+  "box": [
+   206.3,
+   197.9,
+   249.3,
+   230.3
+  ],
+  "coco": "bus",
+  "det_conf": 0.293,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 128,
+  "file": "b2_07.jpg",
+  "box": [
+   247.9,
+   171.4,
+   305.4,
+   202.8
+  ],
+  "coco": "car",
+  "det_conf": 0.239,
+  "cls": "car",
+  "cls_conf": 1.0,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 129,
+  "file": "b2_07.jpg",
+  "box": [
+   17.5,
+   95.2,
+   31.8,
+   111.0
+  ],
+  "coco": "truck",
+  "det_conf": 0.214,
+  "cls": "car",
+  "cls_conf": 0.677,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 130,
+  "file": "b2_07.jpg",
+  "box": [
+   252.2,
+   201.4,
+   298.4,
+   232.1
+  ],
+  "coco": "bus",
+  "det_conf": 0.21,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 131,
+  "file": "b2_07.jpg",
+  "box": [
+   89.2,
+   122.3,
+   108.4,
+   139.6
+  ],
+  "coco": "car",
+  "det_conf": 0.182,
+  "cls": "car",
+  "cls_conf": 0.608,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 132,
+  "file": "b2_07.jpg",
+  "box": [
+   121.4,
+   160.1,
+   176.7,
+   192.7
+  ],
+  "coco": "truck",
+  "det_conf": 0.179,
+  "cls": "car",
+  "cls_conf": 0.824,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 133,
+  "file": "b2_07.jpg",
+  "box": [
+   528.9,
+   314.7,
+   560.9,
+   349.5
+  ],
+  "coco": "car",
+  "det_conf": 0.175,
+  "cls": "car",
+  "cls_conf": 0.825,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 134,
+  "file": "b2_07.jpg",
+  "box": [
+   78.4,
+   132.3,
+   96.2,
+   146.4
+  ],
+  "coco": "car",
+  "det_conf": 0.172,
+  "cls": "cng",
+  "cls_conf": 0.618,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 135,
+  "file": "b2_07.jpg",
+  "box": [
+   488.4,
+   156.9,
+   611.2,
+   224.5
+  ],
+  "coco": "bus",
+  "det_conf": 0.172,
+  "cls": "rickshaw",
+  "cls_conf": 0.586,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 136,
+  "file": "b2_07.jpg",
+  "box": [
+   305.2,
+   198.0,
+   348.6,
+   229.6
+  ],
+  "coco": "car",
+  "det_conf": 0.162,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 137,
+  "file": "b2_07.jpg",
+  "box": [
+   353.0,
+   197.1,
+   384.1,
+   229.1
+  ],
+  "coco": "car",
+  "det_conf": 0.158,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 138,
+  "file": "b2_08.jpg",
+  "box": [
+   102.6,
+   28.2,
+   304.6,
+   211.8
+  ],
+  "coco": "truck",
+  "det_conf": 0.71,
+  "cls": "cng",
+  "cls_conf": 0.985,
+  "cng_colour": "green",
+  "plate": [
+   103.4,
+   135.4,
+   162.5,
+   203.3
+  ],
+  "plate_conf": 0.56
+ },
+ {
+  "k": 139,
+  "file": "b2_08.jpg",
+  "box": [
+   2.6,
+   32.3,
+   184.3,
+   226.9
+  ],
+  "coco": "truck",
+  "det_conf": 0.615,
+  "cls": "cng",
+  "cls_conf": 0.997,
+  "cng_colour": "green",
+  "plate": [
+   102.8,
+   138.3,
+   162.0,
+   203.5
+  ],
+  "plate_conf": 0.636
+ },
+ {
+  "k": 140,
+  "file": "b2_09.jpg",
+  "box": [
+   273.4,
+   188.0,
+   332.5,
+   259.9
+  ],
+  "coco": "bicycle",
+  "det_conf": 0.572,
+  "cls": "rickshaw",
+  "cls_conf": 0.919,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 141,
+  "file": "b2_09.jpg",
+  "box": [
+   67.1,
+   108.9,
+   297.8,
+   261.0
+  ],
+  "coco": "truck",
+  "det_conf": 0.528,
+  "cls": "cng",
+  "cls_conf": 0.995,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 142,
+  "file": "b2_09.jpg",
+  "box": [
+   0.2,
+   100.8,
+   60.5,
+   259.6
+  ],
+  "coco": "truck",
+  "det_conf": 0.338,
+  "cls": "cng",
+  "cls_conf": 0.983,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 143,
+  "file": "b2_09.jpg",
+  "box": [
+   70.9,
+   154.4,
+   102.8,
+   219.8
+  ],
+  "coco": "bicycle",
+  "det_conf": 0.335,
+  "cls": "rickshaw",
+  "cls_conf": 0.979,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 144,
+  "file": "b2_09.jpg",
+  "box": [
+   330.2,
+   98.0,
+   389.8,
+   259.2
+  ],
+  "coco": "truck",
+  "det_conf": 0.174,
+  "cls": "rickshaw",
+  "cls_conf": 0.916,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 145,
+  "file": "b2_09.jpg",
+  "box": [
+   241.2,
+   127.2,
+   286.3,
+   203.4
+  ],
+  "coco": "truck",
+  "det_conf": 0.158,
+  "cls": "cng",
+  "cls_conf": 0.992,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 146,
+  "file": "b2_10.jpg",
+  "box": [
+   293.6,
+   136.5,
+   388.9,
+   213.1
+  ],
+  "coco": "truck",
+  "det_conf": 0.75,
+  "cls": "cng",
+  "cls_conf": 0.933,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 147,
+  "file": "b2_10.jpg",
+  "box": [
+   81.0,
+   99.3,
+   107.9,
+   120.3
+  ],
+  "coco": "bus",
+  "det_conf": 0.396,
+  "cls": "cng",
+  "cls_conf": 0.999,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 148,
+  "file": "b2_10.jpg",
+  "box": [
+   157.6,
+   107.8,
+   206.9,
+   122.9
+  ],
+  "coco": "car",
+  "det_conf": 0.366,
+  "cls": "car",
+  "cls_conf": 0.347,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 149,
+  "file": "b2_10.jpg",
+  "box": [
+   244.8,
+   133.5,
+   309.4,
+   194.6
+  ],
+  "coco": "truck",
+  "det_conf": 0.333,
+  "cls": "cng",
+  "cls_conf": 0.989,
+  "cng_colour": "silver",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 150,
+  "file": "b2_10.jpg",
+  "box": [
+   17.0,
+   102.1,
+   33.0,
+   118.8
+  ],
+  "coco": "truck",
+  "det_conf": 0.322,
+  "cls": "car",
+  "cls_conf": 0.542,
+  "cng_colour": null,
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 151,
+  "file": "b2_10.jpg",
+  "box": [
+   212.9,
+   127.0,
+   264.4,
+   185.0
+  ],
+  "coco": "truck",
+  "det_conf": 0.257,
+  "cls": "cng",
+  "cls_conf": 0.999,
+  "cng_colour": "unknown",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 152,
+  "file": "b2_10.jpg",
+  "box": [
+   131.8,
+   118.5,
+   196.9,
+   166.2
+  ],
+  "coco": "bus",
+  "det_conf": 0.189,
+  "cls": "cng",
+  "cls_conf": 0.985,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 153,
+  "file": "b2_10.jpg",
+  "box": [
+   168.7,
+   127.0,
+   226.6,
+   177.4
+  ],
+  "coco": "bus",
+  "det_conf": 0.184,
+  "cls": "cng",
+  "cls_conf": 1.0,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ },
+ {
+  "k": 154,
+  "file": "b2_10.jpg",
+  "box": [
+   149.3,
+   126.9,
+   181.8,
+   166.6
+  ],
+  "coco": "truck",
+  "det_conf": 0.162,
+  "cls": "cng",
+  "cls_conf": 0.999,
+  "cng_colour": "green",
+  "plate": null,
+  "plate_conf": null
+ }
+]

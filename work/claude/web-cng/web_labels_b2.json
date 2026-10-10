@@ -1,0 +1,1478 @@
+{
+ "b2_04.jpg": [
+  {
+   "box": [
+    194,
+    118,
+    502,
+    334
+   ],
+   "label": "cng",
+   "colour": "silver",
+   "note": "motion blur; \u09aa\u09cd\u09b0\u09be\u0987\u09ad\u09c7\u099f on canopy"
+  }
+ ],
+ "b2_10.jpg": [
+  {
+   "box": [
+    297,
+    136,
+    387,
+    212
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    246,
+    130,
+    302,
+    192
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    214,
+    125,
+    257,
+    181
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    148,
+    124,
+    175,
+    165
+   ],
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    182,
+    128,
+    227,
+    175
+   ],
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    167,
+    127,
+    200,
+    170
+   ],
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "b2_01.jpg": [
+  {
+   "box": [
+    237,
+    202,
+    427,
+    333
+   ],
+   "proposal_k": 0,
+   "label": "car"
+  },
+  {
+   "box": [
+    143,
+    100,
+    228,
+    142
+   ],
+   "proposal_k": 1,
+   "label": "car"
+  },
+  {
+   "box": [
+    88,
+    150,
+    172,
+    230
+   ],
+   "proposal_k": 2,
+   "label": "car"
+  },
+  {
+   "box": [
+    197,
+    149,
+    304,
+    230
+   ],
+   "proposal_k": 3,
+   "label": "car"
+  },
+  {
+   "box": [
+    376,
+    305,
+    638,
+    359
+   ],
+   "proposal_k": 4,
+   "label": "car"
+  },
+  {
+   "box": [
+    115,
+    186,
+    244,
+    320
+   ],
+   "proposal_k": 5,
+   "label": "car"
+  },
+  {
+   "box": [
+    255,
+    102,
+    329,
+    144
+   ],
+   "proposal_k": 6,
+   "label": "car"
+  },
+  {
+   "box": [
+    194,
+    120,
+    263,
+    172
+   ],
+   "proposal_k": 7,
+   "label": "car"
+  },
+  {
+   "box": [
+    130,
+    316,
+    335,
+    359
+   ],
+   "proposal_k": 8,
+   "label": "car"
+  },
+  {
+   "box": [
+    584,
+    87,
+    640,
+    124
+   ],
+   "proposal_k": 9,
+   "label": "car"
+  },
+  {
+   "box": [
+    511,
+    198,
+    640,
+    334
+   ],
+   "proposal_k": 11,
+   "label": "cng",
+   "colour": "silver"
+  },
+  {
+   "box": [
+    422,
+    160,
+    524,
+    268
+   ],
+   "proposal_k": 12,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    88,
+    105,
+    150,
+    167
+   ],
+   "proposal_k": 13,
+   "label": "car"
+  },
+  {
+   "box": [
+    319,
+    112,
+    374,
+    177
+   ],
+   "proposal_k": 14,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    357,
+    138,
+    433,
+    221
+   ],
+   "proposal_k": 15,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    255,
+    90,
+    284,
+    114
+   ],
+   "proposal_k": 16,
+   "label": "car"
+  },
+  {
+   "box": [
+    302,
+    89,
+    354,
+    115
+   ],
+   "proposal_k": 18,
+   "label": "car"
+  }
+ ],
+ "b2_02.jpg": [
+  {
+   "box": [
+    256,
+    507,
+    418,
+    658
+   ],
+   "proposal_k": 19,
+   "label": "car"
+  },
+  {
+   "box": [
+    46,
+    526,
+    197,
+    638
+   ],
+   "proposal_k": 20,
+   "label": "car"
+  },
+  {
+   "box": [
+    80,
+    455,
+    219,
+    598
+   ],
+   "proposal_k": 21,
+   "label": "car"
+  },
+  {
+   "box": [
+    0,
+    369,
+    110,
+    498
+   ],
+   "proposal_k": 22,
+   "label": "car"
+  },
+  {
+   "box": [
+    359,
+    263,
+    430,
+    327
+   ],
+   "proposal_k": 23,
+   "label": "car"
+  },
+  {
+   "box": [
+    236,
+    314,
+    350,
+    461
+   ],
+   "proposal_k": 24,
+   "label": "car"
+  },
+  {
+   "box": [
+    22,
+    309,
+    116,
+    397
+   ],
+   "proposal_k": 25,
+   "label": "car"
+  },
+  {
+   "box": [
+    0,
+    448,
+    35,
+    597
+   ],
+   "proposal_k": 26,
+   "label": "car"
+  },
+  {
+   "box": [
+    67,
+    258,
+    140,
+    323
+   ],
+   "proposal_k": 27,
+   "label": "car"
+  },
+  {
+   "box": [
+    92,
+    212,
+    159,
+    289
+   ],
+   "proposal_k": 28,
+   "label": "car"
+  },
+  {
+   "box": [
+    359,
+    344,
+    437,
+    434
+   ],
+   "proposal_k": 29,
+   "label": "car"
+  },
+  {
+   "box": [
+    155,
+    264,
+    224,
+    319
+   ],
+   "proposal_k": 30,
+   "label": "car"
+  },
+  {
+   "box": [
+    21,
+    198,
+    95,
+    272
+   ],
+   "proposal_k": 31,
+   "label": "car"
+  },
+  {
+   "box": [
+    365,
+    304,
+    437,
+    362
+   ],
+   "proposal_k": 32,
+   "label": "car"
+  },
+  {
+   "box": [
+    382,
+    383,
+    437,
+    545
+   ],
+   "proposal_k": 33,
+   "label": "car"
+  },
+  {
+   "box": [
+    249,
+    279,
+    320,
+    329
+   ],
+   "proposal_k": 34,
+   "label": "car"
+  },
+  {
+   "box": [
+    169,
+    238,
+    229,
+    291
+   ],
+   "proposal_k": 35,
+   "label": "car"
+  },
+  {
+   "box": [
+    0,
+    328,
+    18,
+    416
+   ],
+   "proposal_k": 36,
+   "label": "car"
+  },
+  {
+   "box": [
+    126,
+    335,
+    224,
+    481
+   ],
+   "proposal_k": 37,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    1,
+    241,
+    67,
+    308
+   ],
+   "proposal_k": 38,
+   "label": "car"
+  },
+  {
+   "box": [
+    248,
+    238,
+    313,
+    298
+   ],
+   "proposal_k": 39,
+   "label": "car"
+  },
+  {
+   "box": [
+    181,
+    210,
+    236,
+    264
+   ],
+   "proposal_k": 40,
+   "label": "car"
+  },
+  {
+   "box": [
+    0,
+    272,
+    46,
+    349
+   ],
+   "proposal_k": 41,
+   "label": "car"
+  },
+  {
+   "box": [
+    206,
+    178,
+    258,
+    242
+   ],
+   "proposal_k": 42,
+   "label": "car"
+  },
+  {
+   "box": [
+    52,
+    289,
+    130,
+    351
+   ],
+   "proposal_k": 43,
+   "label": "car"
+  },
+  {
+   "box": [
+    128,
+    192,
+    173,
+    242
+   ],
+   "proposal_k": 44,
+   "label": "car"
+  },
+  {
+   "box": [
+    150,
+    177,
+    194,
+    221
+   ],
+   "proposal_k": 45,
+   "label": "car"
+  },
+  {
+   "box": [
+    15,
+    63,
+    39,
+    88
+   ],
+   "proposal_k": 46,
+   "label": "car"
+  },
+  {
+   "box": [
+    266,
+    398,
+    355,
+    513
+   ],
+   "proposal_k": 47,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    335,
+    200,
+    389,
+    267
+   ],
+   "proposal_k": 48,
+   "label": "car"
+  },
+  {
+   "box": [
+    384,
+    239,
+    437,
+    296
+   ],
+   "proposal_k": 49,
+   "label": "car"
+  },
+  {
+   "box": [
+    70,
+    182,
+    119,
+    221
+   ],
+   "proposal_k": 50,
+   "label": "car"
+  },
+  {
+   "box": [
+    273,
+    209,
+    331,
+    274
+   ],
+   "proposal_k": 51,
+   "label": "car"
+  },
+  {
+   "box": [
+    14,
+    169,
+    63,
+    202
+   ],
+   "proposal_k": 52,
+   "label": "car"
+  },
+  {
+   "box": [
+    197,
+    168,
+    237,
+    209
+   ],
+   "proposal_k": 53,
+   "label": "car"
+  },
+  {
+   "box": [
+    48,
+    158,
+    88,
+    195
+   ],
+   "proposal_k": 54,
+   "label": "car"
+  }
+ ],
+ "b2_03.jpg": [
+  {
+   "box": [
+    165,
+    104,
+    385,
+    248
+   ],
+   "proposal_k": 55,
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "b2_05.jpg": [
+  {
+   "box": [
+    807,
+    311,
+    959,
+    376
+   ],
+   "proposal_k": 56,
+   "label": "car"
+  },
+  {
+   "box": [
+    1058,
+    298,
+    1280,
+    419
+   ],
+   "proposal_k": 57,
+   "label": "car"
+  },
+  {
+   "box": [
+    441,
+    325,
+    702,
+    633
+   ],
+   "proposal_k": 58,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    294,
+    304,
+    460,
+    530
+   ],
+   "proposal_k": 59,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    816,
+    372,
+    1278,
+    716
+   ],
+   "proposal_k": 60,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    764,
+    303,
+    868,
+    336
+   ],
+   "proposal_k": 61,
+   "label": "car"
+  },
+  {
+   "box": [
+    42,
+    335,
+    366,
+    686
+   ],
+   "proposal_k": 62,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    0,
+    326,
+    131,
+    386
+   ],
+   "proposal_k": 63,
+   "label": "car"
+  },
+  {
+   "box": [
+    891,
+    304,
+    988,
+    361
+   ],
+   "proposal_k": 64,
+   "label": "car"
+  },
+  {
+   "box": [
+    174,
+    294,
+    278,
+    340
+   ],
+   "proposal_k": 65,
+   "label": "car"
+  },
+  {
+   "box": [
+    680,
+    298,
+    770,
+    334
+   ],
+   "proposal_k": 66,
+   "label": "car"
+  },
+  {
+   "box": [
+    109,
+    308,
+    269,
+    353
+   ],
+   "proposal_k": 67,
+   "label": "car"
+  },
+  {
+   "box": [
+    625,
+    320,
+    762,
+    504
+   ],
+   "proposal_k": 68,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    0,
+    381,
+    121,
+    715
+   ],
+   "proposal_k": 69,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    566,
+    306,
+    663,
+    334
+   ],
+   "proposal_k": 70,
+   "label": "car"
+  },
+  {
+   "box": [
+    613,
+    284,
+    692,
+    321
+   ],
+   "proposal_k": 71,
+   "label": "car"
+  },
+  {
+   "box": [
+    696,
+    333,
+    944,
+    645
+   ],
+   "proposal_k": 72,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    524,
+    292,
+    614,
+    328
+   ],
+   "proposal_k": 73,
+   "label": "car"
+  },
+  {
+   "box": [
+    424,
+    300,
+    516,
+    415
+   ],
+   "proposal_k": 74,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    958,
+    305,
+    1127,
+    383
+   ],
+   "proposal_k": 75,
+   "label": "car"
+  },
+  {
+   "box": [
+    400,
+    288,
+    478,
+    308
+   ],
+   "proposal_k": 76,
+   "label": "car"
+  }
+ ],
+ "b2_06.jpg": [
+  {
+   "box": [
+    299,
+    196,
+    325,
+    249
+   ],
+   "proposal_k": 77,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    270,
+    308,
+    299,
+    349
+   ],
+   "proposal_k": 78,
+   "label": "car"
+  },
+  {
+   "box": [
+    427,
+    327,
+    458,
+    370
+   ],
+   "proposal_k": 79,
+   "label": "car"
+  },
+  {
+   "box": [
+    207,
+    176,
+    243,
+    222
+   ],
+   "proposal_k": 80,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    427,
+    368,
+    500,
+    406
+   ],
+   "proposal_k": 81,
+   "label": "car"
+  },
+  {
+   "box": [
+    3,
+    304,
+    126,
+    427
+   ],
+   "proposal_k": 82,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    242,
+    176,
+    273,
+    215
+   ],
+   "proposal_k": 83,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    0,
+    347,
+    20,
+    375
+   ],
+   "proposal_k": 84,
+   "label": "car"
+  },
+  {
+   "box": [
+    82,
+    258,
+    116,
+    280
+   ],
+   "proposal_k": 85,
+   "label": "car"
+  },
+  {
+   "box": [
+    469,
+    404,
+    523,
+    427
+   ],
+   "proposal_k": 86,
+   "label": "car"
+  },
+  {
+   "box": [
+    312,
+    320,
+    331,
+    355
+   ],
+   "proposal_k": 87,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    60,
+    277,
+    97,
+    302
+   ],
+   "proposal_k": 88,
+   "label": "car"
+  },
+  {
+   "box": [
+    98,
+    280,
+    122,
+    306
+   ],
+   "proposal_k": 89,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    249,
+    228,
+    269,
+    245
+   ],
+   "proposal_k": 90,
+   "label": "car"
+  },
+  {
+   "box": [
+    377,
+    196,
+    392,
+    216
+   ],
+   "proposal_k": 91,
+   "label": "car"
+  },
+  {
+   "box": [
+    127,
+    392,
+    158,
+    426
+   ],
+   "proposal_k": 92,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    406,
+    229,
+    432,
+    252
+   ],
+   "proposal_k": 93,
+   "label": "car"
+  },
+  {
+   "box": [
+    132,
+    225,
+    200,
+    296
+   ],
+   "proposal_k": 94,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    10,
+    313,
+    61,
+    350
+   ],
+   "proposal_k": 95,
+   "label": "car"
+  },
+  {
+   "box": [
+    402,
+    336,
+    424,
+    373
+   ],
+   "proposal_k": 96,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    390,
+    240,
+    416,
+    268
+   ],
+   "proposal_k": 97,
+   "label": "car"
+  },
+  {
+   "box": [
+    213,
+    271,
+    244,
+    303
+   ],
+   "proposal_k": 98,
+   "label": "car"
+  },
+  {
+   "box": [
+    400,
+    208,
+    417,
+    231
+   ],
+   "proposal_k": 99,
+   "label": "car"
+  },
+  {
+   "box": [
+    142,
+    227,
+    158,
+    245
+   ],
+   "proposal_k": 100,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    106,
+    239,
+    132,
+    261
+   ],
+   "proposal_k": 101,
+   "label": "car"
+  },
+  {
+   "box": [
+    397,
+    315,
+    416,
+    344
+   ],
+   "proposal_k": 102,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    233,
+    117,
+    250,
+    132
+   ],
+   "proposal_k": 103,
+   "label": "car"
+  },
+  {
+   "box": [
+    315,
+    154,
+    335,
+    184
+   ],
+   "proposal_k": 105,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    383,
+    222,
+    406,
+    248
+   ],
+   "proposal_k": 107,
+   "label": "car"
+  },
+  {
+   "box": [
+    155,
+    214,
+    170,
+    232
+   ],
+   "proposal_k": 108,
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "b2_07.jpg": [
+  {
+   "box": [
+    273,
+    268,
+    388,
+    354
+   ],
+   "proposal_k": 109,
+   "label": "car"
+  },
+  {
+   "box": [
+    124,
+    229,
+    162,
+    251
+   ],
+   "proposal_k": 110,
+   "label": "motorcycle"
+  },
+  {
+   "box": [
+    441,
+    193,
+    487,
+    224
+   ],
+   "proposal_k": 112,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    55,
+    165,
+    77,
+    190
+   ],
+   "proposal_k": 113,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    111,
+    175,
+    135,
+    202
+   ],
+   "proposal_k": 114,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    174,
+    178,
+    240,
+    210
+   ],
+   "proposal_k": 115,
+   "label": "car"
+  },
+  {
+   "box": [
+    101,
+    144,
+    136,
+    168
+   ],
+   "proposal_k": 116,
+   "label": "car"
+  },
+  {
+   "box": [
+    152,
+    191,
+    193,
+    224
+   ],
+   "proposal_k": 117,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    309,
+    174,
+    372,
+    197
+   ],
+   "proposal_k": 119,
+   "label": "car"
+  },
+  {
+   "box": [
+    88,
+    139,
+    111,
+    155
+   ],
+   "proposal_k": 120,
+   "label": "car"
+  },
+  {
+   "box": [
+    318,
+    144,
+    406,
+    180
+   ],
+   "proposal_k": 121,
+   "label": "bus_truck"
+  },
+  {
+   "box": [
+    398,
+    197,
+    442,
+    227
+   ],
+   "proposal_k": 122,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    320,
+    184,
+    366,
+    209
+   ],
+   "proposal_k": 123,
+   "label": "car"
+  },
+  {
+   "box": [
+    377,
+    174,
+    432,
+    194
+   ],
+   "proposal_k": 124,
+   "label": "car"
+  },
+  {
+   "box": [
+    397,
+    185,
+    451,
+    210
+   ],
+   "proposal_k": 125,
+   "label": "car"
+  },
+  {
+   "box": [
+    445,
+    174,
+    504,
+    195
+   ],
+   "proposal_k": 126,
+   "label": "car"
+  },
+  {
+   "box": [
+    206,
+    198,
+    249,
+    230
+   ],
+   "proposal_k": 127,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    248,
+    171,
+    305,
+    203
+   ],
+   "proposal_k": 128,
+   "label": "car"
+  },
+  {
+   "box": [
+    252,
+    201,
+    298,
+    232
+   ],
+   "proposal_k": 130,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    121,
+    160,
+    177,
+    193
+   ],
+   "proposal_k": 132,
+   "label": "car"
+  },
+  {
+   "box": [
+    305,
+    198,
+    349,
+    230
+   ],
+   "proposal_k": 136,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    353,
+    197,
+    384,
+    229
+   ],
+   "proposal_k": 137,
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "b2_08.jpg": [
+  {
+   "box": [
+    103,
+    28,
+    305,
+    212
+   ],
+   "proposal_k": 138,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    3,
+    32,
+    184,
+    227
+   ],
+   "proposal_k": 139,
+   "label": "cng",
+   "colour": "green"
+  }
+ ],
+ "b2_09.jpg": [
+  {
+   "box": [
+    273,
+    188,
+    332,
+    260
+   ],
+   "proposal_k": 140,
+   "label": "rickshaw"
+  },
+  {
+   "box": [
+    67,
+    109,
+    298,
+    261
+   ],
+   "proposal_k": 141,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    0,
+    101,
+    60,
+    260
+   ],
+   "proposal_k": 142,
+   "label": "cng",
+   "colour": "green"
+  },
+  {
+   "box": [
+    71,
+    154,
+    103,
+    220
+   ],
+   "proposal_k": 143,
+   "label": "rickshaw"
+  },
+  {
+   "box": [
+    330,
+    98,
+    390,
+    259
+   ],
+   "proposal_k": 144,
+   "label": "rickshaw"
+  },
+  {
+   "box": [
+    241,
+    127,
+    286,
+    203
+   ],
+   "proposal_k": 145,
+   "label": "cng",
+   "colour": "green"
+  }
+ ]
+}

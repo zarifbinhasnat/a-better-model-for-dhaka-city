@@ -11,19 +11,20 @@ import cv2, numpy as np
 ROOT=Path(__file__).resolve().parents[3];sys.path.insert(0,str(ROOT/'outputs/claude/plate_rules'))
 from bd_plate_rules import allowed_letters
 from ultralytics import YOLO
-VEH=ROOT/'work/detection-pilot/yolo26s.pt';CLS=ROOT/'work/claude/models/vehicle_cls_run3.pt';PLATE=ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'
+VEH=ROOT/'work/detection-pilot/yolo26s.pt';CLS=ROOT/'work/claude/models/vehicle_cls_run4b.pt';PLATE=ROOT/'work/claude/models/plate_B_yolo26s_run1.pt'
 def cng_colour(crop,plate_box=None,occluded=False):
     """green (commercial, থ) / silver (private, দ) / unknown, from the colour of the lower half of the CNG.
-    green : lower body >= 6% green pixels (or a saturated plate with >= 3% green)
+    green : lower body >= 10% green pixels (or a saturated plate with >= 3% green); private silver CNGs can carry
+            small green accents (fender stripe) or a green cast at night (~8%), so 10% not 6%
     silver: lower body < 3% green AND either a pale plate (median saturation < 30, body V >= 80)
             or, with no plate, a bright low-saturation body (median V >= 80, S <= 40)
     unknown otherwise, and always when another vehicle covers the lower half (occluded).
-    Tuned on this video (291 green / 37 silver crops) + 9 downloaded photos (23 green / 10 silver):
+    Tuned on this video (291 green / 37 silver crops) + 19 downloaded photos (59 green / 16 silver):
     0 green<->silver confusions on that data; no untouched test set. Silver is rare: unknown keeps both letters."""
     if occluded:return 'unknown'
     hsv=cv2.cvtColor(crop,cv2.COLOR_BGR2HSV);body=hsv[hsv.shape[0]//2:]
     g=((body[...,0]>=40)&(body[...,0]<=90)&(body[...,1]>=70)).mean();V=np.median(body[...,2]);S=np.median(body[...,1])
-    if g>=.06:return 'green'
+    if g>=.10:return 'green'
     ps=None
     if plate_box is not None:
         x1,y1,x2,y2=[int(v) for v in plate_box];pl=hsv[max(0,y1):y2,max(0,x1):x2]
